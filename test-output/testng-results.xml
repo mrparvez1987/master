@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="8" total="9" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="DashManagement" duration-ms="14482" started-at="2019-10-24T15:18:52Z" finished-at="2019-10-24T15:19:07Z">
+    <groups>
+    </groups>
+    <test name="Priority Test" duration-ms="14482" started-at="2019-10-24T15:18:52Z" finished-at="2019-10-24T15:19:07Z">
+      <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ProjectPriorityTest_003@464bee09]" name="setup" is-config="true" duration-ms="5317" started-at="2019-10-24T10:18:53Z" finished-at="2019-10-24T10:18:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateProjectRank()[pri:0, instance:com.projects.activities.testCases.TC_ProjectPriorityTest_003@464bee09]" name="validateProjectRank" duration-ms="8290" started-at="2019-10-24T10:18:58Z" finished-at="2019-10-24T10:19:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProjectRank -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ProjectPriorityTest_003@464bee09]" name="teardown" is-config="true" duration-ms="712" started-at="2019-10-24T10:19:06Z" finished-at="2019-10-24T10:19:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.projects.activities.testCases.TC_ProjectPriorityTest_003 -->
+    </test> <!-- Priority Test -->
+  </suite> <!-- DashManagement -->
+</testng-results>

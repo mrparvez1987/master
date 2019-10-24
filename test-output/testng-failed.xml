@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003">
+        <methods>
+          <include name="validateProectExpireDate"/>
+          <include name="validateProjectRank"/>
+          <include name="validateProjectRecordDel"/>
+          <include name="setup"/>
+          <include name="validateProjectExpireDatePast"/>
+          <include name="teardown"/>
+          <include name="createProgramPriority"/>
+          <include name="validateProjectId"/>
+          <include name="validateProjectRankMix"/>
+          <include name="validateProjectDel"/>
+          <include name="validateProjectEffectiveDate"/>
+        </methods>
+      </class> <!-- com.projects.activities.testCases.TC_ProjectPriorityTest_003 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

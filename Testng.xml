@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="DashManagement">
+
+	<listeners>
+		<listener class-name="com.dashManagement.utilities.Reporting" />
+	</listeners>
+
+
+
+	<test name="Priority Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+		
+			   <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" >
+					<methods> <include name="validateProjectRank"/> </methods> </class>
+					
+		  <!-- 	  <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" /> -->
+		  <!--    <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" /> -->
+		  <!--   <class name="com.projects.activities.testCases.TC_ClientPriorityTest_004" /> -->
+		  	<!-- <class name="com.projects.activities.testCases.TC_ProgramListTest_005" /> -->
+		   <!--   <class name="com.projects.activities.testCases.TC_ProjectListTest_006" /> -->
+		    <!--  	<class name="com.projects.activities.testCases.TC_ClientListTest_007" />-->
+		  		
+			
+		</classes>
+
+	</test>
+
+</suite>

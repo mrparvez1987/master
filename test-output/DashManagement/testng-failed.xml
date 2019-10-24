@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DashManagement]">
+  <listeners>
+    <listener class-name="com.dashManagement.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="Priority Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003">
+        <methods>
+          <include name="validateProjectRank"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.projects.activities.testCases.TC_ProjectPriorityTest_003 -->
+    </classes>
+  </test> <!-- Priority Test(failed) -->
+</suite> <!-- Failed suite [DashManagement] -->
