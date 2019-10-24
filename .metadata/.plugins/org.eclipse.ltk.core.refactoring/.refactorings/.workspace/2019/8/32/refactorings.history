@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Dash2sellManagement&apos; to &apos;Dash2SellManagement&apos;" description="Rename resource &apos;Dash2sellManagement&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Dash2sellManagement" name="Dash2SellManagement" stamp="1565025418453" updateReferences="true"/>
+</session>
