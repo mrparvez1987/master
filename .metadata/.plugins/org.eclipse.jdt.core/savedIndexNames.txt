@@ -1,1 +1,0 @@
-INDEX VERSION 1.130+C:\Users\mohammad.parvez\eclipse-workspace\test-automation\DashManagement\.metadata\.plugins\org.eclipse.jdt.core
