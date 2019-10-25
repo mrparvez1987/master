@@ -494,12 +494,6 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 			Assert.assertTrue(false);
 		}
 	}
-	
-	public void test() {
-		System.out.println("This test");
-		System.out.println("This test1");
-		System.out.println("This test5");;
-	}
 
 
 }

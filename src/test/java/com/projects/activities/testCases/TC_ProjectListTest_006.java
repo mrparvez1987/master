@@ -1,6 +1,7 @@
 package com.projects.activities.testCases;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Iterator;
@@ -537,7 +538,99 @@ public class TC_ProjectListTest_006 extends BaseClass {
 	
 	
 	
+	@Test
+	public void validateExportToDownload() throws InterruptedException, IOException
+	{
+		AccessLogin login=new AccessLogin();
+		login.loginAccess();
 		
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		
+		ProjectPriorityPage project=new ProjectPriorityPage(driver);
+		project.clickProjectsIcon();
+		project.moveToActivities();
+		project.clickProjPriority();
+		
+		ProjectListPage projectList=new ProjectListPage(driver);
+		projectList.clickExportTableLink();
+		projectList.selectFileType("Excel 5");
+		logger.info("File Type Selected");
+		projectList.clickExportTableButton();
+		projectList.clickDownloadTableLink();
+		logger.info("File Downloded");
+		Thread.sleep(3000);
+		
+		Assert.assertTrue(isFileDownloaded_Ext("C:\\Users\\mohammad.parvez\\Downloads\\", ".xls"));
+		
+			
+			
+		
+		
+		}
+	
+	
+	private boolean isFileDownloaded_Ext(String dirPath, String ext){
+		boolean flag=false;
+	    File dir = new File(dirPath);
+	    File[] files = dir.listFiles();
+	    if (files == null || files.length == 0) {
+	    	  flag = false;
+	       
+	    }
+	    
+	    for (int i = 1; i < files.length; i++) {
+	    	if(files[i].getName().contains(ext)) {
+	    		flag=true;
+	    		 logger.info("Test Pass");
+	    	}
+	    	
+	    	
+	    }
+	   
+	    return flag;
+	    
+	    
+	}
+
+	
+	
+	@Test
+	public void validateExportToFile() throws InterruptedException, IOException
+	{
+		AccessLogin login=new AccessLogin();
+		login.loginAccess();
+		
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		
+		ProjectPriorityPage project=new ProjectPriorityPage(driver);
+		project.clickProjectsIcon();
+		project.moveToActivities();
+		project.clickProjPriority();
+		
+		ProjectListPage projectList=new ProjectListPage(driver);
+		projectList.clickExportTableLink();
+		projectList.selectFileType("Excel 5");
+		logger.info("File Type Selected");
+		projectList.clickExportTableButton();
+		
+		boolean res=driver.getPageSource().contains("The table has been exported to file.");
+		
+		
+		if(res==true)
+		{
+			Assert.assertTrue(true);
+			logger.info("test case passed....");
+			
+		}
+		else
+		{
+			logger.info("test case failed....");
+			captureScreen(driver,"validateExportToFile");
+			Assert.assertTrue(false);
+		}
+			
+				
+	}
 	
 
 }

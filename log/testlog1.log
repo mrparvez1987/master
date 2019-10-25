@@ -10094,3 +10094,665 @@
 2019-10-24 10:19:04,661 [main] INFO Retail - Save button clicked
 2019-10-24 10:19:04,662 [main] INFO Retail - validation started....
 2019-10-24 10:19:06,676 [main] INFO Retail - test case passed....
+2019-10-25 10:20:57,168 [main] INFO Retail - User name is provided
+2019-10-25 10:20:57,234 [main] INFO Retail - Passsword is provided
+2019-10-25 10:21:00,338 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:21:00,392 [main] INFO Retail - Move to Activities
+2019-10-25 10:21:00,914 [main] INFO Retail - Project Priority Clicked
+2019-10-25 10:21:01,711 [main] INFO Retail - New Project Priority cliecked
+2019-10-25 10:21:01,762 [main] INFO Retail - Project ID Send
+2019-10-25 10:21:02,293 [main] INFO Retail - Project Description Clicked
+2019-10-25 10:21:02,293 [main] INFO Retail - Rank not Selected
+2019-10-25 10:21:02,370 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:21:02,464 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:21:02,522 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:21:03,087 [main] INFO Retail - Save button clicked
+2019-10-25 10:21:03,087 [main] INFO Retail - validation started....
+2019-10-25 10:21:05,099 [main] INFO Retail - test case passed....
+2019-10-25 10:22:03,738 [main] INFO Retail - User name is provided
+2019-10-25 10:22:03,799 [main] INFO Retail - Passsword is provided
+2019-10-25 10:22:06,597 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:22:06,647 [main] INFO Retail - Move to Activities
+2019-10-25 10:22:07,067 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:22:07,695 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:22:07,752 [main] INFO Retail - Program ID Send
+2019-10-25 10:22:08,274 [main] INFO Retail - Program Description Clicked
+2019-10-25 10:22:08,309 [main] INFO Retail - Rank Send
+2019-10-25 10:22:08,384 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:22:08,470 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:22:08,555 [main] INFO Retail - Followups 'Yes' Selected
+2019-10-25 10:22:09,223 [main] INFO Retail - Save button clicked
+2019-10-25 10:22:09,224 [main] INFO Retail - validation started....
+2019-10-25 10:22:11,232 [main] INFO Retail - test case passed....
+2019-10-25 10:22:15,802 [main] INFO Retail - User name is provided
+2019-10-25 10:22:15,867 [main] INFO Retail - Passsword is provided
+2019-10-25 10:22:19,044 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:22:19,098 [main] INFO Retail - Move to Activities
+2019-10-25 10:22:19,617 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:22:20,132 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:22:20,197 [main] INFO Retail - Delete button clicked without selecting any program
+2019-10-25 10:22:20,203 [main] INFO Retail - validation started....
+2019-10-25 10:22:22,217 [main] INFO Retail - test case passed....
+2019-10-25 10:22:26,711 [main] INFO Retail - User name is provided
+2019-10-25 10:22:26,775 [main] INFO Retail - Passsword is provided
+2019-10-25 10:22:28,395 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:22:28,444 [main] INFO Retail - Move to Activities
+2019-10-25 10:22:28,863 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:22:31,006 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:22:31,069 [main] INFO Retail - Program ID Send
+2019-10-25 10:22:31,577 [main] INFO Retail - Program Description Clicked
+2019-10-25 10:22:31,617 [main] INFO Retail - Rank Send
+2019-10-25 10:22:31,617 [main] INFO Retail - Effective Date not Selected
+2019-10-25 10:22:31,714 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:22:31,768 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:22:32,223 [main] INFO Retail - Save button clicked
+2019-10-25 10:22:32,223 [main] INFO Retail - validation started....
+2019-10-25 10:22:34,249 [main] INFO Retail - test case passed....
+2019-10-25 10:22:38,771 [main] INFO Retail - User name is provided
+2019-10-25 10:22:38,826 [main] INFO Retail - Passsword is provided
+2019-10-25 10:22:41,583 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:22:41,642 [main] INFO Retail - Move to Activities
+2019-10-25 10:22:42,063 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:22:42,579 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:22:42,628 [main] INFO Retail - Program ID Send
+2019-10-25 10:22:43,147 [main] INFO Retail - Program Description Clicked
+2019-10-25 10:22:43,184 [main] INFO Retail - Rank Send
+2019-10-25 10:22:43,257 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:22:43,257 [main] INFO Retail - Expire Date not Selected
+2019-10-25 10:22:43,310 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:22:43,746 [main] INFO Retail - Save button clicked
+2019-10-25 10:22:43,746 [main] INFO Retail - validation started....
+2019-10-25 10:22:45,754 [main] INFO Retail - test case passed....
+2019-10-25 10:22:50,401 [main] INFO Retail - User name is provided
+2019-10-25 10:22:50,458 [main] INFO Retail - Passsword is provided
+2019-10-25 10:22:52,041 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:22:52,115 [main] INFO Retail - Move to Activities
+2019-10-25 10:22:52,525 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:22:53,067 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:22:53,120 [main] INFO Retail - Program ID Send
+2019-10-25 10:22:53,634 [main] INFO Retail - Program Description Clicked
+2019-10-25 10:22:53,667 [main] INFO Retail - Rank Send
+2019-10-25 10:22:53,742 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:22:53,822 [main] INFO Retail - Expire Date Selected As Past
+2019-10-25 10:22:53,870 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:22:54,290 [main] INFO Retail - Save button clicked
+2019-10-25 10:22:54,290 [main] INFO Retail - validation started....
+2019-10-25 10:22:56,299 [main] INFO Retail - test case passed....
+2019-10-25 10:23:00,742 [main] INFO Retail - User name is provided
+2019-10-25 10:23:00,807 [main] INFO Retail - Passsword is provided
+2019-10-25 10:23:02,443 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:23:02,492 [main] INFO Retail - Move to Activities
+2019-10-25 10:23:02,900 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:23:04,541 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:23:04,541 [main] INFO Retail - Program ID did not Send
+2019-10-25 10:23:04,587 [main] INFO Retail - Rank Send
+2019-10-25 10:23:04,677 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:23:04,759 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:23:04,828 [main] INFO Retail - Followups 'Yes' Selected
+2019-10-25 10:23:05,324 [main] INFO Retail - Save button clicked
+2019-10-25 10:23:05,325 [main] INFO Retail - validation started....
+2019-10-25 10:23:07,339 [main] INFO Retail - test case passed....
+2019-10-25 10:23:11,876 [main] INFO Retail - User name is provided
+2019-10-25 10:23:11,937 [main] INFO Retail - Passsword is provided
+2019-10-25 10:23:13,565 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:23:13,622 [main] INFO Retail - Move to Activities
+2019-10-25 10:23:14,023 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:23:16,174 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:23:16,222 [main] INFO Retail - Program ID Send
+2019-10-25 10:23:16,777 [main] INFO Retail - Program Description Clicked
+2019-10-25 10:23:16,777 [main] INFO Retail - Rank not Selected
+2019-10-25 10:23:16,857 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:23:16,935 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:23:16,980 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:23:17,424 [main] INFO Retail - Save button clicked
+2019-10-25 10:23:17,424 [main] INFO Retail - validation started....
+2019-10-25 10:23:19,435 [main] INFO Retail - test case passed....
+2019-10-25 10:23:23,964 [main] INFO Retail - User name is provided
+2019-10-25 10:23:24,024 [main] INFO Retail - Passsword is provided
+2019-10-25 10:23:27,396 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:23:27,459 [main] INFO Retail - Move to Activities
+2019-10-25 10:23:27,929 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:23:28,542 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:23:28,596 [main] INFO Retail - Program ID Send
+2019-10-25 10:23:29,102 [main] INFO Retail - Program Description Clicked
+2019-10-25 10:23:29,139 [main] INFO Retail - Rank with number AND Letter Selected
+2019-10-25 10:23:29,212 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:23:29,295 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:23:29,352 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:23:29,792 [main] INFO Retail - Save button clicked
+2019-10-25 10:23:29,792 [main] INFO Retail - validation started....
+2019-10-25 10:23:31,813 [main] INFO Retail - test case passed....
+2019-10-25 10:23:36,304 [main] INFO Retail - User name is provided
+2019-10-25 10:23:36,368 [main] INFO Retail - Passsword is provided
+2019-10-25 10:23:37,955 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:23:38,005 [main] INFO Retail - Move to Activities
+2019-10-25 10:23:38,442 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:23:40,450 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:23:40,503 [main] INFO Retail - Program ID Send
+2019-10-25 10:23:41,073 [main] INFO Retail - Program Description Clicked
+2019-10-25 10:23:41,111 [main] INFO Retail - Rank Send
+2019-10-25 10:23:41,193 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:23:41,269 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:23:41,313 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:23:42,101 [main] INFO Retail - Save button clicked
+2019-10-25 10:23:45,160 [main] INFO Retail - Program ID Send
+2019-10-25 10:23:45,543 [main] INFO Retail - Apply button clicked
+2019-10-25 10:23:45,947 [main] INFO Retail - deletable ID selected
+2019-10-25 10:23:46,008 [main] INFO Retail - Id deleted
+2019-10-25 10:23:46,013 [main] INFO Retail - validation started....
+2019-10-25 10:23:48,030 [main] INFO Retail - test case passed....
+2019-10-25 10:44:35,478 [main] INFO Retail - User name is provided
+2019-10-25 10:44:35,540 [main] INFO Retail - Passsword is provided
+2019-10-25 10:44:37,158 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:44:37,212 [main] INFO Retail - Move to Activities
+2019-10-25 10:44:37,754 [main] INFO Retail - Project Priority Clicked
+2019-10-25 10:44:40,244 [main] INFO Retail - New Project Priority cliecked
+2019-10-25 10:44:40,293 [main] INFO Retail - Project ID Send
+2019-10-25 10:44:40,791 [main] INFO Retail - Project Description Clicked
+2019-10-25 10:44:40,831 [main] INFO Retail - Rank Send
+2019-10-25 10:44:40,917 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:44:41,005 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:44:41,087 [main] INFO Retail - Followups 'Yes' Selected
+2019-10-25 10:44:41,991 [main] INFO Retail - Save button clicked
+2019-10-25 10:44:41,991 [main] INFO Retail - validation started....
+2019-10-25 10:44:44,001 [main] INFO Retail - test case passed....
+2019-10-25 10:44:49,833 [main] INFO Retail - User name is provided
+2019-10-25 10:44:49,904 [main] INFO Retail - Passsword is provided
+2019-10-25 10:44:51,847 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:44:51,899 [main] INFO Retail - Move to Activities
+2019-10-25 10:44:52,397 [main] INFO Retail - Project Priority Clicked
+2019-10-25 10:44:53,049 [main] INFO Retail - New Project Priority cliecked
+2019-10-25 10:44:53,103 [main] INFO Retail - Project ID Send
+2019-10-25 10:44:53,611 [main] INFO Retail - Project Description Clicked
+2019-10-25 10:44:53,644 [main] INFO Retail - Rank Send
+2019-10-25 10:44:53,724 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:44:53,724 [main] INFO Retail - Expire Date not Selected
+2019-10-25 10:44:53,779 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:44:54,223 [main] INFO Retail - Save button clicked
+2019-10-25 10:44:54,223 [main] INFO Retail - validation started....
+2019-10-25 10:44:56,241 [main] INFO Retail - test case passed....
+2019-10-25 10:45:00,740 [main] INFO Retail - User name is provided
+2019-10-25 10:45:00,800 [main] INFO Retail - Passsword is provided
+2019-10-25 10:45:02,448 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:45:02,508 [main] INFO Retail - Move to Activities
+2019-10-25 10:45:03,095 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:45:05,765 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:45:05,826 [main] INFO Retail - Delete button clicked without selecting any project
+2019-10-25 10:45:05,832 [main] INFO Retail - validation started....
+2019-10-25 10:45:07,859 [main] INFO Retail - test case passed....
+2019-10-25 10:45:12,403 [main] INFO Retail - User name is provided
+2019-10-25 10:45:12,460 [main] INFO Retail - Passsword is provided
+2019-10-25 10:45:15,441 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:45:15,497 [main] INFO Retail - Move to Activities
+2019-10-25 10:45:16,061 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:45:17,610 [main] INFO Retail - New Program Priority cliecked
+2019-10-25 10:45:17,662 [main] INFO Retail - Project ID Send
+2019-10-25 10:45:18,165 [main] INFO Retail - Project Description Clicked
+2019-10-25 10:45:18,199 [main] INFO Retail - Rank Send
+2019-10-25 10:45:18,199 [main] INFO Retail - Effective Date not Selected
+2019-10-25 10:45:18,309 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:45:18,358 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:45:18,978 [main] INFO Retail - Save button clicked
+2019-10-25 10:45:18,978 [main] INFO Retail - validation started....
+2019-10-25 10:45:21,007 [main] INFO Retail - test case passed....
+2019-10-25 10:45:25,595 [main] INFO Retail - User name is provided
+2019-10-25 10:45:25,667 [main] INFO Retail - Passsword is provided
+2019-10-25 10:45:27,243 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:45:27,312 [main] INFO Retail - Move to Activities
+2019-10-25 10:45:28,831 [main] INFO Retail - Program Priority Clicked
+2019-10-25 10:45:29,376 [main] INFO Retail - New Project Priority cliecked
+2019-10-25 10:45:29,431 [main] INFO Retail - Project ID Send
+2019-10-25 10:45:29,926 [main] INFO Retail - Project Description Clicked
+2019-10-25 10:45:29,969 [main] INFO Retail - Rank Send
+2019-10-25 10:45:30,085 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:45:30,167 [main] INFO Retail - Expire Date Selected As Past
+2019-10-25 10:45:30,215 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:45:30,690 [main] INFO Retail - Save button clicked
+2019-10-25 10:45:30,690 [main] INFO Retail - validation started....
+2019-10-25 10:45:32,714 [main] INFO Retail - test case passed....
+2019-10-25 10:45:37,317 [main] INFO Retail - User name is provided
+2019-10-25 10:45:37,374 [main] INFO Retail - Passsword is provided
+2019-10-25 10:45:41,415 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:45:41,461 [main] INFO Retail - Move to Activities
+2019-10-25 10:45:41,967 [main] INFO Retail - Project Priority Clicked
+2019-10-25 10:45:45,536 [main] INFO Retail - New Project Priority cliecked
+2019-10-25 10:45:45,536 [main] INFO Retail - Project ID did not Send
+2019-10-25 10:45:45,579 [main] INFO Retail - Rank Send
+2019-10-25 10:45:45,670 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:45:45,754 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:45:45,820 [main] INFO Retail - Followups 'Yes' Selected
+2019-10-25 10:45:47,320 [main] INFO Retail - Save button clicked
+2019-10-25 10:45:47,320 [main] INFO Retail - validation started....
+2019-10-25 10:45:49,329 [main] INFO Retail - test case passed....
+2019-10-25 10:45:54,292 [main] INFO Retail - User name is provided
+2019-10-25 10:45:54,345 [main] INFO Retail - Passsword is provided
+2019-10-25 10:45:55,906 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:45:55,974 [main] INFO Retail - Move to Activities
+2019-10-25 10:45:56,518 [main] INFO Retail - Project Priority Clicked
+2019-10-25 10:45:58,075 [main] INFO Retail - New Project Priority cliecked
+2019-10-25 10:45:58,124 [main] INFO Retail - Project ID Send
+2019-10-25 10:45:58,623 [main] INFO Retail - Project Description Clicked
+2019-10-25 10:45:58,623 [main] INFO Retail - Rank not Selected
+2019-10-25 10:45:58,706 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:45:58,796 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:45:58,842 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:45:59,409 [main] INFO Retail - Save button clicked
+2019-10-25 10:45:59,409 [main] INFO Retail - validation started....
+2019-10-25 10:46:01,418 [main] INFO Retail - test case passed....
+2019-10-25 10:46:05,955 [main] INFO Retail - User name is provided
+2019-10-25 10:46:06,016 [main] INFO Retail - Passsword is provided
+2019-10-25 10:46:10,755 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:46:10,802 [main] INFO Retail - Move to Activities
+2019-10-25 10:46:11,394 [main] INFO Retail - Project Priority Clicked
+2019-10-25 10:46:12,251 [main] INFO Retail - New Project Priority cliecked
+2019-10-25 10:46:12,299 [main] INFO Retail - Project ID Send
+2019-10-25 10:46:12,823 [main] INFO Retail - Project Description Clicked
+2019-10-25 10:46:12,861 [main] INFO Retail - Rank with number AND Letter Selected
+2019-10-25 10:46:12,945 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:46:13,022 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:46:13,071 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:46:13,527 [main] INFO Retail - Save button clicked
+2019-10-25 10:46:13,527 [main] INFO Retail - validation started....
+2019-10-25 10:46:15,540 [main] INFO Retail - test case passed....
+2019-10-25 10:46:20,856 [main] INFO Retail - User name is provided
+2019-10-25 10:46:20,912 [main] INFO Retail - Passsword is provided
+2019-10-25 10:46:25,034 [main] INFO Retail - Projects Icon clicked
+2019-10-25 10:46:25,093 [main] INFO Retail - Move to Activities
+2019-10-25 10:46:25,596 [main] INFO Retail - Project Priority Clicked
+2019-10-25 10:46:26,176 [main] INFO Retail - New Project Priority cliecked
+2019-10-25 10:46:26,227 [main] INFO Retail - Project ID Send
+2019-10-25 10:46:26,765 [main] INFO Retail - Project Description Clicked
+2019-10-25 10:46:26,807 [main] INFO Retail - Rank Send
+2019-10-25 10:46:26,882 [main] INFO Retail - Effective Date Selected
+2019-10-25 10:46:26,962 [main] INFO Retail - Expire Date Selected
+2019-10-25 10:46:27,009 [main] INFO Retail - Followups 'No' Selected
+2019-10-25 10:46:27,903 [main] INFO Retail - Save button clicked
+2019-10-25 10:46:30,962 [main] INFO Retail - Program ID Send
+2019-10-25 10:46:31,410 [main] INFO Retail - Apply button clicked
+2019-10-25 10:46:31,841 [main] INFO Retail - deletable ID selected
+2019-10-25 10:46:31,898 [main] INFO Retail - Id deleted
+2019-10-25 10:46:31,902 [main] INFO Retail - validation started....
+2019-10-25 10:46:33,920 [main] INFO Retail - test case passed....
+2019-10-25 11:47:09,987 [main] INFO Retail - User name is provided
+2019-10-25 11:47:10,052 [main] INFO Retail - Passsword is provided
+2019-10-25 11:47:12,796 [main] INFO Retail - File Type Selected
+2019-10-25 11:47:14,462 [main] INFO Retail - File Downloded
+2019-10-25 11:47:17,463 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,463 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,464 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,464 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,464 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,464 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,464 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,464 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,465 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,465 [main] INFO Retail - Test Pass
+2019-10-25 11:47:17,465 [main] INFO Retail - Test Pass
+2019-10-25 11:47:22,041 [main] INFO Retail - User name is provided
+2019-10-25 11:47:22,102 [main] INFO Retail - Passsword is provided
+2019-10-25 11:47:24,580 [main] INFO Retail - File Type Selected
+2019-10-25 11:47:25,310 [main] INFO Retail - test case passed....
+2019-10-25 11:47:29,816 [main] INFO Retail - User name is provided
+2019-10-25 11:47:29,887 [main] INFO Retail - Passsword is provided
+2019-10-25 11:47:31,989 [main] INFO Retail - program priority clicked
+2019-10-25 11:47:33,592 [main] INFO Retail - clear clicked
+2019-10-25 11:47:33,677 [main] INFO Retail - Creation calender button clicked
+2019-10-25 11:47:33,999 [main] INFO Retail - Creation date selected
+2019-10-25 11:47:34,324 [main] INFO Retail - apply clicked
+2019-10-25 11:47:37,349 [main] INFO Retail - Creation Dates are within the range
+2019-10-25 11:47:37,361 [main] INFO Retail - Creation Dates are within the range
+2019-10-25 11:47:37,361 [main] INFO Retail - Test Case Passed
+2019-10-25 11:47:41,875 [main] INFO Retail - User name is provided
+2019-10-25 11:47:41,939 [main] INFO Retail - Passsword is provided
+2019-10-25 11:47:44,518 [main] INFO Retail - apply clicked
+2019-10-25 11:47:44,532 [main] INFO Retail - test case passed....
+2019-10-25 11:47:53,797 [main] INFO Retail - test case passed....
+2019-10-25 11:47:58,330 [main] INFO Retail - User name is provided
+2019-10-25 11:47:58,395 [main] INFO Retail - Passsword is provided
+2019-10-25 11:48:02,451 [main] INFO Retail - Prgram saved
+2019-10-25 11:48:02,873 [main] INFO Retail - apply clicked
+2019-10-25 11:48:02,887 [main] INFO Retail - test case passed....
+2019-10-25 11:48:07,402 [main] INFO Retail - User name is provided
+2019-10-25 11:48:07,455 [main] INFO Retail - Passsword is provided
+2019-10-25 11:48:09,571 [main] INFO Retail - program priority clicked
+2019-10-25 11:48:09,969 [main] INFO Retail - clear clicked
+2019-10-25 11:48:10,034 [main] INFO Retail - calender button clicked
+2019-10-25 11:48:10,350 [main] INFO Retail - Effective date selected
+2019-10-25 11:48:10,741 [main] INFO Retail - apply clicked
+2019-10-25 11:48:13,768 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,779 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,790 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,801 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,813 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,825 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,836 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,847 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,858 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,869 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,880 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,891 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,902 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,913 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,925 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,936 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,947 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,957 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,968 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,979 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:13,990 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:14,000 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:14,011 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:14,023 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:14,034 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 11:48:14,034 [main] INFO Retail - Test Case Passed
+2019-10-25 11:48:18,529 [main] INFO Retail - User name is provided
+2019-10-25 11:48:18,596 [main] INFO Retail - Passsword is provided
+2019-10-25 11:48:20,653 [main] INFO Retail - program priority clicked
+2019-10-25 11:48:21,059 [main] INFO Retail - clear clicked
+2019-10-25 11:48:21,132 [main] INFO Retail - calender button clicked
+2019-10-25 11:48:21,399 [main] INFO Retail - Expire date selected
+2019-10-25 11:48:21,769 [main] INFO Retail - apply clicked
+2019-10-25 11:48:23,793 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,804 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,815 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,826 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,837 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,848 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,860 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,871 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,882 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,893 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,905 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,916 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,927 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,937 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,949 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,960 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,972 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,985 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:23,997 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:24,013 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:24,024 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:24,035 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:24,046 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:24,057 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:24,074 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 11:48:24,074 [main] INFO Retail - Test Case Passed
+2019-10-25 11:48:28,599 [main] INFO Retail - User name is provided
+2019-10-25 11:48:28,653 [main] INFO Retail - Passsword is provided
+2019-10-25 11:48:31,556 [main] INFO Retail - Folowups Selected
+2019-10-25 11:48:33,579 [main] INFO Retail - Test Case Passed
+2019-10-25 11:48:38,086 [main] INFO Retail - User name is provided
+2019-10-25 11:48:38,155 [main] INFO Retail - Passsword is provided
+2019-10-25 11:48:41,902 [main] INFO Retail - id send
+2019-10-25 11:48:42,268 [main] INFO Retail - Click apply
+2019-10-25 11:48:42,757 [main] INFO Retail - all id's are  > 1340
+2019-10-25 11:48:42,757 [main] INFO Retail - ID List : [1345, 1354, 1369, 1465, 1465, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+2019-10-25 11:48:42,757 [main] INFO Retail - Test Case Passed
+2019-10-25 11:48:47,289 [main] INFO Retail - User name is provided
+2019-10-25 11:48:47,353 [main] INFO Retail - Passsword is provided
+2019-10-25 11:48:49,882 [main] INFO Retail - rank send
+2019-10-25 11:48:50,249 [main] INFO Retail - Click apply
+2019-10-25 11:48:50,722 [main] INFO Retail - all rank's are  < 3
+2019-10-25 11:48:50,722 [main] INFO Retail - Rank List : [1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2]
+2019-10-25 11:48:50,722 [main] INFO Retail - Test Case Passed
+2019-10-25 14:03:16,070 [main] INFO Retail - User name is provided
+2019-10-25 14:03:16,131 [main] INFO Retail - Passsword is provided
+2019-10-25 14:03:18,685 [main] INFO Retail - File Type Selected
+2019-10-25 14:03:19,706 [main] INFO Retail - File Downloded
+2019-10-25 14:03:22,709 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,710 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,710 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,711 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,712 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,712 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,713 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,713 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,713 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,713 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,713 [main] INFO Retail - Test Pass
+2019-10-25 14:03:22,713 [main] INFO Retail - Test Pass
+2019-10-25 14:03:27,236 [main] INFO Retail - User name is provided
+2019-10-25 14:03:27,294 [main] INFO Retail - Passsword is provided
+2019-10-25 14:03:31,411 [main] INFO Retail - File Type Selected
+2019-10-25 14:03:32,382 [main] INFO Retail - test case passed....
+2019-10-25 14:03:36,936 [main] INFO Retail - User name is provided
+2019-10-25 14:03:36,998 [main] INFO Retail - Passsword is provided
+2019-10-25 14:03:39,107 [main] INFO Retail - project priority clicked
+2019-10-25 14:03:39,609 [main] INFO Retail - clear clicked
+2019-10-25 14:03:39,686 [main] INFO Retail - Creation calender button clicked
+2019-10-25 14:03:40,005 [main] INFO Retail - Creation date selected
+2019-10-25 14:03:40,367 [main] INFO Retail - apply clicked
+2019-10-25 14:03:43,398 [main] INFO Retail - Creation Dates are within the range
+2019-10-25 14:03:43,398 [main] INFO Retail - Test Case Passed
+2019-10-25 14:03:47,856 [main] INFO Retail - User name is provided
+2019-10-25 14:03:47,919 [main] INFO Retail - Passsword is provided
+2019-10-25 14:03:50,409 [main] INFO Retail - apply clicked
+2019-10-25 14:03:50,419 [main] INFO Retail - test case passed....
+2019-10-25 14:03:59,825 [main] INFO Retail - test case passed....
+2019-10-25 14:04:05,756 [main] INFO Retail - User name is provided
+2019-10-25 14:04:05,812 [main] INFO Retail - Passsword is provided
+2019-10-25 14:04:10,055 [main] INFO Retail - Project saved
+2019-10-25 14:04:10,516 [main] INFO Retail - apply clicked
+2019-10-25 14:04:10,532 [main] INFO Retail - test case passed....
+2019-10-25 14:04:15,012 [main] INFO Retail - User name is provided
+2019-10-25 14:04:15,073 [main] INFO Retail - Passsword is provided
+2019-10-25 14:04:17,116 [main] INFO Retail - project priority clicked
+2019-10-25 14:04:17,615 [main] INFO Retail - clear clicked
+2019-10-25 14:04:17,684 [main] INFO Retail - calender button clicked
+2019-10-25 14:04:18,005 [main] INFO Retail - Effective date selected
+2019-10-25 14:04:18,379 [main] INFO Retail - apply clicked
+2019-10-25 14:04:21,400 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:04:21,400 [main] INFO Retail - Test Case Passed
+2019-10-25 14:04:25,869 [main] INFO Retail - User name is provided
+2019-10-25 14:04:25,938 [main] INFO Retail - Passsword is provided
+2019-10-25 14:04:29,428 [main] INFO Retail - project priority clicked
+2019-10-25 14:04:29,911 [main] INFO Retail - clear clicked
+2019-10-25 14:04:29,984 [main] INFO Retail - calender button clicked
+2019-10-25 14:04:30,239 [main] INFO Retail - Expire date selected
+2019-10-25 14:04:30,718 [main] INFO Retail - apply clicked
+2019-10-25 14:04:32,755 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,766 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,779 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,789 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,801 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,814 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,826 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,838 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,848 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,859 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,869 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,880 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,890 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,902 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,913 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,923 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,934 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,944 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,955 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,966 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,977 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,987 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:04:32,987 [main] INFO Retail - Test Case Passed
+2019-10-25 14:04:37,531 [main] INFO Retail - User name is provided
+2019-10-25 14:04:37,587 [main] INFO Retail - Passsword is provided
+2019-10-25 14:04:40,700 [main] INFO Retail - Folowups Selected
+2019-10-25 14:04:42,732 [main] INFO Retail - Test Case Passed
+2019-10-25 14:04:47,394 [main] INFO Retail - User name is provided
+2019-10-25 14:04:47,452 [main] INFO Retail - Passsword is provided
+2019-10-25 14:04:50,011 [main] INFO Retail - id send
+2019-10-25 14:04:50,477 [main] INFO Retail - Click apply
+2019-10-25 14:04:50,935 [main] INFO Retail - all id's are  > 1340
+2019-10-25 14:04:50,935 [main] INFO Retail - ID List : [1453, 1500, 1500, 1500, 1500, 1500, 1500, 1830, 2465, 2500, 3101, 3103, 3104, 3753, 3855, 3872, 3880, 3914, 3934, 3938, 3955, 3981, 4035, 4077, 4092]
+2019-10-25 14:04:50,936 [main] INFO Retail - Test Case Passed
+2019-10-25 14:04:55,390 [main] INFO Retail - User name is provided
+2019-10-25 14:04:55,455 [main] INFO Retail - Passsword is provided
+2019-10-25 14:04:59,330 [main] INFO Retail - rank send
+2019-10-25 14:04:59,825 [main] INFO Retail - Click apply
+2019-10-25 14:05:00,271 [main] INFO Retail - all rank's are  < 3
+2019-10-25 14:05:00,271 [main] INFO Retail - Rank List : [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+2019-10-25 14:05:00,271 [main] INFO Retail - Test Case Passed
+2019-10-25 14:52:48,027 [main] INFO Retail - User name is provided
+2019-10-25 14:52:48,082 [main] INFO Retail - Passsword is provided
+2019-10-25 14:52:51,043 [main] INFO Retail - Client priority clicked
+2019-10-25 14:52:51,466 [main] INFO Retail - clear clicked
+2019-10-25 14:52:51,538 [main] INFO Retail - Creation calender button clicked
+2019-10-25 14:52:51,889 [main] INFO Retail - Creation date selected
+2019-10-25 14:52:52,235 [main] INFO Retail - apply clicked
+2019-10-25 14:52:55,272 [main] INFO Retail - Creation Dates are within the range
+2019-10-25 14:52:55,272 [main] INFO Retail - Test Case Passed
+2019-10-25 14:52:59,794 [main] INFO Retail - User name is provided
+2019-10-25 14:52:59,853 [main] INFO Retail - Passsword is provided
+2019-10-25 14:53:03,716 [main] INFO Retail - apply clicked
+2019-10-25 14:53:03,732 [main] INFO Retail - test case passed....
+2019-10-25 14:53:16,642 [main] INFO Retail - test case passed....
+2019-10-25 14:53:22,179 [main] INFO Retail - User name is provided
+2019-10-25 14:53:22,238 [main] INFO Retail - Passsword is provided
+2019-10-25 14:53:30,393 [main] INFO Retail - Client saved
+2019-10-25 14:53:30,877 [main] INFO Retail - apply clicked
+2019-10-25 14:53:30,892 [main] INFO Retail - test case passed....
+2019-10-25 14:53:35,351 [main] INFO Retail - User name is provided
+2019-10-25 14:53:35,410 [main] INFO Retail - Passsword is provided
+2019-10-25 14:53:39,539 [main] INFO Retail - Client priority clicked
+2019-10-25 14:53:39,949 [main] INFO Retail - clear clicked
+2019-10-25 14:53:40,025 [main] INFO Retail - calender button clicked
+2019-10-25 14:53:40,274 [main] INFO Retail - Effective date selected
+2019-10-25 14:53:41,846 [main] INFO Retail - apply clicked
+2019-10-25 14:53:44,870 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,870 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,881 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,882 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,893 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,893 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,904 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,904 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,915 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,915 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,928 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,928 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,940 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,940 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,955 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,955 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,966 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,966 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,977 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,978 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,988 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,988 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:44,999 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:44,999 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,010 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,011 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,022 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,022 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,033 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,033 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,043 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,043 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,055 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,055 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,066 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,066 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,077 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,078 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,088 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,088 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,099 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,099 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,109 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,110 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,120 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,120 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,131 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,131 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:45,141 [main] INFO Retail - Effective Dates are within the range
+2019-10-25 14:53:45,142 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:49,618 [main] INFO Retail - User name is provided
+2019-10-25 14:53:49,681 [main] INFO Retail - Passsword is provided
+2019-10-25 14:53:53,402 [main] INFO Retail - Client priority clicked
+2019-10-25 14:53:55,029 [main] INFO Retail - clear clicked
+2019-10-25 14:53:55,109 [main] INFO Retail - calender button clicked
+2019-10-25 14:53:55,357 [main] INFO Retail - Expire date selected
+2019-10-25 14:53:55,813 [main] INFO Retail - apply clicked
+2019-10-25 14:53:57,845 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,845 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,856 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,856 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,867 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,867 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,878 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,878 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,889 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,890 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,900 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,900 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,912 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,912 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,923 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,923 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,934 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,934 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,946 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,946 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,958 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,958 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,969 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,969 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,980 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,980 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:57,991 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:57,991 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:58,002 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:58,002 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:58,013 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:58,013 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:58,024 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:58,024 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:58,035 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:58,035 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:58,045 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:58,046 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:58,056 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:58,056 [main] INFO Retail - Test Case Passed
+2019-10-25 14:53:58,066 [main] INFO Retail - Expire Dates are within the range
+2019-10-25 14:53:58,066 [main] INFO Retail - Test Case Passed
+2019-10-25 14:54:02,601 [main] INFO Retail - User name is provided
+2019-10-25 14:54:02,661 [main] INFO Retail - Passsword is provided
+2019-10-25 14:54:05,894 [main] INFO Retail - Folowups Selected
+2019-10-25 14:54:07,918 [main] INFO Retail - Test Case Passed
+2019-10-25 14:54:12,499 [main] INFO Retail - User name is provided
+2019-10-25 14:54:12,553 [main] INFO Retail - Passsword is provided
+2019-10-25 14:54:17,300 [main] INFO Retail - id send
+2019-10-25 14:54:17,650 [main] INFO Retail - Click apply
+2019-10-25 14:54:18,125 [main] INFO Retail - all id's are  > 1340
+2019-10-25 14:54:18,126 [main] INFO Retail - Client Number : [100017, 100041, 100046, 100052, 100054, 100093, 100134, 100134, 100134, 100172, 100200, 100200, 100200, 100200, 100200, 100200, 100200, 100200, 100200, 100200, 100200, 100200, 100200, 100200, 100200]
+2019-10-25 14:54:18,126 [main] INFO Retail - Test Case Passed
+2019-10-25 14:54:24,265 [main] INFO Retail - User name is provided
+2019-10-25 14:54:24,322 [main] INFO Retail - Passsword is provided
+2019-10-25 14:54:27,995 [main] INFO Retail - rank send
+2019-10-25 14:54:28,400 [main] INFO Retail - Click apply
+2019-10-25 14:54:28,883 [main] INFO Retail - all rank's are  < 3
+2019-10-25 14:54:28,884 [main] INFO Retail - Rank List : [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1]
+2019-10-25 14:54:28,884 [main] INFO Retail - Test Case Passed
+2019-10-25 14:54:33,545 [main] INFO Retail - User name is provided
+2019-10-25 14:54:33,614 [main] INFO Retail - Passsword is provided
+2019-10-25 14:54:38,735 [main] INFO Retail - File Type Selected
+2019-10-25 14:54:39,581 [main] INFO Retail - File Downloded
+2019-10-25 14:54:42,581 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,581 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,581 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,581 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,581 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,582 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,582 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,582 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,582 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,582 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,582 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,582 [main] INFO Retail - Test Pass
+2019-10-25 14:54:42,582 [main] INFO Retail - Test Pass
+2019-10-25 14:54:47,084 [main] INFO Retail - User name is provided
+2019-10-25 14:54:47,139 [main] INFO Retail - Passsword is provided
+2019-10-25 14:54:50,983 [main] INFO Retail - File Type Selected
+2019-10-25 14:54:51,708 [main] INFO Retail - test case passed....

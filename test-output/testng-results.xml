@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="8" total="9" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="DashManagement" duration-ms="14482" started-at="2019-10-24T15:18:52Z" finished-at="2019-10-24T15:19:07Z">
+  <suite name="DashManagement" duration-ms="129027" started-at="2019-10-25T19:52:43Z" finished-at="2019-10-25T19:54:52Z">
     <groups>
     </groups>
-    <test name="Priority Test" duration-ms="14482" started-at="2019-10-24T15:18:52Z" finished-at="2019-10-24T15:19:07Z">
-      <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ProjectPriorityTest_003@464bee09]" name="setup" is-config="true" duration-ms="5317" started-at="2019-10-24T10:18:53Z" finished-at="2019-10-24T10:18:58Z">
+    <test name="Priority Test" duration-ms="129027" started-at="2019-10-25T19:52:43Z" finished-at="2019-10-25T19:54:52Z">
+      <class name="com.projects.activities.testCases.TC_ClientListTest_007">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="4442" started-at="2019-10-25T14:52:43Z" finished-at="2019-10-25T14:52:47Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,205 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="validateProjectRank()[pri:0, instance:com.projects.activities.testCases.TC_ProjectPriorityTest_003@464bee09]" name="validateProjectRank" duration-ms="8290" started-at="2019-10-24T10:18:58Z" finished-at="2019-10-24T10:19:06Z">
+        <test-method status="PASS" signature="validateClientCreationDate()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateClientCreationDate" duration-ms="7325" started-at="2019-10-25T14:52:47Z" finished-at="2019-10-25T14:52:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateProjectRank -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ProjectPriorityTest_003@464bee09]" name="teardown" is-config="true" duration-ms="712" started-at="2019-10-24T10:19:06Z" finished-at="2019-10-24T10:19:07Z">
+        </test-method> <!-- validateClientCreationDate -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="704" started-at="2019-10-25T14:52:55Z" finished-at="2019-10-25T14:52:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.projects.activities.testCases.TC_ProjectPriorityTest_003 -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="3746" started-at="2019-10-25T14:52:55Z" finished-at="2019-10-25T14:52:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateClientCreatorList()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateClientCreatorList" duration-ms="4002" started-at="2019-10-25T14:52:59Z" finished-at="2019-10-25T14:53:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateClientCreatorList -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="718" started-at="2019-10-25T14:53:03Z" finished-at="2019-10-25T14:53:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="3768" started-at="2019-10-25T14:53:04Z" finished-at="2019-10-25T14:53:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateClientCreatorListUser()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateClientCreatorListUser" duration-ms="8423" started-at="2019-10-25T14:53:08Z" finished-at="2019-10-25T14:53:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateClientCreatorListUser -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="716" started-at="2019-10-25T14:53:16Z" finished-at="2019-10-25T14:53:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="4760" started-at="2019-10-25T14:53:17Z" finished-at="2019-10-25T14:53:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateClientDescriptionList()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateClientDescriptionList" duration-ms="8771" started-at="2019-10-25T14:53:22Z" finished-at="2019-10-25T14:53:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateClientDescriptionList -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="682" started-at="2019-10-25T14:53:30Z" finished-at="2019-10-25T14:53:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="3722" started-at="2019-10-25T14:53:31Z" finished-at="2019-10-25T14:53:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateClientEffectiveDate()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateClientEffectiveDate" duration-ms="9844" started-at="2019-10-25T14:53:35Z" finished-at="2019-10-25T14:53:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateClientEffectiveDate -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="656" started-at="2019-10-25T14:53:45Z" finished-at="2019-10-25T14:53:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="3760" started-at="2019-10-25T14:53:45Z" finished-at="2019-10-25T14:53:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateClientExpireeDate()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateClientExpireeDate" duration-ms="8508" started-at="2019-10-25T14:53:49Z" finished-at="2019-10-25T14:53:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateClientExpireeDate -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="686" started-at="2019-10-25T14:53:58Z" finished-at="2019-10-25T14:53:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="3797" started-at="2019-10-25T14:53:58Z" finished-at="2019-10-25T14:54:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateClientFollowupsList()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateClientFollowupsList" duration-ms="5368" started-at="2019-10-25T14:54:02Z" finished-at="2019-10-25T14:54:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateClientFollowupsList -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="718" started-at="2019-10-25T14:54:07Z" finished-at="2019-10-25T14:54:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="3798" started-at="2019-10-25T14:54:08Z" finished-at="2019-10-25T14:54:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateClientNumberList()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateClientNumberList" duration-ms="5690" started-at="2019-10-25T14:54:12Z" finished-at="2019-10-25T14:54:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateClientNumberList -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="713" started-at="2019-10-25T14:54:18Z" finished-at="2019-10-25T14:54:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="5378" started-at="2019-10-25T14:54:18Z" finished-at="2019-10-25T14:54:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateClientRankList()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateClientRankList" duration-ms="4665" started-at="2019-10-25T14:54:24Z" finished-at="2019-10-25T14:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateClientRankList -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="674" started-at="2019-10-25T14:54:28Z" finished-at="2019-10-25T14:54:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="3929" started-at="2019-10-25T14:54:29Z" finished-at="2019-10-25T14:54:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateExportToDownload()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateExportToDownload" duration-ms="9094" started-at="2019-10-25T14:54:33Z" finished-at="2019-10-25T14:54:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateExportToDownload -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="689" started-at="2019-10-25T14:54:42Z" finished-at="2019-10-25T14:54:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="setup" is-config="true" duration-ms="3753" started-at="2019-10-25T14:54:43Z" finished-at="2019-10-25T14:54:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validateExportToFile()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="validateExportToFile" duration-ms="4684" started-at="2019-10-25T14:54:47Z" finished-at="2019-10-25T14:54:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateExportToFile -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.projects.activities.testCases.TC_ClientListTest_007@754ba872]" name="teardown" is-config="true" duration-ms="676" started-at="2019-10-25T14:54:51Z" finished-at="2019-10-25T14:54:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.projects.activities.testCases.TC_ClientListTest_007 -->
     </test> <!-- Priority Test -->
   </suite> <!-- DashManagement -->
 </testng-results>
