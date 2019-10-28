@@ -21,7 +21,9 @@
 		  <!--   <class name="com.projects.activities.testCases.TC_ClientPriorityTest_004" /> -->
 		  <!--  	 <class name="com.projects.activities.testCases.TC_ProgramListTest_005" /> -->
 		    <!--   <class name="com.projects.activities.testCases.TC_ProjectListTest_006" /> -->
-		     	<class name="com.projects.activities.testCases.TC_ClientListTest_007" />
+		     <!-- 	<class name="com.projects.activities.testCases.TC_ClientListTest_007" />-->
+		     
+		     <class name="com.escalations.testCases.TC_EscalationTest_002" />
 		  		
 			
 		</classes>

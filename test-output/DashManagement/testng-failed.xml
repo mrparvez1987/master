@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [DashManagement]">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [DashManagement]">
   <listeners>
     <listener class-name="com.dashManagement.utilities.Reporting"/>
   </listeners>
-  <test thread-count="5" name="Priority Test(failed)">
+  <test name="Priority Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003">
+      <class name="com.escalations.testCases.TC_EscalationTest_002">
         <methods>
-          <include name="validateProjectRank"/>
-          <include name="setup"/>
+          <include name="createProgramPriority"/>
           <include name="teardown"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.projects.activities.testCases.TC_ProjectPriorityTest_003 -->
+      </class> <!-- com.escalations.testCases.TC_EscalationTest_002 -->
     </classes>
   </test> <!-- Priority Test(failed) -->
 </suite> <!-- Failed suite [DashManagement] -->
