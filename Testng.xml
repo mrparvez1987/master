@@ -11,19 +11,28 @@
 
 	<test name="Priority Test">
 		<parameter name="browser" value="chrome" />
+		
+		
+		
 		<classes>
 		
-			 <!--   <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" >
-					<methods> <include name="validateProjectRank"/> </methods> </class>-->
+			     <!--   <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" >
+					<methods> <include name="createProgramPriority"/> </methods> </class>-->
 					
-		  	<!--   <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" /> -->
+		  <!--  	  <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" /> -->
 		   <!--    <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" /> -->
 		  <!--   <class name="com.projects.activities.testCases.TC_ClientPriorityTest_004" /> -->
 		  <!--  	 <class name="com.projects.activities.testCases.TC_ProgramListTest_005" /> -->
 		    <!--   <class name="com.projects.activities.testCases.TC_ProjectListTest_006" /> -->
 		     <!-- 	<class name="com.projects.activities.testCases.TC_ClientListTest_007" />-->
 		     
-		     <class name="com.escalations.testCases.TC_EscalationTest_002" />
+		    <!--    <class name="com.dash2sell.testCases.TC_LoginDDT_002" />-->
+		    
+		           <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" >
+					<methods> <include name= "createProjectPriority"/> </methods> </class>
+					
+				<!--  	 <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" >
+					<methods> <include name="createProjectPriority"/> </methods> </class>-->
 		  		
 			
 		</classes>

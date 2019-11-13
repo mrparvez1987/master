@@ -61,12 +61,6 @@ public class ProgramPriorityPage {
 			String text=textProgDesc.getText();
 			System.out.println(text);
 		}
-		
-		
-	
-	
-
-
 	
 		public void clickProjectsIcon() {
 			iconProjects.click();		

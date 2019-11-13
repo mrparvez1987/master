@@ -1,5 +1,10 @@
 package com.escalations.pageObjects;
 
+
+import java.util.Calendar;
+import java.util.TimeZone;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,13 +13,13 @@ import org.openqa.selenium.support.ui.Select;
 
 	public class EscalationPage {
 		WebDriver ldriver;
-	
+		private Alert alert;
 	public EscalationPage(WebDriver rdriver) {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
 	
-		@FindBy(xpath="//*[@id=\"content\"]/div[2]/div[2]/div[1]/img")
+		@FindBy(xpath="//*[@id=\"content\" ] /div[2] //*[@alt=\"Escalations\"]")
 		WebElement iconEscalations;
 	
 		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div/ul/li/a")
@@ -26,10 +31,10 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(id="ElementId")
 		WebElement txtElementId;
 		
-		@FindBy(xpath="//*[starts-with(@id,\\\"ui-id\\\")]/a")
+		@FindBy(xpath="//*[@id=\"ui-id-1\"]/li/a")
 		WebElement lnkElementId;
 		
-		@FindBy(xpath="//*[@id=\"ClientId\"]")
+		@FindBy(xpath="//*[@id='ClientId']")
 		WebElement drpClient;
 		
 		@FindBy(id="Summary")
@@ -44,8 +49,11 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(id="StoreList")
 		WebElement txtSoreList;
 		
-		@FindBy(xpath="//*[@id=\"mceu_29\"]")
+		@FindBy(xpath="//*[@id=\"Description_ifr\"]")
 		WebElement frameDescIssue;
+		
+		@FindBy(xpath="//*[@id=\"AndersonAtFault\"]")
+		WebElement drpResult;
 		
 		@FindBy(xpath="//*[@id=\"Resolution_ifr\"]")
 		WebElement frameResulation;
@@ -62,7 +70,8 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[1]/ul/li/div")
 		WebElement btnSaveClose;
 		
-		
+		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[2]/ul/li/a")
+		WebElement btnBack;
 		
 		public void clickEscalationIcon() {
 			iconEscalations.click();		
@@ -80,6 +89,12 @@ import org.openqa.selenium.support.ui.Select;
 			lnkElementId.click();		
 		}
 		
+		public void clickClient() {
+			drpClient.click();
+			
+			System.out.println(drpClient.getText());
+		}
+		
 		public void selectClient(int clientIndex) {
 			Select select=new Select(drpClient);
 			select.selectByIndex(clientIndex);
@@ -93,6 +108,10 @@ import org.openqa.selenium.support.ui.Select;
 			txtDueDate.sendKeys(dueDate);	
 		}
 		
+		public void clearDueDate() {
+			txtDueDate.clear();
+		}
+		
 		public void sendContactName(String contactName) {
 			txtContactName.sendKeys(contactName);	
 		}
@@ -103,6 +122,11 @@ import org.openqa.selenium.support.ui.Select;
 		
 		public void sendDescIssue(String descIssue) {
 			frameDescIssue.sendKeys(descIssue);	
+		}
+		
+		public void selectResult(String clientText) {
+			Select select=new Select(drpResult);
+			select.selectByVisibleText(clientText);
 		}
 		
 		public void sendResulation(String resulation) {
@@ -125,8 +149,53 @@ import org.openqa.selenium.support.ui.Select;
 		public void clickSaveCloseButton() {
 			btnSaveClose.click();		
 		}
+		
+		public void clickBackButton() {
+			btnBack.click();
+		}
+		public void acceptAlert(){
+			alert = ldriver.switchTo().alert();
+			alert.accept();
+		}
+		
+		
+		public void SENDDueDateField(String dueDate) {
+			txtDueDate.sendKeys(dueDate);
+		}
+		
+		public void clickDueDateField() {
+			txtDueDate.click();
+		}
+		
+		public void pressEscape() {
+			txtDueDate.sendKeys(Keys.ESCAPE);
+			}
+		
+		public String setFutureDate() {	
+		     Calendar cal = Calendar.getInstance();
+		     cal.setTimeZone(TimeZone.getTimeZone("GMT"));
+		     cal.add(Calendar.DATE, 5);
+		        System.out.println("date after 5 days : " + getDate(cal));	    
+		        return getDate(cal);
+		}
+		
+		
+		public String setPastDate() {
+			 Calendar cal = Calendar.getInstance();
+		     cal.setTimeZone(TimeZone.getTimeZone("GMT"));
+		     cal.add(Calendar.DATE, -5);
+		        System.out.println("date BEFORE 5 days : " + getDate(cal));	    
+		        return getDate(cal);
+		 }
+		
+		
+		public static String getDate(Calendar cal){
+	        return "" + cal.get(Calendar.YEAR) +"-" + (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE);
+	    }
+
 	
-	
+		
+		
 	
 
 }

@@ -1,20 +1,34 @@
 package com.projects.activities.testCases;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
+
+
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.dash2sell.database.DataTest;
+import com.dash2sell.pageObjects.LoginPage;
+import com.dashManagement.utilities.XLUtils;
 import com.projects.activities.pageObjects.ProgramListPage;
 import com.projects.activities.pageObjects.ProgramPriorityPage;
+
+
 public class TC_ProgramPriorityTest_002 extends BaseClass {
 	
 	
-	//Create New Program Priority by fill all the required fields
-	@Test
-	public void createProgramPriority() throws InterruptedException, IOException
+	@Test(dataProvider="ProgramPageData")
+	public void createProgramPriority(String uname,String pwd,String progId,String rank,String effDate,String expDate,String follow) throws InterruptedException, IOException
 	{
-		AccessLogin login=new AccessLogin();
-		login.loginAccess();
+		
+		LoginPage lp=new LoginPage(driver);
+		lp.setUserName(uname);
+		logger.info("user name provided");
+		lp.setPassword(pwd);
+		logger.info("password provided");
+		lp.clickSubmit();
 		
 		ProgramPriorityPage program=new ProgramPriorityPage(driver);
 		
@@ -26,17 +40,17 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 		logger.info("Program Priority Clicked");
 		program.clickNewProgPriority();
 		logger.info("New Program Priority cliecked");
-		program.sendProgramId("1500");
+		program.sendProgramId(progId);
 		logger.info("Program ID Send");
 		program.clickProgramDesc();
 		logger.info("Program Description Clicked");
-		program.sendProgRank("5");
+		program.sendProgRank(rank);
 		logger.info("Rank Send");
-		program.sendProgEffectiveDate("2019-10-10");
+		program.sendProgEffectiveDate(effDate);
 		logger.info("Effective Date Selected");
-		program.sendProgExpireDate("2019-10-20");
+		program.sendProgExpireDate(expDate);
 		logger.info("Expire Date Selected");
-		program.selectdrProgFollowups("1");
+		program.selectdrProgFollowups(follow);
 		logger.info("Followups 'Yes' Selected");
 		program.clickProgSave();
 		logger.info("Save button clicked");
@@ -63,9 +77,47 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 			captureScreen(driver,"createProgramPriority");
 			Assert.assertTrue(false);
 		}
+		
+		
+		
+		DataTest dt= new DataTest();
+		try {
+			dt.validateProgramPageData(progId,rank,effDate,expDate,follow);
+		} 
+		catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
 	}
 	
+	
+	@DataProvider(name="ProgramPageData")
+	String [][] getData() throws IOException
+	{
+		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProgramPageData.xlsx";
+	
+		
+		int rownum=XLUtils.getRowCount(path, "Sheet1");
+		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
+		
+		String programdata[][]=new String[rownum][colcount];
+		
+		for(int i=1;i<=rownum;i++)
+		{
+			for(int j=0;j<colcount;j++)
+			{
+				programdata[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
+			}
+				
+		}
+	return programdata;
+	}
+	
+	
+			
+	
 	//Validate Program ID without entering any ID
+	
 	@Test
 	public void validateProgramId() throws InterruptedException, IOException
 	{
@@ -86,7 +138,7 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 		logger.info("Program ID did not Send");
 		//program.clickProgramIDesc();
 		//logger.info("Program Description Clicked");
-		program.sendProgRank("5");
+		program.sendProgRank("2019-11-16");
 		logger.info("Rank Send");
 		program.sendProgEffectiveDate("2019-10-10");
 		logger.info("Effective Date Selected");

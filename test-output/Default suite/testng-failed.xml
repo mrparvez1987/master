@@ -5,8 +5,8 @@
     <classes>
       <class name="com.escalations.testCases.TC_EscalationTest_002">
         <methods>
-          <include name="createProgramPriority"/>
           <include name="teardown"/>
+          <include name="createNewEscalation"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.escalations.testCases.TC_EscalationTest_002 -->

@@ -11,6 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+
+
 public class ProgramListPage {
 		WebDriver ldriver;
 	
@@ -171,6 +173,9 @@ public class ProgramListPage {
 		@FindBy(id="activitytablesprogrampriorityListing_c8")
 		List<WebElement> programFollowupsColoumn;
 		
+		
+		@FindBy(id="activitytablesprogrampriorityListing")
+		List<WebElement> tableProgram;
 		
 		
 		

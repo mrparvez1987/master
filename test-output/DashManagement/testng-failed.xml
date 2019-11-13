@@ -7,13 +7,13 @@
   <test name="Priority Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.escalations.testCases.TC_EscalationTest_002">
+      <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002">
         <methods>
-          <include name="createProgramPriority"/>
-          <include name="teardown"/>
           <include name="setup"/>
+          <include name="teardown"/>
+          <include name="createProgramPriority"/>
         </methods>
-      </class> <!-- com.escalations.testCases.TC_EscalationTest_002 -->
+      </class> <!-- com.projects.activities.testCases.TC_ProgramPriorityTest_002 -->
     </classes>
   </test> <!-- Priority Test(failed) -->
 </suite> <!-- Failed suite [DashManagement] -->

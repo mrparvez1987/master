@@ -1,8 +1,13 @@
 package com.projects.activities.testCases;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import com.dash2sell.database.DataTest;
+import com.dash2sell.pageObjects.LoginPage;
+import com.dashManagement.utilities.XLUtils;
 import com.projects.activities.pageObjects.ProjectListPage;
 import com.projects.activities.pageObjects.ProjectPriorityPage;
 
@@ -10,11 +15,15 @@ public class TC_ProjectPriorityTest_003 extends BaseClass{
 	
 	
 	//Create New Project Priority by fill all the required fields
-	@Test
-	public void createProgramPriority() throws InterruptedException, IOException
+	@Test(dataProvider="ProjectPageData")
+	public void createProjectPriority(String uname,String pwd,String projId,String rank,String effDate,String expDate,String follow) throws InterruptedException, IOException
 	{
-		AccessLogin login=new AccessLogin();
-		login.loginAccess();
+		LoginPage lp=new LoginPage(driver);
+		lp.setUserName(uname);
+		logger.info("user name provided");
+		lp.setPassword(pwd);
+		logger.info("password provided");
+		lp.clickSubmit();
 		
 		ProjectPriorityPage project=new ProjectPriorityPage(driver);
 		
@@ -26,17 +35,17 @@ public class TC_ProjectPriorityTest_003 extends BaseClass{
 		logger.info("Project Priority Clicked");
 		project.clickNewProjPriority();
 		logger.info("New Project Priority cliecked");
-		project.sendProjectId("1300");
+		project.sendProjectId(projId);
 		logger.info("Project ID Send");
 		project.clickProjectDesc();
 		logger.info("Project Description Clicked");
-		project.sendProjRank("5");
+		project.sendProjRank(rank);
 		logger.info("Rank Send");
-		project.sendProjEffectiveDate("2019-10-10");
+		project.sendProjEffectiveDate(effDate);
 		logger.info("Effective Date Selected");
-		project.sendProjExpireDate("2019-10-20");
+		project.sendProjExpireDate(expDate);
 		logger.info("Expire Date Selected");
-		project.selectProjFollowups("1");
+		project.selectProjFollowups(follow);
 		logger.info("Followups 'Yes' Selected");
 		project.clickProjSave();
 		logger.info("Save button clicked");
@@ -60,17 +69,56 @@ public class TC_ProjectPriorityTest_003 extends BaseClass{
 		else
 		{
 			logger.info("test case failed....");
-			captureScreen(driver,"createProgramPriority");
+			captureScreen(driver,"createProjectPriority");
 			Assert.assertTrue(false);
 		}
+		
+	
+		
+		DataTest dt= new DataTest();
+		try {
+			dt.validateProjectPageData(projId,rank,effDate,expDate,follow);
+		} 
+		catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
 	}
+	
+	@DataProvider(name="ProjectPageData")
+	String [][] getData() throws IOException
+	{
+		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProjectPageData.xlsx";
+	
+		
+		int rownum=XLUtils.getRowCount(path, "Sheet1");
+		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
+		
+		String projectdata[][]=new String[rownum][colcount];
+		
+		for(int i=1;i<=rownum;i++)
+		{
+			for(int j=0;j<colcount;j++)
+			{
+				projectdata[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
+			}
+				
+		}
+	return projectdata;
+	}
+	
 	
 	//Validate Project ID without entering any ID
 		@Test
 		public void validateProjectId() throws InterruptedException, IOException
 		{
-			AccessLogin login=new AccessLogin();
-			login.loginAccess();
+			LoginPage lp=new LoginPage(driver);
+			lp.setUserName("brownp");
+			logger.info("user name provided");
+			lp.setPassword("Anderson1!");
+			logger.info("password provided");
+			lp.clickSubmit();
 			
 			ProjectPriorityPage project=new ProjectPriorityPage(driver);
 			

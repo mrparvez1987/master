@@ -48,7 +48,7 @@ WebDriver ldriver;
 	@FindBy(id="Expirationdate")
 	WebElement txtProjExpireDate;
 	
-	@FindBy(id="Generatefollowups")
+	@FindBy(xpath="//*[@id=\"Generatefollowups\"]")
 	WebElement drProjFollowups;
 	
 	@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[1]/ul/li/div")
@@ -57,8 +57,13 @@ WebDriver ldriver;
 	@FindBy(linkText="Delete")
 	WebElement btnProjDel;
 	
+	@FindBy(xpath="//*[@id=\"activitytablesprojectpriorityListing_c1\"]/div[3]")
+	WebElement firstElement;
 	
 	
+	public void clickFirstElement() {
+		firstElement.click();
+	}
 	
 	public void clickProjectsIcon() {
 		iconProjects.click();		

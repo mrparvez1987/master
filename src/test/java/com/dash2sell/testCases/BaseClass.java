@@ -47,6 +47,7 @@ public class BaseClass {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+readconfig.getFirefoxPath());
 			driver = new FirefoxDriver();
 			}
+		
 		else if(br.equals("ie")) {
 			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+readconfig.getIEPath());
 			driver = new InternetExplorerDriver();		
