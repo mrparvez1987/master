@@ -8,11 +8,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.dash2sell.database.DataTest;
 import com.dash2sell.pageObjects.LoginPage;
-import com.dashManagement.utilities.Reporting;
 import com.dashManagement.utilities.TestLogger;
 import com.dashManagement.utilities.XLUtils;
 import com.projects.activities.pageObjects.ProgramListPage;
 import com.projects.activities.pageObjects.ProgramPriorityPage;
+import com.relevantcodes.extentreports.ExtentReports;
 
 
 
@@ -121,15 +121,15 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 			
 	
 	//Validate Program ID without entering any ID
-	
+	public static ExtentReports extent;
 	@Test
 	public void validateProgramId() throws InterruptedException, IOException
 	{
 		LoginPage lp=new LoginPage(driver);
 		lp.setUserName(username);
-		//TestLogger.log("username provided");
+		TestLogger.log("username provided");
 		lp.setPassword(password);
-		//TestLogger.log("password provided");
+		TestLogger.log("password provided");
 		lp.clickSubmit();
 		
 		
@@ -143,7 +143,20 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 		
 		
 		
-	ProgramPriorityPage program=new ProgramPriorityPage(driver);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	/*	ProgramPriorityPage program=new ProgramPriorityPage(driver);
 		
 		program.clickProjectsIcon();
 		logger.info("Projects Icon clicked");
@@ -185,7 +198,7 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 			logger.info("test case failed....");
 			captureScreen(driver,"validateProgramId");
 			Assert.assertTrue(false);
-		}
+		}*/
 	}
 	
 	

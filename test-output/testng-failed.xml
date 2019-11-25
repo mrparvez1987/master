@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [DashManagement]">
-  <listeners>
-    <listener class-name="com.dashManagement.utilities.Reporting"/>
-  </listeners>
   <test name="Priority Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
@@ -12,6 +9,7 @@
           <include name="setup"/>
           <include name="validateProgramId"/>
           <include name="teardown"/>
+          <include name="startup"/>
         </methods>
       </class> <!-- com.projects.activities.testCases.TC_ProgramPriorityTest_002 -->
     </classes>

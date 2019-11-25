@@ -5,10 +5,10 @@
 
 <suite name="DashManagement">
 
-	<listeners>
+	<!-- <listeners>
 		<listener class-name="com.dashManagement.utilities.Reporting" />
 	</listeners>
-
+ -->
 
 
 	<test name="Priority Test">
