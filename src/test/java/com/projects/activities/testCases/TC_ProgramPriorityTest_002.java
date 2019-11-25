@@ -3,30 +3,34 @@ package com.projects.activities.testCases;
 import java.io.IOException;
 import java.sql.SQLException;
 
-
-
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.dash2sell.database.DataTest;
 import com.dash2sell.pageObjects.LoginPage;
+import com.dashManagement.utilities.Reporting;
+import com.dashManagement.utilities.TestLogger;
 import com.dashManagement.utilities.XLUtils;
 import com.projects.activities.pageObjects.ProgramListPage;
 import com.projects.activities.pageObjects.ProgramPriorityPage;
+
 
 
 public class TC_ProgramPriorityTest_002 extends BaseClass {
 	
 	
 	@Test(dataProvider="ProgramPageData")
+	
+	
 	public void createProgramPriority(String uname,String pwd,String progId,String rank,String effDate,String expDate,String follow) throws InterruptedException, IOException
 	{
 		
 		LoginPage lp=new LoginPage(driver);
 		lp.setUserName(uname);
 		logger.info("user name provided");
+		
 		lp.setPassword(pwd);
+		
 		logger.info("password provided");
 		lp.clickSubmit();
 		
@@ -121,10 +125,25 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 	@Test
 	public void validateProgramId() throws InterruptedException, IOException
 	{
-		AccessLogin login=new AccessLogin();
-		login.loginAccess();
+		LoginPage lp=new LoginPage(driver);
+		lp.setUserName(username);
+		//TestLogger.log("username provided");
+		lp.setPassword(password);
+		//TestLogger.log("password provided");
+		lp.clickSubmit();
 		
-		ProgramPriorityPage program=new ProgramPriorityPage(driver);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	ProgramPriorityPage program=new ProgramPriorityPage(driver);
 		
 		program.clickProjectsIcon();
 		logger.info("Projects Icon clicked");

@@ -18,6 +18,8 @@ import org.openqa.selenium.support.ui.Select;
 	}
 	
 	
+	
+	
 	@FindBy(xpath="//*[@id=\"escalationstablesescalationListing_c1_filter\"]")
 	WebElement filterEscalationId;
 	
@@ -79,9 +81,6 @@ import org.openqa.selenium.support.ui.Select;
 	@FindBy(xpath="//*[@id=\"escalationstablesescalationListing_c2\"]/div[3]")
 	WebElement listFirstStatus;
 	
-	@FindBy(xpath="//*[@id=\"escalationstablesescalationListing_c4\"]/div[3]")
-	WebElement listFirstDueDate;
-	
 	@FindBy(id="Summary")
 	WebElement txtSummery;
 	
@@ -90,6 +89,15 @@ import org.openqa.selenium.support.ui.Select;
 	
 	@FindBy(xpath="//*[@id=\"escalationstablesescalationListing_c1\"]/div[3]")
 	WebElement listFirstId;
+	
+	@FindBy(xpath="//*[@id=\"escalationstablesescalationListing_c2\"]/div[3]")
+	WebElement listFirstIStatus;
+	
+	@FindBy(xpath="//*[@id=\"escalationstablesescalationListing_c3\"]/div[3]")
+	WebElement listFirstClient;
+	
+	@FindBy(xpath="//*[@id=\"escalationstablesescalationListing_c4\"]/div[3]")
+	WebElement listFirstDueDate;
 	
 	@FindBy(linkText="Clear")
 	WebElement clear;
@@ -100,7 +108,7 @@ import org.openqa.selenium.support.ui.Select;
 	@FindBy(xpath="//*[@id=\"body\"]/div[12]/div[4]/a[2]")
 	WebElement calApply;
 	
-	@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[2]/ul/li/a")
+	@FindBy(linkText="No Action Required")
 	WebElement btnNoAction;
 	
 	@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[1]/a")
@@ -108,6 +116,44 @@ import org.openqa.selenium.support.ui.Select;
 	
 	@FindBy(xpath="/html/body/div[2]/div[1]/div/ul/li[1]/a/span[1]/i")
 	WebElement listTab;
+	
+	@FindBy(linkText="Approve Escalation")
+	WebElement btnapproveEscalation;
+	
+	@FindBy(xpath="//*[@id=\"content\"]/table[2]/tbody/tr[2]/td[3]/a")
+	WebElement newElementId;
+	
+	@FindBy(xpath="//*[@id=\"logo\"]/a/img")
+	WebElement logoHome;
+	
+	
+	public void clickHome() {
+		logoHome.click();
+	}
+	public WebElement getNewId() {
+		return newElementId;
+	}
+	
+	public void clickApproveEscalation() {
+		btnapproveEscalation.click();
+	}
+	
+	public WebElement getFirstId() {
+		return listFirstId;
+	}
+	
+	public WebElement getFirstStatus() {
+		return listFirstIStatus;
+	}
+	
+	public WebElement getFirstClient() {
+		return listFirstClient;
+	}
+	
+	public WebElement getFirstDueDate() {
+		return listFirstDueDate;
+	}
+	
 	
 	
 	

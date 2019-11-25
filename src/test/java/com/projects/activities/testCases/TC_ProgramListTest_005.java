@@ -587,12 +587,12 @@ public class TC_ProgramListTest_005 extends BaseClass {
 	    for (int i = 1; i < files.length; i++) {
 	    	if(files[i].getName().contains(ext)) {
 	    		flag=true;
-	    		 logger.info("Test Pass");
+	    		
 	    	}
 	    	
 	    	
 	    }
-	   
+	    logger.info("Test Pass");
 	    return flag;
 	    
 	    

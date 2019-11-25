@@ -1,6 +1,8 @@
 package com.escalations.testCases;
 
 import java.io.IOException;
+import java.net.URL;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -9,10 +11,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.dash2sell.database.DataTest;
 import com.dash2sell.pageObjects.LoginPage;
 import com.escalations.pageObjects.EscalataionListPage;
 import com.escalations.pageObjects.EscalationPage;
@@ -37,6 +43,7 @@ public class TC_EscalationListTest_003 extends BaseClass{
 		
 		EscalataionListPage escList=new EscalataionListPage(driver);
 		escList.selectStatus("New");
+		escList.sortEscalationId();
 		escList.clickFirstElement();
 		escPage.clearDueDate();
 		escPage.sendDueDate("2019-12-26");
@@ -53,10 +60,23 @@ public class TC_EscalationListTest_003 extends BaseClass{
 			System.out.println("Test Case failed");
 			captureScreen(driver,"validateStatusNew");
 			Assert.assertTrue(false);
+		}
+		
+	
+		DataTest dt= new DataTest();
+		try {
+			dt.validateNewStatusData();
 			
-	}
+		} 
+		catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
 		
 	}
+	
+	
 	
 	
 	@Test
@@ -82,7 +102,7 @@ public class TC_EscalationListTest_003 extends BaseClass{
 			escPage.sendSummery("abcde");
 			}
 			catch(Exception e) {
-				System.out.println("Something went wrong.");
+				System.out.println("Can not send text.");
 			}
 		
 	    String summery =escList.getSummery();
@@ -487,6 +507,132 @@ public class TC_EscalationListTest_003 extends BaseClass{
 		}	
 }
 	
+	@Test
+	public void validateViewOnlyNewButton() throws InterruptedException, IOException {
+		
+		LoginPage lp=new LoginPage(driver);
+		lp.setUserName("milama");
+		logger.info("User name is provided");
+		lp.setPassword("Anderson1!");
+		logger.info("Passsword is provided");
+		lp.clickSubmit();
+		
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			
+		EscalationPage escPage=new EscalationPage(driver);
+		escPage.clickEscalationIcon();
+		Thread.sleep(5000);
+		EscalataionListPage escList=new EscalataionListPage(driver);
+		
+		
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", escList.listTab());
+		
+			
+		try {
+			
+			driver.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
+		Boolean isPresent = driver.findElements(By.xpath("//*[@id=\"controlA\"]/div[2]/div/ul/li/a")).size() > 0;
+		
+		if (isPresent) {
+			
+			Assert.assertFalse(true);
+			System.out.println("New Button present........Test Case Failed");
+			
+		}else {
+			
+			Assert.assertFalse(false);
+		System.out.println("New Button not Present.............Test Case Passed");
+		
+		}
+		}
+		catch(NoSuchElementException e) {
+			System.out.println(e);
+			
+		}
+	}
 	
 	
+	@Test
+	public void validateViewOnlyStatusFilter() throws InterruptedException, IOException {
+		
+		LoginPage lp=new LoginPage(driver);
+		lp.setUserName("milama");
+		logger.info("User name is provided");
+		lp.setPassword("Anderson1!");
+		logger.info("Passsword is provided");
+		lp.clickSubmit();
+		
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			
+		EscalationPage escPage=new EscalationPage(driver);
+		escPage.clickEscalationIcon();
+		Thread.sleep(5000);
+		EscalataionListPage escList=new EscalataionListPage(driver);
+		
+		
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", escList.listTab());
+		
+		escList.selectStatus("New");
+		escList.clickFirstElement();
+		Thread.sleep(3000);
+		String currentSummary=escPage.getSummary().getText();
+		
+		System.out.println("this is currensummary:"+currentSummary);
+		
+		try {
+		escPage.sendSummery("Updated Summary");
+		
+		}catch(Exception e){
+			System.out.println(e);
+		}
+		
+		
+		String newSummary=escPage.getSummary().getText();
+		System.out.println("this is new summary:"+newSummary);
+		
+		
+		if(currentSummary.equalsIgnoreCase(newSummary)) {
+			Assert.assertTrue(true);
+			System.out.println("This is Read-Only.......Test Pass");
+		}else {
+			Assert.assertTrue(false);
+			System.out.println("This is not Read-Only......Test Fail");
+		}
+		
+		escPage.clickBackButton();
+		escList.selectStatus("Cancelled");
+		escList.clickFirstElement();
+		Thread.sleep(3000);String currentSummary1=escPage.getSummary().getText();
+		
+		System.out.println("this is currensummary:"+currentSummary);
+		
+		try {
+		escPage.sendSummery("Updated Summary");
+		
+		}catch(Exception e){
+			System.out.println(e);
+		}
+		
+		
+		String newSummary1=escPage.getSummary().getText();
+		System.out.println("this is new summary:"+newSummary);
+		
+		
+		if(currentSummary1.equalsIgnoreCase(newSummary1)) {
+			Assert.assertTrue(true);
+			System.out.println("This is Read-Only.......Test Pass");
+		}else {
+			Assert.assertTrue(false);
+			System.out.println("This is not Read-Only......Test Fail");
+		}
+		
+		
+		
+		
+	}
+	
+	
+
 }

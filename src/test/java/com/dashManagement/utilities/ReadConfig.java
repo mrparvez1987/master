@@ -16,11 +16,18 @@ Properties pro;
 			FileInputStream fis = new FileInputStream(src);
 			pro = new Properties();
 			pro.load(fis);
+			fis.close();
 		} catch (Exception e) {
+			
 			System.out.println("Exception is " + e.getMessage());
 		}
-	}
+		
+	
 
+	}
+	
+	
+	
 	
 	public String getApplicationURL(){
 		
@@ -58,5 +65,22 @@ Properties pro;
 	String firefoxpath=pro.getProperty("firefoxpath");
 	return firefoxpath;
 	}
+	
+	public String getDbConnection() {
+		String sqlConnection=pro.getProperty("sqlConnection");
+		return sqlConnection;
+	}
+	
+	public String getDbUserName() {
+		String sqlUserName=pro.getProperty("sqlUserName");
+		return sqlUserName;
+	}
+	
+	public String getDbPassword() {
+		String sqlPassword=pro.getProperty("sqlPassword");
+		return sqlPassword;
+	}
+	
+	
 
 }

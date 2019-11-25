@@ -70,9 +70,54 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[1]/ul/li/div")
 		WebElement btnSaveClose;
 		
-		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[2]/ul/li/a")
+		@FindBy(linkText="Back")
 		WebElement btnBack;
 		
+		@FindBy(xpath="//*[@id=\"field-inline-button-details-ElementId\"]")
+		WebElement btnDetails;
+		
+		@FindBy(xpath="//*[@id=\"field-inline-button-responses-ElementId\"]")
+		WebElement btnResponses;
+		
+		@FindBy(xpath="//*[@id=\"field-inline-button-pictures-ElementId\"]")
+		WebElement btnPictures;
+		
+		@FindBy(xpath="//*[@id=\"content\"]/a")
+		WebElement btnSubmitResponse;
+		
+
+		@FindBy(xpath="//*[@id=\"Elements_grid_row_117902\"]/div[6]/div/input")
+		WebElement nameElement;
+		
+		
+		public WebElement getElementIdName() {
+		return lnkElementId;
+		}
+		
+		public WebElement getElementName() {
+			return nameElement;
+		}
+		
+		public void clickSubmitResponses() {
+			btnSubmitResponse.click();
+		}
+		
+		public void clickDetailsButton() {
+			btnDetails.click();
+		}
+		
+		public void clickResponsesButton() {
+			btnResponses.click();
+		}
+		
+		public void clickPicturesButton() {
+			btnPictures.click();
+		}
+		
+		
+		public WebElement newButton() {
+			return btnNew;
+		}
 		public void clickEscalationIcon() {
 			iconEscalations.click();		
 		}
@@ -100,6 +145,10 @@ import org.openqa.selenium.support.ui.Select;
 			select.selectByIndex(clientIndex);
 		}
 		
+		
+		public WebElement getSummary() {
+			return txtSummery;
+		}
 		public void sendSummery(String summery) {
 			txtSummery.sendKeys(summery);	
 		}
@@ -192,10 +241,6 @@ import org.openqa.selenium.support.ui.Select;
 		public static String getDate(Calendar cal){
 	        return "" + cal.get(Calendar.YEAR) +"-" + (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE);
 	    }
-
-	
-		
-		
 	
 
 }

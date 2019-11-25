@@ -10,8 +10,8 @@
       <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002">
         <methods>
           <include name="setup"/>
+          <include name="validateProgramId"/>
           <include name="teardown"/>
-          <include name="createProgramPriority"/>
         </methods>
       </class> <!-- com.projects.activities.testCases.TC_ProgramPriorityTest_002 -->
     </classes>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
 
 <suite name="DashManagement">
 
@@ -16,8 +18,8 @@
 		
 		<classes>
 		
-			     <!--   <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" >
-					<methods> <include name="createProgramPriority"/> </methods> </class>-->
+			        <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" >
+					<methods> <include name="validateProgramId"/> </methods> </class>
 					
 		  <!--  	  <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" /> -->
 		   <!--    <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" /> -->
@@ -28,11 +30,37 @@
 		     
 		    <!--    <class name="com.dash2sell.testCases.TC_LoginDDT_002" />-->
 		    
-		           <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" >
-					<methods> <include name= "createProjectPriority"/> </methods> </class>
+		       <!--  	  <class name="com.escalations.testCases.TC_EscalationTest_002" >
+					<methods> <include name= "createNewEscalationReview"/> </methods> </class>-->
+		    
+		             <!--   <class name="com.escalations.testCases.TC_EscalationTest_002" >
+					<methods> <include name= "createNewEscalationReview"/>
+								<include name= "validateApproveStatus"/> 
+								<include name="validateCancelledtatus"/>
+								<include name= "validateElementDetails"/>
+								<include name= "validateElementResponses"/>
+								<include name= "validateClientDropDown"/>
 					
-				<!--  	 <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" >
-					<methods> <include name="createProjectPriority"/> </methods> </class>-->
+					</methods> </class>-->
+					
+				
+					  
+					
+					 <!--   <class name="com.escalations.testCases.TC_EscalationTest_002" >
+					<methods> <include name= "validateClientDropDown"/> </methods> </class>-->
+					
+					  <!--  	 <class name="com.escalations.testCases.TC_EscalationListTest_003" >
+					<methods> 	
+								<include name="validateDueDateFilter"/> 
+								<include name="validateViewOnlyNewButton"/> 
+					
+					</methods> </class>-->
+		  		
+		  		
+		  		
+		  		<!--   <class name="com.escalations.testCases.TC_EscalationTest_002" >
+					<methods> <include name= "createNewEscalationReview"/> </methods> </class>-->
+		  		
 		  		
 			
 		</classes>
