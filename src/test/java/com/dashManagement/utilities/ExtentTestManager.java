@@ -20,7 +20,7 @@ public class ExtentTestManager {
 	public static synchronized void endTest() {
 		
 		extent.endTest(extentTestMap.get((int)(long)(Thread.currentThread().getId())));
-		extent.flush();
+	//	extent.flush();
 		
 	}
 	

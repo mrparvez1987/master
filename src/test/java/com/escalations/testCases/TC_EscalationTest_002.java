@@ -7,27 +7,19 @@ import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
-import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.dash2sell.database.DataTest;
 import com.dash2sell.pageObjects.LoginPage;
-import com.dashManagement.utilities.Reporting;
 import com.dashManagement.utilities.XLUtils;
 import com.escalations.pageObjects.EscalataionListPage;
 import com.escalations.pageObjects.EscalationPage;
 
 
 
-public class TC_EscalationTest_002 extends BaseClass {
+public class TC_EscalationTest_002 extends BaseClassOld {
 	
 
 	@Test(dataProvider="EscalationPageData")

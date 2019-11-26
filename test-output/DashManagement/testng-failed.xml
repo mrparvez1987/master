@@ -8,8 +8,10 @@
         <methods>
           <include name="setup"/>
           <include name="validateProgramId"/>
-          <include name="teardown"/>
-          <include name="startup"/>
+          <include name="afterEachTestMethod"/>
+          <include name="extentSetup"/>
+          <include name="generateReport"/>
+          <include name="startExtent"/>
         </methods>
       </class> <!-- com.projects.activities.testCases.TC_ProgramPriorityTest_002 -->
     </classes>

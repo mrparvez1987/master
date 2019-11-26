@@ -12,7 +12,7 @@ import com.dashManagement.utilities.TestLogger;
 import com.dashManagement.utilities.XLUtils;
 import com.projects.activities.pageObjects.ProgramListPage;
 import com.projects.activities.pageObjects.ProgramPriorityPage;
-import com.relevantcodes.extentreports.ExtentReports;
+
 
 
 
@@ -121,84 +121,73 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 			
 	
 	//Validate Program ID without entering any ID
-	public static ExtentReports extent;
+	
 	@Test
 	public void validateProgramId() throws InterruptedException, IOException
 	{
 		LoginPage lp=new LoginPage(driver);
-		lp.setUserName(username);
+		
+		lp.setUserName("brownp");
+		
 		TestLogger.log("username provided");
-		lp.setPassword(password);
+		
+		lp.setPassword("Anderson1!");
+		
+		
 		TestLogger.log("password provided");
+		
 		lp.clickSubmit();
 		
+		TestLogger.log("Submit button clicked");
+			
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	/*	ProgramPriorityPage program=new ProgramPriorityPage(driver);
+		ProgramPriorityPage program=new ProgramPriorityPage(driver);
 		
 		program.clickProjectsIcon();
-		logger.info("Projects Icon clicked");
+		TestLogger.log("Icon clicked");
 		program.moveToActivities();
-		logger.info("Move to Activities");
+		TestLogger.log("Move to Activities");
 		program.clickProgPriority();
-		logger.info("Program Priority Clicked");
+		
 		program.clickNewProgPriority();
 		logger.info("New Program Priority cliecked");
-		//program.sendProgramId("1500");
+		
 		logger.info("Program ID did not Send");
-		//program.clickProgramIDesc();
-		//logger.info("Program Description Clicked");
+		
 		program.sendProgRank("2019-11-16");
-		logger.info("Rank Send");
+	
 		program.sendProgEffectiveDate("2019-10-10");
-		logger.info("Effective Date Selected");
+		
 		program.sendProgExpireDate("2019-10-20");
-		logger.info("Expire Date Selected");
+		
 		program.selectdrProgFollowups("1");
-		logger.info("Followups 'Yes' Selected");
+	
 		program.clickProgSave();
-		logger.info("Save button clicked");
 		
 		
-		logger.info("validation started....");
+		
+		
 		Thread.sleep(2000);
 		
-		boolean res=driver.getPageSource().contains("This is a required field.");
+		boolean res=driver.getPageSource().contains("5555");
 		
 		if(res==true)
 		{
 			Assert.assertTrue(true);
-			logger.info("test case passed....");
+			TestLogger.log("test case passed....");
 			
 		}
 		else
 		{
-			logger.info("test case failed....");
-			captureScreen(driver,"validateProgramId");
+			TestLogger.log("test case failed....");
+			try {
+				captureScreenrobot("validateProgramId");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			Assert.assertTrue(false);
-		}*/
+		}
 	}
 	
 	

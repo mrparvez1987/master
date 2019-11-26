@@ -4,25 +4,30 @@ package com.dashManagement.utilities;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+
+
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import com.relevantcodes.extentreports.ExtentReports;
 
 
 
-public class ExtentManager {
+public class ExtentManager  {
 	
 	private static ExtentReports extent;
 	
-	
+	public static ExtentHtmlReporter htmlReporter;
 	
 	public synchronized static ExtentReports getInstance() {
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());//time stamp
 		String repName="Test-Report-"+timeStamp+".html";
 		
 		
-		
 		if (extent==null) {
 			try{
-				File reportLocation = new File ("test-output/Extent-Report/ExtentReport.html");
+				
+				File reportLocation = new File ("test-output/Extent-Report/"+repName);
 				extent = new ExtentReports(reportLocation.getAbsolutePath(),true);
 				System.out.println("Report is started");
 				extent.addSystemInfo("Testing Team","QA Team").addSystemInfo("Environment","QA").addSystemInfo("Test Name","Automation");
