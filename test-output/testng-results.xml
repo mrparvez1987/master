@@ -2,10 +2,10 @@
 <testng-results skipped="0" failed="1" ignored="8" total="9" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[username provided]]>
+      <![CDATA[username: brownp]]>
     </line>
     <line>
-      <![CDATA[password provided]]>
+      <![CDATA[password: Anderson1!]]>
     </line>
     <line>
       <![CDATA[Submit button clicked]]>
@@ -17,26 +17,29 @@
       <![CDATA[Move to Activities]]>
     </line>
     <line>
-      <![CDATA[test case failed....]]>
+      <![CDATA[New Program Priority cliecked]]>
+    </line>
+    <line>
+      <![CDATA[Program ID did not Send]]>
     </line>
   </reporter-output>
-  <suite name="DashManagement" duration-ms="12115" started-at="2019-11-26T22:57:39Z" finished-at="2019-11-26T22:57:51Z">
+  <suite name="DashManagement" duration-ms="22536" started-at="2019-11-27T20:14:17Z" finished-at="2019-11-27T20:14:39Z">
     <groups>
     </groups>
-    <test name="Priority Test" duration-ms="12115" started-at="2019-11-26T22:57:39Z" finished-at="2019-11-26T22:57:51Z">
+    <test name="Priority Test" duration-ms="22536" started-at="2019-11-27T20:14:17Z" finished-at="2019-11-27T20:14:39Z">
       <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002">
-        <test-method status="PASS" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="extentSetup" is-config="true" duration-ms="119" started-at="2019-11-26T16:57:39Z" finished-at="2019-11-26T16:57:39Z">
+        <test-method status="PASS" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="extentSetup" is-config="true" duration-ms="525" started-at="2019-11-27T14:14:16Z" finished-at="2019-11-27T14:14:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@10993713]]>
+                <![CDATA[org.testng.TestRunner@4c4d27c8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentSetup -->
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="setup" is-config="true" duration-ms="4336" started-at="2019-11-26T16:57:39Z" finished-at="2019-11-26T16:57:44Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="setup" is-config="true" duration-ms="9201" started-at="2019-11-27T14:14:17Z" finished-at="2019-11-27T14:14:26Z">
           <params>
             <param index="0">
               <value>
@@ -47,7 +50,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="startExtent(java.lang.reflect.Method, [Ljava.lang.Object;)[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="startExtent" is-config="true" duration-ms="4" started-at="2019-11-26T16:57:44Z" finished-at="2019-11-26T16:57:44Z">
+        <test-method status="PASS" signature="startExtent(java.lang.reflect.Method, [Ljava.lang.Object;)[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="startExtent" is-config="true" duration-ms="19" started-at="2019-11-27T14:14:26Z" finished-at="2019-11-27T14:14:26Z">
           <params>
             <param index="0">
               <value>
@@ -56,14 +59,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[Ljava.lang.Object;@3fffff43]]>
+                <![CDATA[[Ljava.lang.Object;@1fcb4808]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtent -->
-        <test-method status="FAIL" signature="validateProgramId()[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="validateProgramId" duration-ms="6907" started-at="2019-11-26T16:57:44Z" finished-at="2019-11-26T16:57:51Z">
+        <test-method status="FAIL" signature="validateProgramId()[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="validateProgramId" duration-ms="11479" started-at="2019-11-27T14:14:26Z" finished-at="2019-11-27T14:14:38Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -74,10 +77,10 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[username provided]]>
+              <![CDATA[username: brownp]]>
             </line>
             <line>
-              <![CDATA[password provided]]>
+              <![CDATA[password: Anderson1!]]>
             </line>
             <line>
               <![CDATA[Submit button clicked]]>
@@ -89,22 +92,25 @@
               <![CDATA[Move to Activities]]>
             </line>
             <line>
-              <![CDATA[test case failed....]]>
+              <![CDATA[New Program Priority cliecked]]>
+            </line>
+            <line>
+              <![CDATA[Program ID did not Send]]>
             </line>
           </reporter-output>
         </test-method> <!-- validateProgramId -->
-        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="afterEachTestMethod" is-config="true" duration-ms="847" started-at="2019-11-26T16:57:51Z" finished-at="2019-11-26T16:57:51Z">
+        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="afterEachTestMethod" is-config="true" duration-ms="1777" started-at="2019-11-27T14:14:38Z" finished-at="2019-11-27T14:14:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateProgramId status=FAILURE method=TC_ProgramPriorityTest_002.validateProgramId()[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b] output=username provided]]]>
+                <![CDATA[[TestResult name=validateProgramId status=FAILURE method=TC_ProgramPriorityTest_002.validateProgramId()[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b] output=username: brownp]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="generateReport" is-config="true" duration-ms="20" started-at="2019-11-26T16:57:51Z" finished-at="2019-11-26T16:57:51Z">
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b]" name="generateReport" is-config="true" duration-ms="86" started-at="2019-11-27T14:14:39Z" finished-at="2019-11-27T14:14:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->

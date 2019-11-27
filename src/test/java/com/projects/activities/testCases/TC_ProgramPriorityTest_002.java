@@ -127,14 +127,14 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 	{
 		LoginPage lp=new LoginPage(driver);
 		
-		lp.setUserName("brownp");
+		lp.setUserName(username);
 		
-		TestLogger.log("username provided");
+		TestLogger.log("username: "+username);
 		
-		lp.setPassword("Anderson1!");
+		lp.setPassword(password);
 		
 		
-		TestLogger.log("password provided");
+		TestLogger.log("password: "+password);
 		
 		lp.clickSubmit();
 		
@@ -150,9 +150,9 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 		program.clickProgPriority();
 		
 		program.clickNewProgPriority();
-		logger.info("New Program Priority cliecked");
+		TestLogger.log("New Program Priority cliecked");
 		
-		logger.info("Program ID did not Send");
+		TestLogger.log("Program ID did not Send");
 		
 		program.sendProgRank("2019-11-16");
 	
@@ -169,7 +169,7 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 		
 		Thread.sleep(2000);
 		
-		boolean res=driver.getPageSource().contains("5555");
+		boolean res=driver.getPageSource().contains("55555");
 		
 		if(res==true)
 		{
@@ -179,7 +179,7 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 		}
 		else
 		{
-			TestLogger.log("test case failed....");
+			System.out.println("test case failed....");
 			try {
 				captureScreenrobot("validateProgramId");
 			} catch (Exception e) {

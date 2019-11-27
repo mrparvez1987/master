@@ -13,9 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
 import javax.imageio.ImageIO;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -33,13 +31,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
-
 import com.aventstack.extentreports.ExtentTest;
 import com.dashManagement.utilities.ExtentManager;
 import com.dashManagement.utilities.ExtentTestManager;
 import com.dashManagement.utilities.ReadConfig;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
+
+//BeforeClass-BeforeMethod-Test-AfterMethod-BeforeMethod-Test-AfterMethod-AfterClass
 
 public class BaseClass {
 	
@@ -53,8 +52,6 @@ public class BaseClass {
 	public static Logger logger;
 	
 	public static ExtentReports extent;
-	
-	
 	 
 	 @BeforeSuite
 	 public void extentSetup(ITestContext context) {
@@ -67,7 +64,6 @@ public class BaseClass {
 		
 		logger = Logger.getLogger("Retail");
 		PropertyConfigurator.configure("Log4j.properties");
-		
 		
 		if(br.equals("chrome")) {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+readconfig.getChromePath());
@@ -94,7 +90,6 @@ public class BaseClass {
 	}
 	
 	
-	
 	 @BeforeMethod()
 	 public void startExtent(Method method, Object[] testData) {	//this will initialize the test name and test class
 	        String className = method.getDeclaringClass().getSimpleName();
@@ -102,8 +97,6 @@ public class BaseClass {
 	        ExtentTestManager.startTest(methodName);
 	        ExtentTestManager.getTest().assignCategory(className);
 	    }
-	
-	//BeforeClass-BeforeMethod-Test-AfterMethod-BeforeMethod-Test-AfterMethod-AfterClass
 	
 		 
 	 protected String getStackTrace(Throwable t) {	//this is nothing just wanna get the stacktrace for error, you can call directly on your failed testcase
@@ -128,15 +121,18 @@ public class BaseClass {
 	            ExtentTestManager.getTest().assignCategory(group);
 	        }
 	        if (result.getStatus() == ITestResult.SUCCESS) {
-	            ExtentTestManager.getTest().log(LogStatus.PASS, "Test Case Passed "+result.getName());
+	            ExtentTestManager.getTest().log(LogStatus.PASS, "Test Case Passed "+" - "+result.getName());
 	        }
 	        else if (result.getStatus() == ITestResult.FAILURE) {
-	        	ExtentTestManager.getTest().log(LogStatus.FAIL, "Test Case Failed "+result.getName());
-	            ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Case Failed "+result.getThrowable());
-	            
-	            String screenshotPath=System.getProperty("user.dir")+"/Screenshots/"+result.getName()+".png";
-	           //String screenshotPath=BaseClass.getScreenshot(driver,result.getName());
-	           ExtentTestManager.getTest().log(LogStatus.FAIL, ExtentTestManager.getTest().addScreenCapture(screenshotPath));
+	        	 String screenshotPath=System.getProperty("user.dir")+"/Screenshots/"+result.getName()+".png";
+	        	ExtentTestManager.getTest().log(LogStatus.FAIL, "Test Case Failed : "+"Test Name - "+result.getName()+"/ "+"Reason-"+result.getThrowable()+ExtentTestManager.getTest().addScreenCapture(screenshotPath));
+	           
+	        	// ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Case Failed "+" - "+result.getThrowable());
+	            //String screenshotPath=System.getProperty("user.dir")+"/Screenshots/"+result.getName()+".png";
+	        	 // ExtentTestManager.getTest().log(LogStatus.FAIL, ExtentTestManager.getTest().addScreenCapture(screenshotPath));
+
+	        	//String screenshotPath=BaseClass.getScreenshot(driver,result.getName());
+	         
 	         
 	           
 	        }
@@ -157,7 +153,9 @@ public class BaseClass {
 	        System.out.println("Report is Generated");
 	        extent.close();	//close extent here
 	    }
-
+	 
+	 
+	//Capture ScreenShot with Return File
 	public static File captureScreen(WebDriver driver, String tname) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
@@ -167,6 +165,8 @@ public class BaseClass {
 		return target;
 	}
 	
+	
+	//Capture ScreenShot with Robot class with URl
 	public void captureScreenrobot(String tname) throws Exception
 	{
 			BufferedImage image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
@@ -176,7 +176,7 @@ public class BaseClass {
 			System.out.println("Screenshot taken");
 	}
 	
-	
+	//Capture ScreenShot with Return String
 	public static String getScreenshot(WebDriver driver,String screenshotName) throws IOException {
 		String dateName = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
