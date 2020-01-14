@@ -169,7 +169,7 @@ public class TC_NewDash2Sell_003 extends BaseClass {
 			add.selectPhoto("Yes");
 			logger.info("photo No selected...");
 			
-			add.clickAttachment(System.getProperty("user.dir")+"/Attachments/sidekick"+".pdf");
+			add.clickAttachment(System.getProperty("user.dir")+"/Attachments/sidekick");
 			logger.info("Attachment selected...");
 			
 			add.clickSubmit();

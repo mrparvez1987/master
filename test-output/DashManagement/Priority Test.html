@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Priority Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 27 14:14:17 CST 2019</td>
+<td>Started on:</td><td>Wed Dec 11 09:45:14 CST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>22 seconds (22536 ms)</td>
+<tr><td>Total time:</td><td>14 seconds (14859 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,29 +75,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.projects.activities.testCases.TC_ProgramPriorityTest_002.validateProgramId()'><b>validateProgramId</b><br>Test class: com.projects.activities.testCases.TC_ProgramPriorityTest_002<br/>
-<a href="#Output-154449611" onClick='toggleBox("Output-154449611", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-154449611" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-154449611">
-username: brownp<br/>
-password: Anderson1!<br/>
-Submit button clicked<br/>
-Icon clicked<br/>
-Move to Activities<br/>
-New Program Priority cliecked<br/>
-Program ID did not Send<br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.projects.activities.testCases.TC_ProgramPriorityTest_002.validateProgramId(TC_ProgramPriorityTest_002.java:189)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace154449611", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace154449611'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at com.projects.activities.testCases.TC_ProgramPriorityTest_002.validateProgramId(TC_ProgramPriorityTest_002.java:189)
+<td title='com.projects.templates.testCases.TC_StoreTemplatesPageTest_002.validateStoreElementFeatureLinkField()'><b>validateStoreElementFeatureLinkField</b><br>Test class: com.projects.templates.testCases.TC_StoreTemplatesPageTest_002</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
+System info: host: &apos;PF1QDEC8&apos;, ip: &apos;10.99.97.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.sendKeys(Unknown Source)
+	at com.dash2sell.pageObjects.LoginPage.setUserName(LoginPage.java:36)
+	at com.projects.templates.testCases.TC_StoreTemplatesPageTest_002.validateStoreElementFeatureLinkField(TC_StoreTemplatesPageTest_002.java:381)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1269118128", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1269118128'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
+System info: host: &apos;PF1QDEC8&apos;, ip: &apos;10.99.97.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.sendKeys(Unknown Source)
+	at com.dash2sell.pageObjects.LoginPage.setUserName(LoginPage.java:36)
+	at com.projects.templates.testCases.TC_StoreTemplatesPageTest_002.validateStoreElementFeatureLinkField(TC_StoreTemplatesPageTest_002.java:381)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -124,8 +135,38 @@ Program ID did not Send<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>11</td>
-<td>com.projects.activities.testCases.TC_ProgramPriorityTest_002@3c0ecd4b</td></tr>
+<td>0</td>
+<td>com.projects.templates.testCases.TC_StoreTemplatesPageTest_002@31ef45e3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.projects.templates.testCases.TC_StoreTemplatesPageTest_002.validateStoreElementNumericField()'><b>validateStoreElementNumericField</b><br>Test class: com.projects.templates.testCases.TC_StoreTemplatesPageTest_002<br/>
+<a href="#Output-1077072774" onClick='toggleBox("Output-1077072774", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1077072774" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1077072774">
+username <br/>
+password<br/>
+Project Icon Clicked<br/>
+Templates Menu Clicked<br/>
+New Template Button Clicked<br/>
+Select Store template<br/>
+Select Element Template<br/>
+Loose Attachment Name Provided<br/>
+Submit for Reveiw Button Clicked<br/>
+Alert accepted<br/>
+test case passed....Template submitted for review.<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>com.projects.templates.testCases.TC_StoreTemplatesPageTest_002@31ef45e3</td></tr>
 </table><p>
 </body>
 </html>

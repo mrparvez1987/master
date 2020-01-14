@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002">
+        <methods>
+          <include name="validateStoreElementTextField"/>
+          <include name="validateStoreElementSignatureField"/>
+          <include name="validateStoreElementListField"/>
+          <include name="generateReport"/>
+          <include name="validateStoreElementHyperlinkField"/>
+          <include name="validateStoreElementSingleScreenWrapperField"/>
+          <include name="validateStoreElementScanTypeField"/>
+          <include name="validateStoreElementShopcomField"/>
+          <include name="validateStoreElementCurrencyField"/>
+          <include name="validateStoreElementNumericField"/>
+          <include name="validateStoreElementFeatureLinkField"/>
+          <include name="validateStoreElementPictureField"/>
+          <include name="setup"/>
+          <include name="validateStoreElementExceptionField"/>
+          <include name="validateStoreElementInstructionField"/>
+          <include name="validateStoreElementDateField"/>
+          <include name="validateStoreElementInLineAttachmentField"/>
+          <include name="validateStoreElementLooseAttachmentField"/>
+          <include name="startExtent"/>
+          <include name="afterEachTestMethod"/>
+          <include name="extentSetup"/>
+        </methods>
+      </class> <!-- com.projects.templates.testCases.TC_StoreTemplatesPageTest_002 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

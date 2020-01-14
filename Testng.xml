@@ -7,19 +7,32 @@
 
 	 <!--  <listeners>
 		<listener class-name="com.dashManagement.utilities.Reporting" />
-	</listeners>  
-  -->
+	</listeners>  -->
 
 
-	<test name="Priority Test">
+	<test name="DashTest">
 		<parameter name="browser" value="chrome" />
 		
 		
 		
 		<classes>
 		
-			        <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" >
-					<methods> <include name="validateProgramId"/> </methods> </class>
+		
+			   <!--  <class name= "com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" />   -->
+		
+			       <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
+					<methods>	 <include name= "validateStoreElementNumericField"/> 
+								<include name= "validateStoreElementSignatureField"/> 
+								<include name= "validateStoreElementDateField"/> </methods> 	
+								</class>  
+					
+					 
+					
+					
+					
+					<!--    <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
+					<methods> <include name= "validateStoreElementShopcomField"/> </methods> </class>
+					 -->
 					
 		  <!--  	  <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" /> -->
 		   <!--    <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" /> -->
@@ -33,15 +46,7 @@
 		       <!--  	  <class name="com.escalations.testCases.TC_EscalationTest_002" >
 					<methods> <include name= "createNewEscalationReview"/> </methods> </class>-->
 		    
-		             <!--   <class name="com.escalations.testCases.TC_EscalationTest_002" >
-					<methods> <include name= "createNewEscalationReview"/>
-								<include name= "validateApproveStatus"/> 
-								<include name="validateCancelledtatus"/>
-								<include name= "validateElementDetails"/>
-								<include name= "validateElementResponses"/>
-								<include name= "validateClientDropDown"/>
-					
-					</methods> </class>-->
+		           
 					
 				
 					  

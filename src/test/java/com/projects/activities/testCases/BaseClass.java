@@ -40,7 +40,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 //BeforeClass-BeforeMethod-Test-AfterMethod-BeforeMethod-Test-AfterMethod-AfterClass
 
-public class BaseClass {
+public class BaseClass  {
 	
 	ReadConfig readconfig=new ReadConfig();
 
@@ -121,29 +121,25 @@ public class BaseClass {
 	            ExtentTestManager.getTest().assignCategory(group);
 	        }
 	        if (result.getStatus() == ITestResult.SUCCESS) {
-	            ExtentTestManager.getTest().log(LogStatus.PASS, "Test Case Passed "+" - "+result.getName());
+	            ExtentTestManager.getTest().log(LogStatus.PASS, "Test Case Passed : "+" - "+result.getName());
 	        }
 	        else if (result.getStatus() == ITestResult.FAILURE) {
 	        	 String screenshotPath=System.getProperty("user.dir")+"/Screenshots/"+result.getName()+".png";
 	        	ExtentTestManager.getTest().log(LogStatus.FAIL, "Test Case Failed : "+"Test Name - "+result.getName()+"/ "+"Reason-"+result.getThrowable()+ExtentTestManager.getTest().addScreenCapture(screenshotPath));
 	           
-	        	// ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Case Failed "+" - "+result.getThrowable());
+	        	 //ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Case Failed "+result.getThrowable());
 	            //String screenshotPath=System.getProperty("user.dir")+"/Screenshots/"+result.getName()+".png";
 	        	 // ExtentTestManager.getTest().log(LogStatus.FAIL, ExtentTestManager.getTest().addScreenCapture(screenshotPath));
 
 	        	//String screenshotPath=BaseClass.getScreenshot(driver,result.getName());
 	         
-	         
-	           
-	        }
+	          }
 	        else if (result.getStatus() == ITestResult.SKIP) {
-	            ExtentTestManager.getTest().log(LogStatus.SKIP, "Test Case Skipped"+result.getName());
+	            ExtentTestManager.getTest().log(LogStatus.SKIP, "Test Case Skipped : "+result.getName());
 	        }
 
 	        ExtentTestManager.endTest();
-	        extent.flush();	//flush extent here
-	        
-	       
+	        extent.flush();	    
 	        driver.quit();
 	    }
 
@@ -167,12 +163,9 @@ public class BaseClass {
 	
 	
 	//Capture ScreenShot with Robot class with URl
-	public void captureScreenrobot(String tname) throws Exception
-	{
+	public void captureScreenrobot(String tname) throws Exception{
 			BufferedImage image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
-	  
 			ImageIO.write(image, "png", new File(System.getProperty("user.dir") + "/Screenshots/" + tname + ".png")); 
-			
 			System.out.println("Screenshot taken");
 	}
 	

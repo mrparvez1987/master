@@ -14,11 +14,6 @@ import org.testng.annotations.Test;
 import com.projects.activities.pageObjects.ClientListPage;
 import com.projects.activities.pageObjects.ClientPriorityPage;
 
-
-
-
-
-
 public class TC_ClientListTest_007 extends BaseClass {
 	
 	@Test

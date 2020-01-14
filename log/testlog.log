@@ -18498,3 +18498,39 @@
 2019-11-27 10:08:39,093 - Retail -INFO - Program ID did not Send
 2019-11-27 10:12:15,019 - Retail -INFO - New Program Priority cliecked
 2019-11-27 10:12:15,031 - Retail -INFO - Program ID did not Send
+2019-12-11 10:49:14,589 - Retail -INFO - User name is provided
+2019-12-11 10:49:14,660 - Retail -INFO - Passsword is provided
+2019-12-11 10:49:23,771 - Retail -INFO - Escalation Icon Clicked
+2019-12-11 10:49:27,980 - Retail -INFO - New button clicked
+2019-12-11 10:49:28,038 - Retail -INFO - Element ID Sent
+2019-12-11 10:49:33,095 - Retail -INFO - Element Description clicked
+2019-12-11 10:49:36,267 - Retail -INFO - Client ID selected
+2019-12-11 10:49:36,315 - Retail -INFO - Summary Provided
+2019-12-11 10:49:36,393 - Retail -INFO - Due Date Provided
+2019-12-11 10:49:36,465 - Retail -INFO - Store List selected
+2019-12-11 10:49:36,533 - Retail -INFO - Description of Issue Provided
+2019-12-11 10:49:36,616 - Retail -INFO - Result of Anderson Selected
+2019-12-11 10:49:36,678 - Retail -INFO - Resulation Steps Provided
+2019-12-11 10:49:36,759 - Retail -INFO - Plan Duration Selected
+2019-12-11 10:49:36,809 - Retail -INFO - Review Button Clicked
+2019-12-11 10:49:36,816 - Retail -INFO - Alert accepted
+2019-12-11 10:49:36,816 - Retail -INFO - validation started....
+2019-12-11 10:49:38,848 - Retail -INFO - test case passed....
+2020-01-08 15:21:51,232 - Retail -INFO - User name is provided
+2020-01-08 15:21:51,302 - Retail -INFO - Passsword is provided
+2020-01-08 15:21:53,826 - Retail -INFO - Escalation Icon Clicked
+2020-01-08 15:21:54,458 - Retail -INFO - New button clicked
+2020-01-08 15:21:54,517 - Retail -INFO - Element ID Sent
+2020-01-08 15:21:57,620 - Retail -INFO - Element Description clicked
+2020-01-08 15:22:00,620 - Retail -INFO - Client ID selected
+2020-01-08 15:22:00,710 - Retail -INFO - Summery Provided
+2020-01-08 15:22:00,800 - Retail -INFO - Due Date Provided
+2020-01-08 15:22:00,871 - Retail -INFO - Store List selected
+2020-01-08 15:22:00,963 - Retail -INFO - Description of Issue Provided
+2020-01-08 15:22:01,043 - Retail -INFO - Result of Anderson Selected
+2020-01-08 15:22:01,107 - Retail -INFO - Resulation Steps Provided
+2020-01-08 15:22:01,190 - Retail -INFO - Plan Duration Selected
+2020-01-08 15:22:01,235 - Retail -INFO - Review Button Clicked
+2020-01-08 15:22:01,243 - Retail -INFO - Alert accepted
+2020-01-08 15:22:01,244 - Retail -INFO - validation started....
+2020-01-08 15:22:03,280 - Retail -INFO - Get the error messege....test case passed!!!

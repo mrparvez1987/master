@@ -2,6 +2,7 @@ package com.projects.activities.testCases;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -166,27 +167,29 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 		
 		
 		
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		//Thread.sleep(2000);
 		
-		Thread.sleep(2000);
-		
-		boolean res=driver.getPageSource().contains("55555");
+		boolean res=driver.getPageSource().contains("5555");
 		
 		if(res==true)
 		{
 			Assert.assertTrue(true);
-			TestLogger.log("test case passed....");
+			TestLogger.log("expected find");
+			
 			
 		}
 		else
 		{
-			System.out.println("test case failed....");
+			
 			try {
 				captureScreenrobot("validateProgramId");
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
-			Assert.assertTrue(false);
+			
+			Assert.assertTrue(false, "not find expected..'this messege'.... ");
 		}
 	}
 	

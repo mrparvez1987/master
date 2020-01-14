@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [DashManagement]">
-  <test name="Priority Test(failed)">
+  <test name="DashTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002">
+      <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002">
         <methods>
           <include name="setup"/>
-          <include name="validateProgramId"/>
-          <include name="afterEachTestMethod"/>
-          <include name="extentSetup"/>
           <include name="generateReport"/>
           <include name="startExtent"/>
+          <include name="afterEachTestMethod"/>
+          <include name="extentSetup"/>
+          <include name="validateStoreElementShopcomField"/>
         </methods>
-      </class> <!-- com.projects.activities.testCases.TC_ProgramPriorityTest_002 -->
+      </class> <!-- com.projects.templates.testCases.TC_StoreTemplatesPageTest_002 -->
     </classes>
-  </test> <!-- Priority Test(failed) -->
+  </test> <!-- DashTest(failed) -->
 </suite> <!-- Failed suite [DashManagement] -->
