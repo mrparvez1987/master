@@ -1114,64 +1114,136 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("3056");
+		storeTemp.selectFieldType("3122");
 		storeTemp.sendCaption("This is Caption for Shopcom field");
 		storeTemp.selectOptional("1");
+	
 		
-		storeTemp.clickAttachment();
+		if(driver.findElement(By.xpath("//*[text()[contains(.,'Field Availability Criteria (advanced)')]]")).isDisplayed()) {
+			
+			storeTemp.clickAttachment();
+			
+			Robot robot=new Robot();
+			robot.setAutoDelay(2000);
+			
+			StringSelection stringSelection=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+			robot.setAutoDelay(1000);
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_V);
+			
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_V);
+			robot.setAutoDelay(2000);
+			
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			
+			storeTemp.clickInstruction();
+			storeTemp.sendInstruction("First Instruction for Exception field type"+"\n"+"This is second instruction");
+			storeTemp.clickApplyChangesButton();	 
+			
+			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+			
+			List<WebElement> addButtonList=driver.findElements(By.xpath("//div[text()[contains(.,'Add')]]"));
+			Iterator<WebElement> addButton=addButtonList.iterator();
+			addButton.next();
+			addButton.next();
+			addButton.next();
+			addButton.next();
+			addButton.next();
+			WebElement addButton6=addButton.next();
+			addButton6.click();
+			
+
+		} else {
+			
+
+			 driver.findElement(By.xpath("//*[text()[contains(.,'Toggle Advanced Mode')]]")).click();
+			 driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+			storeTemp.clickNewFieldButton();
+			storeTemp.selectFieldType("3122");
+			
+			storeTemp.sendCaption("This is Caption for Shopcom field");
+			storeTemp.selectOptional("1");
+			
+			storeTemp.clickAttachment();
+			
+			Robot robot=new Robot();
+			robot.setAutoDelay(2000);
+			
+			StringSelection stringSelection=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+			robot.setAutoDelay(1000);
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_V);
+			
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_V);
+			robot.setAutoDelay(2000);
+			
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			
+			driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).click();
+			
+			
+			
+			 
+			
+			
+			//JavascriptExecutor js = (JavascriptExecutor)driver;
+			//js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")));
+			
+		}
 		
-		Robot robot=new Robot();
-		robot.setAutoDelay(2000);
 		
-		StringSelection stringSelection=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
-		robot.setAutoDelay(1000);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
 		
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.setAutoDelay(2000);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-	Thread.sleep(3000);
-	/*	
+	
+	
+		/*   
 		storeTemp.clickInstruction();
+		//driver.switchTo().frame(driver.findElement(By.id("mce_0_ifr")));
 		storeTemp.sendInstruction("First Instruction for Shopcom Type field type"+"\n"+"This is second instruction");
-		storeTemp.clickApplyChangesButton();*/
-		
+		storeTemp.clickApplyChangesButton();
+		//driver.switchTo().defaultContent();
+*/		
 		
 		//boolean addbutton=driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).isDisplayed();
-		/*
-		if(driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).isDisplayed()) {
-			JavascriptExecutor js = (JavascriptExecutor)driver;
-			js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")));
+	//driver.switchTo().defaultContent();
+		
+		/*if(driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).isDisplayed()) {
+			//JavascriptExecutor js = (JavascriptExecutor)driver;
+			//js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")));
 			
 			//driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).click();
 		}
 		else {
 			
-			driver.findElement(By.xpath("//*[text()[contains(.,'Toggle Advanced Mode')]]")).click();
-			//driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).click();
+			 driver.findElement(By.xpath("//*[text()[contains(.,'Toggle Advanced Mode')]]")).click();
+			 
+			driver.findElement(By.xpath("//*[@colname[contains(.,'criteria')]]/div[1]/div[2]/div[1] ")).click();
 			
-			JavascriptExecutor js = (JavascriptExecutor)driver;
-			js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")));
+			//JavascriptExecutor js = (JavascriptExecutor)driver;
+			//js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")));
 			
-		}*/
-		
+		}
+		*/
 		
 	
 	
-		
+		/*
 		driver.findElement(By.xpath("//*[text()[contains(.,'Toggle Advanced Mode')]]")).click();
 		
 		Thread.sleep(3000);
 	driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).click();
-		
+		*/
 		
 	
 	
@@ -1241,7 +1313,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		}*/
 	}
 	
-
-
-
 }
+
+
+

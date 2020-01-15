@@ -9,13 +9,34 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">DashManagement</th></tr>
-<tr><td><a href="#t0">DashTest</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">80,831</td><td></td><td></td></tr>
+<tr><td><a href="#t0">DashTest</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">43,961</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">DashManagement</th></tr></tbody><tbody id="t0"><tr><th colspan="4">DashTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.projects.templates.testCases.TC_StoreTemplatesPageTest_002</td><td><a href="#m0">validateStoreElementDateField</a></td><td rowspan="1">1579042932239</td><td rowspan="1">22369</td></tr><tr class="passedeven"><td><a href="#m1">validateStoreElementNumericField</a></td><td rowspan="1">1579042879543</td><td rowspan="1">12561</td></tr><tr class="passedeven"><td><a href="#m2">validateStoreElementSignatureField</a></td><td rowspan="1">1579042896878</td><td rowspan="1">30740</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">DashManagement</th></tr></tbody><tbody id="t0"><tr><th colspan="4">DashTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.projects.templates.testCases.TC_StoreTemplatesPageTest_002</td><td><a href="#m0">validateStoreElementShopcomField</a></td><td rowspan="1">1579120234832</td><td rowspan="1">38793</td></tr></tbody>
 </table>
-<h2>DashTest</h2><h3 id="m0">com.projects.templates.testCases.TC_StoreTemplatesPageTest_002#validateStoreElementDateField</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">username <br/>password<br/>Submit for Reveiw Button Clicked<br/>Alert accepted<br/>test case passed....Template submitted for review.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.projects.templates.testCases.TC_StoreTemplatesPageTest_002#validateStoreElementNumericField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th></tr><tr class="param stripe"><td>brownp</td><td>Anderson1!</td><td>866</td><td>1</td><td>1</td><td>5</td><td>10</td><td>ATT</td><td>First Instruction for numeric field type.
-This is second instruction</td></tr><tr><th colspan="9">Messages</th></tr><tr><td colspan="9"><div class="messages">username: brownp<br/>password: Anderson1!<br/>Project Icon Clicked<br/>Templates Menu Clicked<br/>New Template Button Clicked<br/>Select Store template<br/>Select Element Template<br/>Loose Attachment Name Provided<br/>Submit for Reveiw Button Clicked<br/>Alert accepted<br/>test case passed....Template submitted for review.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.projects.templates.testCases.TC_StoreTemplatesPageTest_002#validateStoreElementSignatureField</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">username <br/>password<br/>Loose Attachment Name Provided<br/>Submit for Reveiw Button Clicked<br/>Alert accepted<br/>test case passed....Template submitted for review.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>DashTest</h2><h3 id="m0">com.projects.templates.testCases.TC_StoreTemplatesPageTest_002#validateStoreElementShopcomField</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">username <br/>password</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[starts-with(@id,&apos;grid_criteria_Fields_grid_row_&apos;) and text()=&apos;Add&apos;]&quot;}
+  (Session info: chrome=79.0.3945.117)
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
+System info: host: &apos;PF1QDEC8&apos;, ip: &apos;10.99.97.124&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.43.600210 (68dcf5eebde371..., userDataDir: C:\Users\MOHAMM~1.PAR\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50874}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 79.0.3945.117, webStorageEnabled: true}
+Session ID: 54e6697ff2d85b60ea08bddb69b131c8
+*** Element info: {Using=xpath, value=//div[starts-with(@id,&apos;grid_criteria_Fields_grid_row_&apos;) and text()=&apos;Add&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.projects.templates.testCases.TC_StoreTemplatesPageTest_002.validateStoreElementShopcomField(TC_StoreTemplatesPageTest_002.java:1172)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -20,19 +20,19 @@
 		
 			   <!--  <class name= "com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" />   -->
 		
-			       <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
+			      <!--  <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
 					<methods>	 <include name= "validateStoreElementNumericField"/> 
 								<include name= "validateStoreElementSignatureField"/> 
 								<include name= "validateStoreElementDateField"/> </methods> 	
-								</class>  
+								</class>   -->
 					
 					 
 					
 					
 					
-					<!--    <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
+				   <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
 					<methods> <include name= "validateStoreElementShopcomField"/> </methods> </class>
-					 -->
+					
 					
 		  <!--  	  <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" /> -->
 		   <!--    <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" /> -->
