@@ -10,8 +10,8 @@
           <include name="generateReport"/>
           <include name="startExtent"/>
           <include name="afterEachTestMethod"/>
+          <include name="validateStoreElementSingleScreenWrapperField"/>
           <include name="extentSetup"/>
-          <include name="validateStoreElementShopcomField"/>
         </methods>
       </class> <!-- com.projects.templates.testCases.TC_StoreTemplatesPageTest_002 -->
     </classes>

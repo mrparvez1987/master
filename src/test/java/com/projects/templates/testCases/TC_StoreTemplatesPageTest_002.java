@@ -1,21 +1,13 @@
 package com.projects.templates.testCases;
 
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
+
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -76,7 +68,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		
 		boolean b=driver.getPageSource().contains("Template submitted for review.");
-		//boolean b1=driver.getPageSource().contentEquals("Template submitted for review.");
+		
 		
 		
 		if(b==true)
@@ -96,7 +88,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 	@DataProvider(name="TemplateNumericFieldPageData")
 	String [][] getData() throws IOException
 	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateNumericFieldPageData.xlsx";
+		String path=System.getProperty("user.dir")+"/src/test/java/testData/TemplateNumericFieldPageData.xlsx";
 	
 		
 		int rownum=XLUtils.getRowCount(path, "Sheet1");
@@ -138,7 +130,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("945");
+		storeTemp.selectFieldTypeByText("Date");
 		storeTemp.sendCaption("This is Caption for List field");
 		storeTemp.selectOptional("1");
 		storeTemp.sendEarliestDate("2019-12-15");
@@ -147,24 +139,18 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.getEarliestDate().sendKeys(Keys.ESCAPE);
 		storeTemp.clickAttachment();
 		
-		Robot robot=new Robot();
-		robot.setAutoDelay(2000);
+		storeTemp.uploadFile(System.getProperty("user.dir")+"\\Attachments\\sidekick"+".pdf");
 		
-		StringSelection stringSelection=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
-		robot.setAutoDelay(1000);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
 		
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.setAutoDelay(2000);
+		/*driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//input[@class[contains(.,'aawgui_attachment_filepicker')]]")).sendKeys(System.getProperty("user.dir")+"/Attachments/sidekick"+".pdf");
+		Thread.sleep(5000);
+		driver.switchTo().alert().accept();
+		Thread.sleep(3000);*/
+		//storeTemp.uploadFile(System.getProperty("user.dir")+"/Attachments/sidekick"+".pdf");
 		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		//add.clickAttachment(System.getProperty("user.dir")+"/Attachments/sidekick"+".pdf");
 		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
 		
 		storeTemp.clickInstruction();
 		storeTemp.sendInstruction("First Instruction for Date field type"+"\n"+"This is second instruction");
@@ -217,7 +203,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("2427");
+		storeTemp.selectFieldTypeByText("Signature");
 		storeTemp.sendCaption("This is Caption for List field");
 		storeTemp.selectOptional("1");
 		storeTemp.selectAutoApprovePic("1");
@@ -349,7 +335,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("867");
+		storeTemp.selectFieldTypeByText("Text");
 		storeTemp.sendCaption("This is Caption for Text field");
 		storeTemp.selectOptional("1");
 		storeTemp.sendMaxValue("10");
@@ -404,7 +390,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("868");
+		storeTemp.selectFieldTypeByText("List");
 		storeTemp.sendCaption("This is Caption for List field");
 		storeTemp.selectOptional("1");
 		storeTemp.sendLooseAttachment("ATT");
@@ -466,7 +452,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("869");
+		storeTemp.selectFieldTypeByText("Picture");
 		storeTemp.sendCaption("This is Caption for List field");
 		storeTemp.selectOptional("1");
 		storeTemp.sendLooseAttachment("ATT");
@@ -520,7 +506,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("870");
+		storeTemp.selectFieldTypeByText("Instructions");
 		storeTemp.sendCaption("This is Caption for List field");
 		storeTemp.selectOptional("1");
 		storeTemp.clickInstruction();
@@ -569,29 +555,12 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("871");
+		storeTemp.selectFieldTypeByText("In-Line Attachment");
 		storeTemp.sendCaption("This is Caption for In-Line Attachment field");
 		storeTemp.selectOptional("1");	 
 		storeTemp.clickAttachment();
 		
-		Robot robot=new Robot();
-		robot.setAutoDelay(2000);
-		
-		StringSelection stringSelection=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
-		robot.setAutoDelay(1000);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.setAutoDelay(2000);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		storeTemp.uploadFile(System.getProperty("user.dir")+"\\Attachments\\sidekick"+".pdf");
 	
 		storeTemp.clickSubmitForReveiw();
 		TestLogger.log("Submit for Reveiw Button Clicked");
@@ -636,30 +605,13 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("935");
+		storeTemp.selectFieldTypeByText("Feature Link");
 		storeTemp.sendCaption("This is Caption for In-Line Attachment field");
 		storeTemp.selectOptional("1");
 		storeTemp.selectFeatureLinkType("32");
 		storeTemp.clickAttachment();
 		
-		Robot robot=new Robot();
-		robot.setAutoDelay(2000);
-		
-		StringSelection stringSelection=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
-		robot.setAutoDelay(1000);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.setAutoDelay(2000);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-	
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		storeTemp.uploadFile(System.getProperty("user.dir")+"\\Attachments\\sidekick"+".pdf");;
 		
 		storeTemp.clickInstruction();
 		storeTemp.sendInstruction("First Instruction for Feature Link field type"+"\n"+"This is second instruction");
@@ -710,30 +662,13 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("936");
+		storeTemp.selectFieldTypeByText("Exception");
 		storeTemp.sendCaption("This is Caption for Exception field");
 		storeTemp.selectOptional("1");
 		storeTemp.selectExcetptionType("939");
 		storeTemp.clickAttachment();
 		
-		Robot robot=new Robot();
-		robot.setAutoDelay(2000);
-		
-		StringSelection stringSelection=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
-		robot.setAutoDelay(1000);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.setAutoDelay(2000);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		storeTemp.uploadFile(System.getProperty("user.dir")+"\\Attachments\\sidekick"+".pdf");
 		
 		storeTemp.clickInstruction();
 		storeTemp.sendInstruction("First Instruction for Exception field type"+"\n"+"This is second instruction");
@@ -784,7 +719,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("946");
+		storeTemp.selectFieldTypeByText("Currency");
 		storeTemp.sendCaption("This is Caption for List field");
 		storeTemp.selectOptional("1");
 		storeTemp.getMinAmount().clear();
@@ -843,7 +778,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("1069");
+		storeTemp.selectFieldTypeByText("Loose Attachment");
 		storeTemp.sendCaption("This is Caption for List field");
 		storeTemp.selectOptional("1");
 		storeTemp.sendLooseAttachment("ATT");
@@ -893,7 +828,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("1091");
+		storeTemp.selectFieldTypeByText("Scan Type");
 		storeTemp.sendCaption("This is Caption for List field");
 		storeTemp.selectScanType("2");
 		storeTemp.selectOptional("1");
@@ -948,7 +883,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("2004");
+		storeTemp.selectFieldTypeByText("Single Screen Wrapper");
 		storeTemp.selectOptional("1");
 		storeTemp.sendCaption("This is Caption for List field");
 		driver.findElement(By.xpath("//div[@colname[contains(.,'addchild')]]")).click();
@@ -959,7 +894,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		cap.next();
 		WebElement caption2=cap.next();
 		caption2.sendKeys("This is Second caption");
-		
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		
 		List<WebElement> attachList=driver.findElements(By.xpath("//input[@class[contains(.,'aawgui_attachment_filepicker')]]"));
 		Iterator<WebElement> attach=attachList.iterator();
@@ -967,25 +902,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		WebElement attachList2=attach.next();
 		attachList2.click();
 		
-		
-		Robot robot=new Robot();
-		robot.setAutoDelay(2000);
-		
-		StringSelection stringSelection2=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection2,null);
-		robot.setAutoDelay(1000);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.setAutoDelay(2000);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		storeTemp.uploadFile(System.getProperty("user.dir")+"\\Attachments\\sidekick"+".pdf");
 		
 		List<WebElement> addButtonList=driver.findElements(By.xpath("//*[starts-with(@id,'grid_responses_aawgui_Fields_grid_temporary_') and text()='Add']"));
 		Iterator<WebElement> addButton=addButtonList.iterator();
@@ -1041,7 +958,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("2911");
+		storeTemp.selectFieldTypeByText("Hyperlink (URL, web address)");
 		storeTemp.sendCaption("This is Caption for Hyperlink field");
 		storeTemp.selectOptional("1");
 		storeTemp.sendHyperlinkAddress("https://google.com");
@@ -1114,7 +1031,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		storeTemp.clickElementTemplate();
 		storeTemp.sendDescription("This is Description of element template");
 		storeTemp.clickNewFieldButton();
-		storeTemp.selectFieldType("3122");
+		storeTemp.selectFieldTypeByText("Shopcom Order");
 		storeTemp.sendCaption("This is Caption for Shopcom field");
 		storeTemp.selectOptional("1");
 	
@@ -1122,25 +1039,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		if(driver.findElement(By.xpath("//*[text()[contains(.,'Field Availability Criteria (advanced)')]]")).isDisplayed()) {
 			
 			storeTemp.clickAttachment();
-			
-			Robot robot=new Robot();
-			robot.setAutoDelay(2000);
-			
-			StringSelection stringSelection=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
-			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
-			robot.setAutoDelay(1000);
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_V);
-			
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_V);
-			robot.setAutoDelay(2000);
-			
-			robot.keyPress(KeyEvent.VK_ENTER);
-			robot.keyRelease(KeyEvent.VK_ENTER);
-			
-			robot.keyPress(KeyEvent.VK_ENTER);
-			robot.keyRelease(KeyEvent.VK_ENTER);
+			storeTemp.uploadFile(System.getProperty("user.dir")+"\\Attachments\\sidekick"+".pdf");
 			
 			storeTemp.clickInstruction();
 			storeTemp.sendInstruction("First Instruction for Exception field type"+"\n"+"This is second instruction");
@@ -1172,78 +1071,19 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 			
 			storeTemp.clickAttachment();
 			
-			Robot robot=new Robot();
-			robot.setAutoDelay(2000);
+			storeTemp.uploadFile(System.getProperty("user.dir")+"\\Attachments\\sidekick"+".pdf");
 			
-			StringSelection stringSelection=new StringSelection("C:\\Users\\mohammad.parvez\\git\\test-automation\\Attachments\\sidekick.pdf");
-			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
-			robot.setAutoDelay(1000);
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_V);
-			
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			robot.keyRelease(KeyEvent.VK_V);
-			robot.setAutoDelay(2000);
-			
-			robot.keyPress(KeyEvent.VK_ENTER);
-			robot.keyRelease(KeyEvent.VK_ENTER);
-			
-			robot.keyPress(KeyEvent.VK_ENTER);
-			robot.keyRelease(KeyEvent.VK_ENTER);
-			
-			driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).click();
-			
-			
+			driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).click();			
 			
 			 
-			
-			
-			//JavascriptExecutor js = (JavascriptExecutor)driver;
-			//js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")));
-			
+		
 		}
 		
 		
 		
 	
 	
-		/*   
-		storeTemp.clickInstruction();
-		//driver.switchTo().frame(driver.findElement(By.id("mce_0_ifr")));
-		storeTemp.sendInstruction("First Instruction for Shopcom Type field type"+"\n"+"This is second instruction");
-		storeTemp.clickApplyChangesButton();
-		//driver.switchTo().defaultContent();
-*/		
 		
-		//boolean addbutton=driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).isDisplayed();
-	//driver.switchTo().defaultContent();
-		
-		/*if(driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).isDisplayed()) {
-			//JavascriptExecutor js = (JavascriptExecutor)driver;
-			//js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")));
-			
-			//driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).click();
-		}
-		else {
-			
-			 driver.findElement(By.xpath("//*[text()[contains(.,'Toggle Advanced Mode')]]")).click();
-			 
-			driver.findElement(By.xpath("//*[@colname[contains(.,'criteria')]]/div[1]/div[2]/div[1] ")).click();
-			
-			//JavascriptExecutor js = (JavascriptExecutor)driver;
-			//js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")));
-			
-		}
-		*/
-		
-	
-	
-		/*
-		driver.findElement(By.xpath("//*[text()[contains(.,'Toggle Advanced Mode')]]")).click();
-		
-		Thread.sleep(3000);
-	driver.findElement(By.xpath("//div[starts-with(@id,'grid_criteria_Fields_grid_row_') and text()='Add']")).click();
-		*/
 		
 	
 	

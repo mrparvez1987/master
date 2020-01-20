@@ -1,5 +1,10 @@
 package com.projects.templates.pageObject;
 
+
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 import org.openqa.selenium.Alert;
@@ -9,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
 
 	public class StoreTemplatesPage {
 	WebDriver ldriver;
@@ -59,17 +65,11 @@ import org.openqa.selenium.support.ui.Select;
 		WebElement drOptional;
 		
 		@FindBy(xpath="//*[@id=\"aawgui_Fields_grid_temporary_0\"]/div[15]/div[3]/select")
-		WebElement drIdentifier;
-		
+		WebElement drIdentifier;	
 		
 		@FindBy(xpath="//input[@colname[contains(.,'label')]]")
 		WebElement txtCaption;
-
-		@FindBy(xpath="//input[@colname[contains(.,'label')]]")
-		List<WebElement> multiCaption;
-		
-		
-		
+	
 		@FindBy(xpath="//input[@colname[contains(.,'minimum')]]")
 		WebElement txtMinValue;
 		
@@ -145,14 +145,72 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(xpath="//input[@colname[contains(.,'hyperlink')]]")
 		WebElement txtHyperlinkAddress;
 		
+		
+		
+		
+		@FindBy(xpath="//input[@colname[contains(.,'label')]]")
+		List<WebElement> multiCaption;
+		
 		@FindBy(xpath="//input[@colname[contains(.,'hyperlink')]]")
 		List<WebElement> multiHyperlink;
 		
 		@FindBy(xpath="//input[@class[contains(.,'aawgui_attachment_filepicker')]]")
 		List<WebElement> multiAttach;
 		
+		@FindBy(xpath="//option[text()='Numeric']")
+		List<WebElement> multiNumericDropList;
+		
+		@FindBy(xpath="//option[text()='Text']")
+		List<WebElement> multiTextDropList;
+		
+		@FindBy(xpath="//option[text()='List']")
+		List<WebElement> multiListDropList;
+
+		@FindBy(xpath="//option[text()='Picture']")
+		List<WebElement> multiPictureDropList;
+		
+		@FindBy(xpath="//option[text()='Instructions']")
+		List<WebElement> multiInstructionsDropList;
+
+		@FindBy(xpath="//option[text()='In-Line Attachment']")
+		List<WebElement> multiInLineAttachmentDropList;
+	
+		@FindBy(xpath="//option[text()='Feature Link']")
+		List<WebElement> multiFeatureLinkDropList;
+
+		@FindBy(xpath="//option[text()='Exception']")
+		List<WebElement> multiExceptionDropList;
+		
+		@FindBy(xpath="//option[text()='Date']")
+		List<WebElement> multiDateDropList;
+		
+		@FindBy(xpath="//option[text()='Currency']")
+		List<WebElement> multiCurrencyDropList;
+		
+		@FindBy(xpath="//option[text()='Loose Attachment']")
+		List<WebElement> multiLooseAttachmentDropList;
+		
+		@FindBy(xpath="//input[@colname[contains(.,'itemattachmentname')]]")
+		List<WebElement> multiLooseAttachment;
+		
+		@FindBy(xpath="//option[text()='Scan Type']")
+		List<WebElement> multiScanTypeDropList;
+		
+		@FindBy(xpath="//option[text()='Single Screen Wrapper']")
+		List<WebElement> multiSingleScreenWrapperDropList;
+		
+		@FindBy(xpath="//option[text()='Signature']")
+		List<WebElement> multiSignatureDropList;
+		
 		@FindBy(xpath="//option[text()='Hyperlink (URL, web address)']")
 		List<WebElement> multiHyperDropList;
+		
+		@FindBy(xpath="//option[text()='Shopcom Order']")
+		List<WebElement> multiShopcomDropList;
+		
+		@FindBy(id="//*[@id=\"ui-id-10\"]/li[1]/a")
+		List<WebElement> responseList;
+		
 		
 		
 		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[1]/div")
@@ -172,13 +230,11 @@ import org.openqa.selenium.support.ui.Select;
 		
 		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[1]/ul/li[2]/div")
 		WebElement btnSaveAndClose;
-		
-	
-		
+			
 		
 		
-		@FindBy(id="//*[@id=\"ui-id-10\"]/li[1]/a")
-		List<WebElement> responseList;
+		
+		
 		
 		public List<WebElement> getResponseElement() {
 			return responseList;
@@ -229,60 +285,7 @@ import org.openqa.selenium.support.ui.Select;
 			btnNewField.click();
 		}
 		
-		public void selectFieldType(String fieldType) {
-			Select select=new Select(drFieldType);
-			select.selectByValue(fieldType);
-		}
 		
-		public void selectOptional(String option) {
-			Select select=new Select(drOptional);
-			select.selectByValue(option);
-		}
-		
-		public void selectIdentifierField(String identifier) {
-			Select select=new Select(drIdentifier);
-			select.selectByValue(identifier);
-		}
-		
-		public void selectReportResponse(String report) {
-			Select select=new Select(drReportResponse);
-			select.selectByValue(report);
-		}
-		
-		public void selectMultipleSelection(String multiple) {
-			Select select=new Select(drMultipleSelection);
-			select.selectByValue(multiple);
-		}
-		
-		public void selectAutoApprovePictures(String autoApprovePic) {
-			Select select=new Select(drAutoApprovePic);
-			select.selectByValue(autoApprovePic);
-		}
-		
-		public void selectFeatureLinkType(String featureLink) {
-			Select select=new Select(drpfeatureLink);
-			select.selectByValue(featureLink);
-		}
-		
-		public void selectExcetptionType(String exceptionType) {
-			Select select=new Select(drpExceptionType);
-			select.selectByValue(exceptionType);
-		}
-		
-		public void selectScanType(String scanType) {
-			Select select=new Select(drpScanType);
-			select.selectByValue(scanType);
-		}
-		
-		public void selectAutoApprovePic(String autoApprove) {
-			Select select=new Select(drpAutoApprove);
-			select.selectByValue(autoApprove);
-		}
-		
-		public void selectInternalUse(String internalUse) {
-			Select select=new Select(drpInternalUse);
-			select.selectByValue(internalUse);
-		}
 		
 		public void sendCaption(String caption) {
 			txtCaption.sendKeys(caption);
@@ -308,8 +311,7 @@ import org.openqa.selenium.support.ui.Select;
 			boxInstruction.click();
 		}
 		
-		public void sendInstruction(String instruction) {
-		
+		public void sendInstruction(String instruction) {	
 			txtInstruction.sendKeys(instruction);
 		}
 		
@@ -370,13 +372,11 @@ import org.openqa.selenium.support.ui.Select;
 		
 		public void sendMinAmount(String minAmount) {
 			txtMinAmount.sendKeys(minAmount);
-		}
-		
+		}	
 
 		public void sendMaxAmount(String maxAmount) {
 			txtMaxAmount.sendKeys(maxAmount);
-		}
-		
+		}	
 
 		public WebElement getMinAmount() {
 			return txtMinAmount;
@@ -386,12 +386,83 @@ import org.openqa.selenium.support.ui.Select;
 			return txtMaxAmount;
 		}
 		
-		public List<WebElement> getMultiCaption() {
-			return multiCaption;
-		}
-		
 		public void sendHyperlinkAddress(String hyperlink) {
 			txtHyperlinkAddress.sendKeys(hyperlink);
+		}
+		
+		
+		
+		
+		
+		
+		
+		public void selectFieldType(String fieldType) {
+			Select select=new Select(drFieldType);
+			select.selectByValue(fieldType);
+		}
+		
+		public void selectFieldTypeByText(String fieldText) {
+			Select select=new Select(drFieldType);
+			select.selectByVisibleText(fieldText);
+		}
+		
+		public void selectOptional(String option) {
+			Select select=new Select(drOptional);
+			select.selectByValue(option);
+		}
+		
+		public void selectIdentifierField(String identifier) {
+			Select select=new Select(drIdentifier);
+			select.selectByValue(identifier);
+		}
+		
+		public void selectReportResponse(String report) {
+			Select select=new Select(drReportResponse);
+			select.selectByValue(report);
+		}
+		
+		public void selectMultipleSelection(String multiple) {
+			Select select=new Select(drMultipleSelection);
+			select.selectByValue(multiple);
+		}
+		
+		public void selectAutoApprovePictures(String autoApprovePic) {
+			Select select=new Select(drAutoApprovePic);
+			select.selectByValue(autoApprovePic);
+		}
+		
+		public void selectFeatureLinkType(String featureLink) {
+			Select select=new Select(drpfeatureLink);
+			select.selectByValue(featureLink);
+		}
+		
+		public void selectExcetptionType(String exceptionType) {
+			Select select=new Select(drpExceptionType);
+			select.selectByValue(exceptionType);
+		}
+		
+		public void selectScanType(String scanType) {
+			Select select=new Select(drpScanType);
+			select.selectByValue(scanType);
+		}
+		
+		public void selectAutoApprovePic(String autoApprove) {
+			Select select=new Select(drpAutoApprove);
+			select.selectByValue(autoApprove);
+		}
+		
+		public void selectInternalUse(String internalUse) {
+			Select select=new Select(drpInternalUse);
+			select.selectByValue(internalUse);
+		}
+		
+		
+		
+		
+		
+		
+		public List<WebElement> getMultiCaption() {
+			return multiCaption;
 		}
 		
 		public List<WebElement> getMultihyperlink() {
@@ -402,10 +473,96 @@ import org.openqa.selenium.support.ui.Select;
 			return multiAttach;
 		}
 		
+		public List<WebElement> getMultiNumericdroplist() {
+			return multiNumericDropList;
+		}	
+		
+		public List<WebElement> getMultiTextdroplist() {
+			return multiTextDropList;
+		}	
+		
+		public List<WebElement> getMultiListdroplist() {
+			return multiListDropList;
+		}	
+		
+		public List<WebElement> getMultiPicturedroplist() {
+			return multiPictureDropList;
+		}	
+		
+		public List<WebElement> getMultiInstructionsdroplist() {
+			return multiInstructionsDropList;
+		}	
+		
+		public List<WebElement> getMultiInLineAttachmentdroplist() {
+			return multiInLineAttachmentDropList;
+		}	
+		
+		public List<WebElement> getMultiFeatureLinkdroplist() {
+			return multiFeatureLinkDropList;
+		}	
+
+		public List<WebElement> getMultiDatedroplist() {
+			return multiDateDropList;
+		}
+		
+		public List<WebElement> getMultiCurrencydroplist() {
+			return multiCurrencyDropList;
+		}
+		
+		public List<WebElement> getMultiLooseAttachmentdroplist() {
+			return multiLooseAttachmentDropList;
+		}
+		
+		public List<WebElement> getMultiScanTypedroplist() {
+			return multiScanTypeDropList;
+		}
+		
+		public List<WebElement> getMultiSingleScreenWrapperdroplist() {
+			return multiSingleScreenWrapperDropList;
+		}
+		
+		public List<WebElement> getMultiSignaturedroplist() {
+			return multiSignatureDropList;
+		}
+		
 		public List<WebElement> getMultihyperdroplist() {
 			return multiHyperDropList;
 		}
 		
+		public List<WebElement> getMultiShopcomdroplist() {
+			return multiShopcomDropList;
+		}
+		
+		public List<WebElement> getMultiLooseAttachment() {
+			return multiLooseAttachment;
+		}
+		
+		public void uploadFile(String filePath) throws Exception {
+			
+
+			Robot robot=new Robot();
+			robot.setAutoDelay(1000);
+			
+			StringSelection stringSelection=new StringSelection(filePath);
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+			robot.setAutoDelay(2000);
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_V);
+			
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_V);
+			
+			//robot.setAutoDelay(2000);
+			
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+		}
+		
+		
+	
 		
 	
 	}
