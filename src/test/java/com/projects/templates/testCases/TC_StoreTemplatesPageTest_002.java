@@ -173,9 +173,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 			
 			captureScreenrobot("validateStoreElementDateField");
 			Assert.assertTrue(false,"Template Did not submitted for review...");
-			
-			
-			
+				
 			
 		}
 	}
@@ -235,34 +233,6 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 			Assert.assertTrue(false,"Template Did not submitted for review...");
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
