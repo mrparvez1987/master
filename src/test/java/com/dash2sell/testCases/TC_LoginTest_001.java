@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.dash2sell.pageObjects.LoginPage;
+import com.dashManagement.utilities.BaseClass;
 
 public class TC_LoginTest_001 extends BaseClass {
 	

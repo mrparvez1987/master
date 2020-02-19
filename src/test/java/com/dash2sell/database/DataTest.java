@@ -7,8 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 
-
+import org.apache.poi.util.SystemOutLogger;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import com.dashManagement.utilities.ReadConfig;
 
@@ -232,7 +233,7 @@ public class DataTest {
 }
 
 
-
+	
 	public void validateCancelledStatusData(String escid) throws SQLException {
 	
 	try {
@@ -259,7 +260,7 @@ public class DataTest {
 			System.out.println("Current Status of escataion from database : "+statusName+"..."+"Test Case Passed");	
 		}
 			
-	else{
+	else {
 		
 		Assert.assertTrue(false);
 		System.out.println("...Test Case Failed");
@@ -276,6 +277,741 @@ catch(Exception e){
 }
 
 
+}
+	
+	
+
+public void validateTemplateScanTypeData2(String desc,String caption,String optional,String instr,String fieldType,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT temp.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.INSTRUCTIONS,cc.DESCRIPTION "
+				+ "FROM NINJA.TEMPLATES temp "
+				+ "JOIN NINJA.FIELDS fie "
+				+ "on temp.TEMPLATEID=fie.TEMPLATEID "
+				+ "join NINJA.FIELDCRITERIA fcri "
+				+ "on fcri.FIELDID=fie.TEMPLATEID "
+				+"LEFT join COREAPP.CODES cc "
+				+"on fie.TYPEID=cc.CODEID "
+				+"WHERE temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+	
+		ResultSet rs = smt.executeQuery(query);
+	
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5));
+				
+		if(rs.getString(1).equalsIgnoreCase(desc) && rs.getString(2).equalsIgnoreCase(caption) && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).contains(""+instr)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+
+	
+}
+	
+
+
+	public void validateInLineAttachmentTypeData(String fieldType,String caption,String optional,String tempNumber) throws SQLException {
+	
+	try {
+		
+		Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+		Statement smt = con.createStatement();
+	
+	String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL "
+			+ "FROM NINJA.TEMPLATES temp "
+			+ "JOIN NINJA.FIELDS fie "
+			+ "on temp.TEMPLATEID=fie.TEMPLATEID "
+			+"LEFT join COREAPP.CODES cc "
+			+"on fie.TYPEID=cc.CODEID "
+			+"WHERE cc.DESCRIPTION='In-Line Attachment' "
+			+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+	
+
+	ResultSet rs = smt.executeQuery(query);
+
+	if(rs.next()) {	
+		
+		System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3));
+			
+	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)) {
+			Assert.assertTrue(true);
+			System.out.println("Record found and matches with Database...Test Case Passed");
+			
+		} else{
+			System.out.println("Record Not Found in Database...Test Case Failed");
+			Assert.assertTrue(false);			
+		}		
+	
+	}
+	con.close();
+}
+catch(Exception e){
+	System.out.println(e);
+}
+
 
 }
+	
+	
+	public void validateInstructionTypeData(String fieldType,String caption,String optional,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL "
+				+ "FROM NINJA.TEMPLATES temp "
+				+ "JOIN NINJA.FIELDS fie "
+				+ "on temp.TEMPLATEID=fie.TEMPLATEID "
+				+"LEFT join COREAPP.CODES cc "
+				+"on fie.TYPEID=cc.CODEID "
+				+"WHERE cc.DESCRIPTION='Instructions' "
+				+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3));
+				
+		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+
+
+	}
+	
+public void validatePictureTypeData(String fieldType,String caption,String optional,String loose,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,ia.NAME  "
+				+ "FROM NINJA.TEMPLATES temp "
+				+ "JOIN NINJA.FIELDS fie "
+				+ "on temp.TEMPLATEID=fie.TEMPLATEID "
+				+"join ACTIVITY.ITEMATTACHMENTNAMES ia "
+				+"on ia.ITEMATTACHMENTNAMEID = fie.ITEMATTACHMENTNAMEID "
+				+"LEFT join COREAPP.CODES cc "
+				+"on fie.TYPEID=cc.CODEID "
+				+"WHERE cc.DESCRIPTION='Picture' "
+				+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4));
+				
+		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(loose)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+
+
+	}
+
+
+public void validateListTypeData(String fieldType,String caption,String optional,String loose,String resText,String tempNumber) throws SQLException {
+	
+	try {
+		
+		Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+		Statement smt = con.createStatement();
+	
+	String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,ia.NAME,r.RESPONSETEXT "
+			+ "FROM NINJA.TEMPLATES temp "
+			+ "JOIN NINJA.FIELDS fie "
+			+ "on temp.TEMPLATEID=fie.TEMPLATEID "
+			+"join ACTIVITY.ITEMATTACHMENTNAMES ia "
+			+ "on ia.ITEMATTACHMENTNAMEID = fie.ITEMATTACHMENTNAMEID "
+			+"join NINJA.FIELDRESPONSES fr "
+			+ "on fr.FIELDID = fie.FIELDID "
+			+"join NINJA.RESPONSES r "
+			+ "on r.RESPONSEID = fr.RESPONSEID "
+			+"LEFT join COREAPP.CODES cc "
+			+"on fie.TYPEID=cc.CODEID "
+			+"WHERE temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+	
+
+	ResultSet rs = smt.executeQuery(query);
+
+	if(rs.next()) {	
+		
+		System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5));
+			
+	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption) && rs.getString(3).equalsIgnoreCase(optional)  && rs.getString(4).equalsIgnoreCase(loose) && rs.getString(5).contains(resText)) {
+			Assert.assertTrue(true);
+			System.out.println("Record found and matches with Database...Test Case Passed");
+			
+		} else{
+			System.out.println("Record Not Found in Database...Test Case Failed");
+			Assert.assertTrue(false);			
+		}		
+	
+	}
+	con.close();
+}
+catch(Exception e){
+	System.out.println(e);
+}
+
+
+}
+
+public void validateTextTypeData(String fieldType,String caption,String optional,String maxValue,String loose,String tempNumber) throws SQLException {
+	
+	try {
+		
+		Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+		Statement smt = con.createStatement();
+	
+	String query="Select cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.MAXIMUM,ia.NAME "
+			+"FROM NINJA.TEMPLATES temp "
+			+"JOIN NINJA.FIELDS fie "
+			+"on temp.TEMPLATEID=fie.TEMPLATEID "
+			+"join ACTIVITY.ITEMATTACHMENTNAMES ia " 
+			+"on ia.ITEMATTACHMENTNAMEID = fie.ITEMATTACHMENTNAMEID "
+			+"join COREAPP.CODES cc on fie.TYPEID=cc.CODEID "
+			+"WHERE cc.DESCRIPTION='Text' " 
+			+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+	
+
+	ResultSet rs = smt.executeQuery(query);
+
+	if(rs.next()) {	
+		
+		System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5));
+			
+	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).equalsIgnoreCase(maxValue)&& rs.getString(5).contains(loose)) {
+			Assert.assertTrue(true);
+			System.out.println("Record found and matches with Database...Test Case Passed");
+			
+		} else{
+			System.out.println("Record Not Found in Database...Test Case Failed");
+			Assert.assertTrue(false);			
+		}		
+	
+	}
+	con.close();
+}
+catch(Exception e){
+	System.out.println(e);
+}
+
+
+}
+
+
+public void validateSignatureTypeData(String fieldType,String caption,String optional,String aApprove,String internal,String loose,String tempNumber) throws SQLException {
+	
+	try {
+		
+		Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+		Statement smt = con.createStatement();
+	
+	String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.AUTOAPPROVE,fie.INTERNALONLY,ia.NAME "
+			+"FROM NINJA.TEMPLATES temp "
+			+"JOIN NINJA.FIELDS fie "
+			+"on temp.TEMPLATEID=fie.TEMPLATEID "
+			+"join ACTIVITY.ITEMATTACHMENTNAMES ia on ia.ITEMATTACHMENTNAMEID = fie.ITEMATTACHMENTNAMEID "
+			+"join COREAPP.CODES cc "
+			+"on fie.TYPEID=cc.CODEID "
+			+"WHERE cc.DESCRIPTION='Signature' "
+			+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+	
+
+	ResultSet rs = smt.executeQuery(query);
+
+	if(rs.next()) {	
+		
+		System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5)+"\t"+rs.getString(6));
+			
+	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).equalsIgnoreCase(aApprove) && rs.getString(5).equalsIgnoreCase(internal)&& rs.getString(6).equalsIgnoreCase(loose)) {
+			Assert.assertTrue(true);
+			System.out.println("Record found and matches with Database...Test Case Passed");
+			
+		} else{
+			System.out.println("Record Not Found in Database...Test Case Failed");
+			Assert.assertTrue(false);			
+		}		
+	
+	}
+	con.close();
+}
+catch(Exception e){
+	System.out.println(e);
+}
+
+
+}
+
+
+public void validateTemplateDateData(String fieldType,String caption,String optional,String edate,String ldate,String tempNumber) throws SQLException {
+	
+	try {
+		
+		Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+		Statement smt = con.createStatement();
+	
+	String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.DATEMIN,fie.DATEMAX "  
+			+"FROM NINJA.TEMPLATES temp " 
+			+"JOIN NINJA.FIELDS fie "  
+			+"on temp.TEMPLATEID=fie.TEMPLATEID "
+			+"LEFT join COREAPP.CODES cc " 
+			+"on fie.TYPEID=cc.CODEID "
+			+"WHERE cc.DESCRIPTION='Date' "
+			+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+	
+
+	ResultSet rs = smt.executeQuery(query);
+
+	if(rs.next()) {	
+		
+		System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5));
+			
+	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).equalsIgnoreCase(edate) && rs.getString(5).equalsIgnoreCase(ldate)) {
+			Assert.assertTrue(true);
+			System.out.println("Record found and matches with Database...Test Case Passed");
+			
+		} else{
+			System.out.println("Record Not Found in Database...Test Case Failed");
+			Assert.assertTrue(false);			
+		}		
+	
+	}
+	con.close();
+}
+catch(Exception e){
+	System.out.println(e);
+}
+
+
+}
+
+
+
+public void validateFeatureLinkTypeData(String fieldType,String caption,String optional,String featurelink,String tempNumber) throws SQLException {
+	
+	try {
+		
+		Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+		Statement smt = con.createStatement();
+	
+	String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.FEATUREID "
+			+"FROM NINJA.TEMPLATES temp "
+			+"JOIN NINJA.FIELDS fie "
+			+"on temp.TEMPLATEID=fie.TEMPLATEID "
+			+"join COREAPP.CODES cc "
+			+"on fie.TYPEID=cc.CODEID "
+			+"WHERE cc.DESCRIPTION='Feature Link' "
+			+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+	
+
+	ResultSet rs = smt.executeQuery(query);
+
+	if(rs.next()) {	
+		
+		System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4));
+			
+	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(featurelink)) {
+			Assert.assertTrue(true);
+			System.out.println("Record found and matches with Database...Test Case Passed");
+			
+		} else{
+			System.out.println("Record Not Found in Database...Test Case Failed");
+			Assert.assertTrue(false);			
+		}		
+	
+	}
+	con.close();
+}
+catch(Exception e){
+	System.out.println(e);
+}
+
+
+}
+
+public void validateExceptionTypeData(String fieldType,String caption,String optional,String exceptionType,String filename,String tempNumber) throws SQLException {
+	
+	try {
+		
+		Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+		Statement smt = con.createStatement();
+	
+	String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.EXCEPTIONTYPEID,aa.NAME "
+			+"FROM NINJA.TEMPLATES temp "
+			+"JOIN NINJA.FIELDS fie "
+			+"on temp.TEMPLATEID=fie.TEMPLATEID "
+			+"JOIN ATTACHMENT.ATTACHMENTS  aa "
+			+"on aa.ATTACHMENTID=fie.ATTACHMENTID "
+			+"join COREAPP.CODES cc "
+			+"on fie.TYPEID=cc.CODEID "
+			+"WHERE cc.DESCRIPTION='Exception' "
+			+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+	
+
+	ResultSet rs = smt.executeQuery(query);
+
+	if(rs.next()) {	
+		
+		System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5));
+			
+	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(exceptionType)&& rs.getString(5).equalsIgnoreCase(filename)) {
+			Assert.assertTrue(true);
+			System.out.println("Record found and matches with Database...Test Case Passed");
+			
+		} else{
+			System.out.println("Record Not Found in Database...Test Case Failed");
+			Assert.assertTrue(false);			
+		}		
+	
+	}
+	con.close();
+}
+catch(Exception e){
+	System.out.println(e);
+}
+}
+	public void validateTemplateScanTypeData(String fieldType,String caption,String optional,String scanType,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.SCANTYPEID "
+				+"FROM NINJA.TEMPLATES temp "
+				+"JOIN NINJA.FIELDS fie "
+				+"on temp.TEMPLATEID=fie.TEMPLATEID "
+				+"join COREAPP.CODES cc "
+				+"on fie.TYPEID=cc.CODEID "
+				+"WHERE cc.DESCRIPTION='Scan Type' "
+				+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4));
+				
+		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(scanType)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+}
+
+	
+ public void validateCurrencyTypeData(String fieldType,String caption,String optional,String minamount,String maxamount,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.FLOATMIN,fie.FLOATMAX "
+				+"FROM NINJA.TEMPLATES temp "
+				+"JOIN NINJA.FIELDS fie "
+				+"on temp.TEMPLATEID=fie.TEMPLATEID "
+				+"join COREAPP.CODES cc "
+				+"on fie.TYPEID=cc.CODEID "
+				+"WHERE cc.DESCRIPTION='Currency' "
+				+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5));
+				
+		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).contains(minamount)&& rs.getString(5).contains(maxamount)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+}
+ 
+ 
+ 
+/* shopcom*/
+ 
+ public void validateShomcomTypeData(String desc,String fieldType,String caption,String optional,String comp,String value,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT temp.DESCRIPTION,cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fcri.COMPARISONTYPEID,fcri.VALUE "
+				+"FROM NINJA.TEMPLATES temp "
+				+"JOIN NINJA.FIELDS fie "
+				+"on temp.TEMPLATEID=fie.TEMPLATEID "
+				+"join NINJA.FIELDCRITERIA fcri "
+				+"on fcri.FIELDID=fie.FIELDID "
+				+"join COREAPP.CODES cc "
+				+"on fie.TYPEID=cc.CODEID "
+				+"WHERE temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5)+"\t"+rs.getString(6));
+				
+		if(rs.getString(1).equalsIgnoreCase(desc) && rs.getString(2).equalsIgnoreCase(fieldType) && rs.getString(3).equalsIgnoreCase(caption)  && rs.getString(4).equalsIgnoreCase(optional)&& rs.getString(5).equalsIgnoreCase(comp)&& rs.getString(6).equalsIgnoreCase(value)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+	}
+ 
+ 
+ public void validateHyperlinkTypeData(String fieldType,String caption,String optional,String hyperadd,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.HYPERLINK "
+				+"FROM NINJA.TEMPLATES temp "
+				+"JOIN NINJA.FIELDS fie "
+				+"on temp.TEMPLATEID=fie.TEMPLATEID "
+				+"join COREAPP.CODES cc "
+				+"on fie.TYPEID=cc.CODEID "
+				+"WHERE cc.DESCRIPTION='Hyperlink (URL, web address)' "
+				+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4));
+				
+		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(hyperadd)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+	}
+
+ public void validateSingleWrapperTypeData(String fieldType,String caption,String optional,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL "
+				+"FROM NINJA.TEMPLATES temp "
+				+"JOIN NINJA.FIELDS fie "
+				+"on temp.TEMPLATEID=fie.TEMPLATEID "
+				+"join COREAPP.CODES cc "
+				+"on fie.TYPEID=cc.CODEID "
+				+"WHERE cc.DESCRIPTION='Single Screen Wrapper' "
+				+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3));
+				
+		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+	}
+ 
+ 
+
+ 
+ 
+ public void validateTemplateNumericData(String desc,String fieldType,String caption,String optional,String minvalue,String maxvalue,String comp,String value,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT temp.DESCRIPTION,cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,fie.MINIMUM,fie.MAXIMUM,c.DESCRIPTION,fcri.VALUE "
+				+"FROM NINJA.TEMPLATES temp "
+				+"JOIN NINJA.FIELDS fie "
+				+"on temp.TEMPLATEID=fie.TEMPLATEID "
+				+"join NINJA.FIELDCRITERIA fcri "
+				+"on fcri.FIELDID=fie.FIELDID "
+				+"join ACTIVITY.ITEMATTACHMENTNAMES ia " 
+				+"on ia.ITEMATTACHMENTNAMEID = fie.ITEMATTACHMENTNAMEID "
+				+"join COREAPP.CODES cc on fie.TYPEID=cc.CODEID "
+				+"join COREAPP.CODES c on fcri.COMPARISONTYPEID=c.CODEID "
+				+"WHERE temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5)+"\t"+rs.getString(6)+"\t"+rs.getString(7)+"\t"+rs.getString(8));
+				
+		if(rs.getString(1).equalsIgnoreCase(desc) && rs.getString(2).equalsIgnoreCase(fieldType) && rs.getString(3).equalsIgnoreCase(caption)  && rs.getString(4).equalsIgnoreCase(optional)&& rs.getString(5).equalsIgnoreCase(minvalue)  && rs.getString(6).equalsIgnoreCase(maxvalue)&& rs.getString(7).equalsIgnoreCase(comp)  && rs.getString(8).equalsIgnoreCase(value)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+	}
+ 
+ 
+ public void validateLooseAttachmentTypeData(String fieldType,String caption,String optional,String loose,String tempNumber) throws SQLException {
+		
+		try {
+			
+			Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+			Statement smt = con.createStatement();
+		
+		String query="SELECT cc.DESCRIPTION,fie.LABEL,fie.OPTIONAL,iname.NAME "
+				+"FROM NINJA.TEMPLATES temp "
+				+"JOIN NINJA.FIELDS fie "
+				+"on temp.TEMPLATEID=fie.TEMPLATEID "
+				+"JOIN ACTIVITY.ITEMATTACHMENTNAMES iname "
+				+"on fie.ITEMATTACHMENTNAMEID=iname.ITEMATTACHMENTNAMEID "
+				+"join COREAPP.CODES cc "
+				+"on fie.TYPEID=cc.CODEID "
+				+"WHERE cc.DESCRIPTION='Loose Attachment' "
+				+"AND temp.TEMPLATENUMBER='"+tempNumber+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4));
+				
+		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).equalsIgnoreCase(loose)) {
+				Assert.assertTrue(true);
+				System.out.println("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				System.out.println("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+	}
 }

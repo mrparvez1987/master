@@ -5,8 +5,15 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.List;
 
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.sl.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,6 +30,7 @@ import org.openqa.selenium.support.ui.Select;
 		public StoreTemplatesPage(WebDriver rdriver) {
 		ldriver=rdriver;
 		PageFactory.initElements(rdriver, this);
+		
 		}
 		
 		@FindBy(xpath="//*[@id=\"content\"]/div[1]/div[3]/div[1]/img")
@@ -40,6 +48,9 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(xpath="//*[@id=\"content\"]/div[2]/div[1]/img")
 		WebElement iconStoreTemplate;
 		
+		@FindBy(xpath="//*[@id=\"content\"]/div[2]/div[2]/img")
+		WebElement iconItemTemplate;
+		
 		@FindBy(xpath="//*[@id=\"content\"]/div[2]/div[1]")
 		WebElement iconElementTemplate;
 		
@@ -55,7 +66,7 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(xpath="//*[@id=\"toggle_metadata_dictionary\"]")
 		WebElement btnMetaDataDictionary;
 		
-		@FindBy(xpath="//*[@class[contains(.,'Fields_grid_button_new')]]")
+		@FindBy(xpath="//*[@class[contains(.,'Fields_grid_button_new')] and text()='New Field']")
 		WebElement btnNewField;
 		
 		@FindBy(xpath="//*[@id=\"aawgui_Fields_grid_temporary_0\"]/div[15]/div[1]/select")
@@ -145,8 +156,100 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(xpath="//input[@colname[contains(.,'hyperlink')]]")
 		WebElement txtHyperlinkAddress;
 		
+		@FindBy(xpath="//div[@class[contains(.,'ui-dialog-content ui-widget-content')]]/textarea")
+		WebElement boxValue;	
+		
+		@FindBy(xpath="//div[@class[contains(.,'betterbutton  grid_criteria_Fields_')] and text()='Add']")
+		WebElement btnCriteriaAdd;	
+			
+		@FindBy(xpath="//*[contains(text(),\"Template #\")]")
+		WebElement txtTemplate;	
+		
+		@FindBy(xpath="//*[@id=\"criteria_grid_grid_criteria_aawgui_Fields_grid_temporary_0_temporary_0\"]/div[11]/div/select")
+		WebElement boxComp;
+		
+		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[1]/div")
+		WebElement btnSubmitForReview;
+		
+		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[2]/div")
+		WebElement btnCopyToNew;
+		
+		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[3]/div")
+		WebElement btnToggleAdvanceMood;
+		
+		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[4]/div")
+		WebElement btnEmulator;
+		
+		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[5]/div")
+		WebElement btnExportToExcel;
+		
+		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[1]/ul/li[2]/div")
+		WebElement btnSaveAndClose;
+		
+		@FindBy(xpath="//div[@class[contains(.,'criteria_grid_column_content criteria_grid_column_content_value')]]")
+		WebElement valuecriteria;
+		
+		@FindBy(xpath="//div[text()='Save']")
+		WebElement btnSave;
 		
 		
+		
+		
+		
+		
+		@FindBy(xpath="//select[@colname[contains(.,'featureid')]]")
+		List<WebElement> multidrpfeatureLink;
+		
+		@FindBy(xpath="//select[@colname[contains(.,'scantypeid')]]")
+		List<WebElement> multidrpScanType;
+		
+		@FindBy(xpath="//input[@colname[contains(.,'hyperlink')]]")
+		List<WebElement> multitxtHyperlinkAddress;
+
+		@FindBy(xpath="//input[@colname[contains(.,'floatmax')]]")
+		List<WebElement> multitxtMaxAmount;
+		
+		@FindBy(xpath="//input[@colname[contains(.,'floatmin')]]")
+		List<WebElement> multitxtMinAmount;
+		
+		@FindBy(xpath="//input[@colname[contains(.,'responsetext')]]")
+		List<WebElement> multitxtResponseText;
+		
+		@FindBy(xpath="//select[@colname[contains(.,'multipleselection')]]")
+		List<WebElement> multidrMultipleSelection;
+
+		@FindBy(xpath="//select[@colname[contains(.,'exceptiontypeid')]]")
+		List<WebElement> multidrpExceptionType;	
+		
+		@FindBy(xpath="//input[@class[contains(.,'aawgui_attachment_filepicker')]]")
+		List<WebElement> multiupldAttachment;
+			
+		@FindBy(xpath="//div[@id[contains(.,'grid_criteria_aawgui_Fields_grid_temporary')] and text()='Add']")
+		List<WebElement> multibtnCriteriaAdd;	
+		
+		@FindBy(xpath="//*[text()[contains(.,'Apply Changes')]]")
+		List<WebElement> multibtnApplyChanges;
+		
+		@FindBy(xpath="//select[@colname[contains(.,'internalonly')]]")
+		List<WebElement> multidrpInternalUse;
+		
+		@FindBy(xpath="//select[@colname[contains(.,'autoapprove')]]")
+		List<WebElement> multidrpAutoApprove;	
+		
+		@FindBy(xpath="//input[@colname[contains(.,'maximum')]]")
+		List<WebElement> multiMaxValue;
+			
+		@FindBy(xpath="//div[@colname[contains(.,'instructions')]]")
+		List<WebElement> multiboxInstruction;
+			
+		@FindBy(xpath="//input[@colname[contains(.,'datemin')]]")
+		List<WebElement> multiEarliestDate;
+		
+		@FindBy(xpath="//input[@colname[contains(.,'datemax')]]")
+		List<WebElement> multiLatesttDate;			
+		
+		@FindBy(xpath="//*[@class[contains(.,'Fields_grid_button_new')] and text()='New Field']")
+		List<WebElement> multiNewField;
 		
 		@FindBy(xpath="//input[@colname[contains(.,'label')]]")
 		List<WebElement> multiCaption;
@@ -169,6 +272,9 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(xpath="//option[text()='Picture']")
 		List<WebElement> multiPictureDropList;
 		
+		@FindBy(xpath="//div[@colname[contains(.,'instructions')]]")
+		List<WebElement> multiInstruction;
+			
 		@FindBy(xpath="//option[text()='Instructions']")
 		List<WebElement> multiInstructionsDropList;
 
@@ -211,27 +317,12 @@ import org.openqa.selenium.support.ui.Select;
 		@FindBy(id="//*[@id=\"ui-id-10\"]/li[1]/a")
 		List<WebElement> responseList;
 		
+		@FindBy(xpath="//input[@colname[contains(.,'metatypetext')]]")
+		List<WebElement> multiSourceList;
 		
-		
-		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[1]/div")
-		WebElement btnSubmitForReview;
-		
-		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[2]/div")
-		WebElement btnCopyToNew;
-		
-		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[3]/div")
-		WebElement btnToggleAdvanceMood;
-		
-		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[4]/div")
-		WebElement btnEmulator;
-		
-		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[3]/ul/li[5]/div")
-		WebElement btnExportToExcel;
-		
-		@FindBy(xpath="//*[@id=\"controlA\"]/div[2]/div[1]/ul/li[2]/div")
-		WebElement btnSaveAndClose;
+		@FindBy(xpath="//*[@class[contains(.,'ui-button ui-corner-all ui-widget')] and text()='Apply Changes']")
+		List<WebElement> ApplyChanges;
 			
-		
 		
 		
 		
@@ -261,6 +352,10 @@ import org.openqa.selenium.support.ui.Select;
 			iconStoreTemplate.click();
 		}
 		
+		public void clickItemTemplate() {
+			iconItemTemplate.click();
+		}
+		
 		public void clickElementTemplate(){
 			iconElementTemplate.click();
 		}
@@ -284,8 +379,6 @@ import org.openqa.selenium.support.ui.Select;
 		public void clickNewFieldButton() {
 			btnNewField.click();
 		}
-		
-		
 		
 		public void sendCaption(String caption) {
 			txtCaption.sendKeys(caption);
@@ -390,12 +483,31 @@ import org.openqa.selenium.support.ui.Select;
 			txtHyperlinkAddress.sendKeys(hyperlink);
 		}
 		
+		public void sendValue(String value) {
+			boxValue.sendKeys(value);
+		}
+		
+		public void clickValue() {
+			valuecriteria.click();
+		}
+		
+		public void clickSave() {
+			btnSave.click();
+		}
+			
+		public void clickCriteriaAddButton() {
+			btnCriteriaAdd.click();
+		}	
 		
 		
 		
 		
 		
-		
+		public void selectComp(String comp) {
+			Select select=new Select(boxComp);
+			select.selectByVisibleText(comp);
+		}
+			
 		public void selectFieldType(String fieldType) {
 			Select select=new Select(drFieldType);
 			select.selectByValue(fieldType);
@@ -460,7 +572,10 @@ import org.openqa.selenium.support.ui.Select;
 		
 		
 		
-		
+		public List<WebElement> getApplyChangesButton() {
+			return ApplyChanges;
+		}
+			
 		public List<WebElement> getMultiCaption() {
 			return multiCaption;
 		}
@@ -537,22 +652,105 @@ import org.openqa.selenium.support.ui.Select;
 			return multiLooseAttachment;
 		}
 		
+		public List<WebElement> getMultiInstruction() {
+			return multiInstruction;
+		}
+		
+		public List<WebElement> getMultisource() {
+			return multiSourceList;
+		}	
+		
+		public List<WebElement> getMultiNewFieldButton() {
+			return multiNewField;
+		}
+			
+		public List<WebElement> getMultiEarliestDate() {
+			return multiEarliestDate;
+		}		
+		
+		public List<WebElement> getMultiLatestDate() {
+			return multiLatesttDate;
+		}
+		
+		public List<WebElement> getMultiInstructionBox() {
+			return multiboxInstruction;
+		}
+		
+		public List<WebElement> getMultiMaxValue() {
+			return multiMaxValue;
+		}
+		
+		public List<WebElement> getMultiAutoApproveDrop() {
+			return multidrpAutoApprove;
+		}
+		
+		public List<WebElement> getMultiInterUSeDrop() {
+			return multidrpInternalUse;
+		}
+		
+		public List<WebElement> getMultiApplyChangeBtn() {
+			return multibtnApplyChanges;
+		}	
+		
+		public List<WebElement> getMultiCriteriaAdd() {
+			return multibtnCriteriaAdd;
+		}
+			
+		public List<WebElement> getMultiUploadAttachment() {
+			return multiupldAttachment;
+		}
+		
+		public List<WebElement> getMultiExceptionType() {
+			return multidrpExceptionType;
+		}
+		
+		public List<WebElement> getMultiMultipleSelection() {
+			return multidrMultipleSelection;
+		}
+		
+		public List<WebElement> getMultiResponseText() {
+			return multitxtResponseText;
+		}
+				
+		public List<WebElement> getMultiMinAmount() {
+			return multitxtMinAmount;
+		}
+		
+		public List<WebElement> getMultiMaxAmount() {
+			return multitxtMaxAmount;
+		}
+		
+		public List<WebElement> getMultiHyperAddBox() {
+			return multitxtHyperlinkAddress;
+		}
+		
+		public List<WebElement> getMultiScanType() {
+			return multidrpScanType;
+		}
+		
+		public List<WebElement> getMultiFeatureLink() {
+			return multidrpfeatureLink;
+		}
+			
+		public WebElement tempText() {
+			return txtTemplate;
+		}
+		
+		
+		
 		public void uploadFile(String filePath) throws Exception {
 			
-
 			Robot robot=new Robot();
-			robot.setAutoDelay(1000);
+			robot.setAutoDelay(2000);
 			
 			StringSelection stringSelection=new StringSelection(filePath);
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
-			robot.setAutoDelay(2000);
+			robot.setAutoDelay(3000);
 			robot.keyPress(KeyEvent.VK_CONTROL);
 			robot.keyPress(KeyEvent.VK_V);
 			
 			robot.keyRelease(KeyEvent.VK_CONTROL);
 			robot.keyRelease(KeyEvent.VK_V);
-			
-			//robot.setAutoDelay(2000);
 			
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyRelease(KeyEvent.VK_ENTER);
@@ -562,7 +760,29 @@ import org.openqa.selenium.support.ui.Select;
 		}
 		
 		
+		public void gotoBottomPage() throws Exception {
+			
+			Robot robot=new Robot();
+			robot.setAutoDelay(2000);
+			
+			StringSelection stringSelection=new StringSelection(null);
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+			robot.setAutoDelay(3000);
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_END);
+			
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyRelease(KeyEvent.VK_END);
+					
+		}
 	
 		
+		
 	
+	    
 	}
+	
+		
+		
+	
+	

@@ -8,6 +8,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.dash2sell.pageObjects.LoginPage;
+import com.dashManagement.utilities.BaseClass;
 import com.dashManagement.utilities.XLUtils;
 
 public class TC_LoginDDT_002 extends BaseClass {

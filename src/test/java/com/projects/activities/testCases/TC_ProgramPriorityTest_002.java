@@ -21,8 +21,6 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 	
 	
 	@Test(dataProvider="ProgramPageData")
-	
-	
 	public void createProgramPriority(String uname,String pwd,String progId,String rank,String effDate,String expDate,String follow) throws InterruptedException, IOException
 	{
 		
@@ -47,6 +45,7 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 		logger.info("New Program Priority cliecked");
 		program.sendProgramId(progId);
 		logger.info("Program ID Send");
+		Thread.sleep(2000);
 		program.clickProgramDesc();
 		logger.info("Program Description Clicked");
 		program.sendProgRank(rank);
@@ -96,7 +95,7 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 	}
 	
 	
-	@DataProvider(name="ProgramPageData")
+	/*@DataProvider(name="ProgramPageData")
 	String [][] getData() throws IOException
 	{
 		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProgramPageData.xlsx";
@@ -117,9 +116,24 @@ public class TC_ProgramPriorityTest_002 extends BaseClass {
 		}
 	return programdata;
 	}
+	*/
 	
 	
-			
+	/*@DataProvider(name="ProgramPageData")
+	public Object[][] getProgramPageData() {
+		Object data [] []=TestUtil.getTestData("sheet1");
+		return data;
+	}
+			*/
+	
+	@DataProvider(name="ProgramPageData")
+	public Object[][] getProgramData() throws IOException {
+		Object data[][]=XLUtils.getData(System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProgramPageData.xlsx");
+		return data;
+	}
+	
+	
+	
 	
 	//Validate Program ID without entering any ID
 	

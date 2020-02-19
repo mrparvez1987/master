@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 
 import com.dash2sell.pageObjects.LoginPage;
+import com.dashManagement.utilities.BaseClass;
 import com.dash2sell.pageObjects.Dash2SellListPage;
 
 public class TC_Dash2SellListTest_004 extends BaseClass{

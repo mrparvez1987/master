@@ -15,26 +15,45 @@
 		
 		
 		
+		
 		<classes>
 		
 		
-			 
-		
-			    <!--    <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
+		 	      <!--   <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
 					<methods>	 <include name= "validateStoreElementNumericField"/> 
-								<include name= "validateStoreElementSignatureField"/> 
-								<include name= "validateStoreElementDateField"/> </methods> 	
-								</class>   
-					 -->
-					 
-					
-					
+								<include name= "validateStoreElementScanTypeField"/> 
+								<include name= "validateStoreElementShopcomField"/> 
+								<include name= "validateStoreElementCurrencyField"/> 
+								<include name= "validateStoreElementSignatureField"/>
+					</methods> 	
+						</class>   	  -->
+		  
+					  
+			 		 	      <!--  <class name="com.projects.templates.testCases.AllFieldTypeTestCases" />   -->
 			 		
-				   <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
-					<methods> <include name= "validateStoreElementNumericField"/> </methods> </class>
+ 			 	 	
+	 		             <class name="com.projects.templates.testCases.AllFieldTypeTestCases" >
+					<methods> <include name= "validateStoreAllField"/> </methods> </class>   
+					   
 					 
+				 	  
+					  <!-- 
+					 	       <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
+					<methods> <include name= "validateStoreElementInLineAttachmentField"/> </methods> </class>  -->     
+					  
 					
-		  <!--  	  <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" /> -->
+					
+					 
+					 
+					<!--    <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002" >
+					<methods> <include name= "createProgramPriority"/> </methods> </class>   -->
+					  
+					  
+					  
+					   
+					  
+		 			
+		  
 		   <!--    <class name="com.projects.activities.testCases.TC_ProjectPriorityTest_003" /> -->
 		  <!--   <class name="com.projects.activities.testCases.TC_ClientPriorityTest_004" /> -->
 		  <!--  	 <class name="com.projects.activities.testCases.TC_ProgramListTest_005" /> -->

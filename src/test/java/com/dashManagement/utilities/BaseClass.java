@@ -3,6 +3,8 @@ package com.dashManagement.utilities;
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -27,7 +29,6 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
@@ -181,6 +182,47 @@ public class BaseClass  {
 		FileUtils.copyFile(source, finalDestination);
 		return destination;
 		
+	}
+	
+	public void uploadFile(String filePath) throws Exception {
+		
+
+		Robot robot=new Robot();
+		robot.setAutoDelay(2000);
+		
+		StringSelection stringSelection=new StringSelection(filePath);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+		robot.setAutoDelay(3000);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);
+		
+		//robot.setAutoDelay(2000);
+		
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+	
+	public void gotoBottomPage() throws Exception {
+		
+
+		Robot robot=new Robot();
+		robot.setAutoDelay(2000);
+		
+		StringSelection stringSelection=new StringSelection(null);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection,null);
+		robot.setAutoDelay(3000);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_END);
+		
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_END);
+				
 	}
 
 }

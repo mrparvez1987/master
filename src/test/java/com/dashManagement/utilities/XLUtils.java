@@ -1,10 +1,15 @@
 package com.dashManagement.utilities;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -84,5 +89,69 @@ public class XLUtils {
 		fo.close();
 	}
 	
+	
+	
+	//This is current way
+	public static String [][] getData(String path) throws IOException
+	{
+		//String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProgramPageData.xlsx";
+			
+		int rownum=XLUtils.getRowCount(path, "Sheet1");
+		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
+		
+		String programdata[][]=new String[rownum][colcount];
+		
+		for(int i=1;i<=rownum;i++)
+		{
+			for(int j=0;j<colcount;j++)
+			{
+				programdata[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
+			}
+				
+		}
+	return programdata;
+	}
+	
+	
+	//Another way 
+		static Workbook book;
+		static Sheet sheet;
+		
+		public static String TESTDATA_SHEET_PATH=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProgramPageData.xlsx";
+		
+		public static Object[][] getTestData(String sheetName) {
+			
+			FileInputStream file=null;
+			
+			try {
+				file= new FileInputStream (TESTDATA_SHEET_PATH);
+			} catch (FileNotFoundException e) {
+				
+				e.printStackTrace();
+			}
+			
+			try {
+				book= WorkbookFactory.create(file);
+			} catch (EncryptedDocumentException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			sheet=book.getSheet(sheetName);
+			
+			Object [][] data= new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
+			
+			for (int i=0;i<sheet.getLastRowNum();i++) {
+				
+				for (int k=0;k<sheet.getRow(0).getLastCellNum();k++) {
+					
+					data [i][k]=sheet.getRow(i+1).getCell(k).toString();
+					
+				}
+			}
+			
+			return data;
+		}
 	
 }
