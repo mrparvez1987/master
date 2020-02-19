@@ -92,24 +92,24 @@ public class XLUtils {
 	
 	
 	//This is current way
-	public static String [][] getData(String path) throws IOException
+	public static String [][] getData(String fileName) throws IOException
 	{
-		//String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProgramPageData.xlsx";
+		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/"+fileName;
 			
 		int rownum=XLUtils.getRowCount(path, "Sheet1");
 		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
 		
-		String programdata[][]=new String[rownum][colcount];
+		String data[][]=new String[rownum][colcount];
 		
 		for(int i=1;i<=rownum;i++)
 		{
 			for(int j=0;j<colcount;j++)
 			{
-				programdata[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
+				data[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
 			}
 				
 		}
-	return programdata;
+	return data;
 	}
 	
 	
@@ -117,14 +117,14 @@ public class XLUtils {
 		static Workbook book;
 		static Sheet sheet;
 		
-		public static String TESTDATA_SHEET_PATH=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProgramPageData.xlsx";
+		public static String PATH=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProgramPageData.xlsx";
 		
 		public static Object[][] getTestData(String sheetName) {
 			
 			FileInputStream file=null;
 			
 			try {
-				file= new FileInputStream (TESTDATA_SHEET_PATH);
+				file= new FileInputStream (PATH);
 			} catch (FileNotFoundException e) {
 				
 				e.printStackTrace();

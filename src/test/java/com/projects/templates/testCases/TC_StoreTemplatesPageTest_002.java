@@ -169,31 +169,14 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 			
 			e.printStackTrace();
 		}
-		} 
-	
-
+	} 
 	
 	@DataProvider(name="TemplateNumericFieldPageData")
-	String [][] getNumericTypeData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateNumericFieldPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateNumericData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateNumericData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateNumericData;
+	public Object[][] getNumericFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateNumericFieldPageData.xlsx");
+		return data;
 	}
+	
 	
 	
 	
@@ -290,28 +273,13 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		}
 	}
 	
-	
 	@DataProvider(name="TemplateLooseAttachmentPageData")
-	public String [][] getLooseAttachmentData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateLooseAttachmentPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateLooseAttachmentData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateLooseAttachmentData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateLooseAttachmentData;
+	public Object[][] getLooseAttachmentFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateLooseAttachmentPageData.xlsx");
+		return data;
 	}
+	
+	
 	
 	
 	
@@ -438,26 +406,13 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 	}
 	
 	@DataProvider(name="TemplateDateFieldPageData")
-	public String [][] getDateData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateDateFieldPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateDateData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateDateData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateDateData;
+	public Object[][] getDateFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateDateFieldPageData.xlsx");
+		return data;
 	}
+	
+	
+	
 	
 	
 	
@@ -557,30 +512,14 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
+
 	@DataProvider(name="TemplateInstructionFieldPageData")
-	public String [][] getInstructionData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateInstructionFieldPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateInstructionData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateInstructionData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateInstructionData;
+	public Object[][] getInstructionFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateInstructionFieldPageData.xlsx");
+		return data;
 	}
+	
+	
 	
 	
 	
@@ -724,31 +663,15 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 			e.printStackTrace();
 		}
 	}
-	
-	
+		
 	@DataProvider(name="TemplateSignatureFieldPageData")
-	public String [][] getSignatureData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateSignatureFieldPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateSignatureData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateSignatureData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateSignatureData;
+	public Object[][] getSignatureFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateSignatureFieldPageData.xlsx");
+		return data;
 	}
 	
-		
+	
+	
 	
 	
 	@Test(dataProvider="TemplateTextFieldPageData")
@@ -878,29 +801,13 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		}
 	}
 	
-	
-	
 	@DataProvider(name="TemplateTextFieldPageData")
-	public String [][] getTextData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateTextFieldPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateTextData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateTextData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateTextData;
+	public Object[][] getTextFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateTextFieldPageData.xlsx");
+		return data;
 	}
+	
+	
 	
 	
 	@Test(dataProvider="TemplatePictureFieldPageData")
@@ -1036,28 +943,13 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		}
 	}
 	
-	
 	@DataProvider(name="TemplatePictureFieldPageData")
-	public String [][] getPictureData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplatePictureFieldPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templatePictureData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templatePictureData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templatePictureData;
+	public Object[][] getPictureFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplatePictureFieldPageData.xlsx");
+		return data;
 	}
+	
+	
 	
 	
 	
@@ -1210,26 +1102,14 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 	}
 	
 	@DataProvider(name="TemplateExceptionPageData")
-	public String [][] getExceptionData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateExceptionPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateExceptionData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateExceptionData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateExceptionData;
+	public Object[][] getExceptionFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateExceptionPageData.xlsx");
+		return data;
 	}
+	
+	
+	
+	
 	
 	
 	@Test(dataProvider="TemplateShopcomPageData")
@@ -1355,32 +1235,18 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 		
 		
 	}
-	
+		
 	@DataProvider(name="TemplateShopcomPageData")
-	public String [][] getShopcomData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateShopcomPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateShopcomData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateShopcomData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateShopcomData;
+	public Object[][] getShomcomFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateShopcomPageData.xlsx");
+		return data;
 	}
-		
 	
 	
+
 	
+	
+
 	@Test(dataProvider="TemplateListFieldPageData")
 	public void validateStoreElementListField(String user,String pass,String desc,String fieldType,String cap,String optional,String loose,String resText) throws Exception {
 	
@@ -1407,7 +1273,7 @@ public class TC_StoreTemplatesPageTest_002 extends BaseClass{
 	}
 	
 	
-public void commonListField(String fieldType2,String cap2,String optional2,String loose2,String resText) throws Exception {
+	public void commonListField(String fieldType2,String cap2,String optional2,String loose2,String resText) throws Exception {
 		
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		
@@ -1509,29 +1375,16 @@ public void commonListField(String fieldType2,String cap2,String optional2,Strin
 		}
 	}
 	
-
 	@DataProvider(name="TemplateListFieldPageData")
-	public String [][] getListData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateListFieldPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateListData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateListData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateListData;
+	public Object[][] getListFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateListFieldPageData.xlsx");
+		return data;
 	}
 
+	
+	
+	
+	
 	@Test(dataProvider="TemplateCurrencyPageData")
 	public void validateStoreElementCurrencyField(String user,String pass,String desc,String fieldType,String cap,String optional,String minamount,String maxamount) throws Exception {
 
@@ -1658,29 +1511,14 @@ public void commonListField(String fieldType2,String cap2,String optional2,Strin
 	}
 	
 	@DataProvider(name="TemplateCurrencyPageData")
-	public String [][] getCurrencyData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateCurrencyPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateCurrencyData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateCurrencyData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateCurrencyData;
+	public Object[][] getCurrencyFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateCurrencyPageData.xlsx");
+		return data;
 	}
-	
-	
 
+
+	
+	
 
 	@Test(dataProvider="TemplateHyperlinkPageData")
 	public void validateStoreElementHyperlinkField(String user,String pass,String desc,String fieldType,String caption,String optional,String hyperadd) throws Exception {
@@ -1789,29 +1627,14 @@ public void commonListField(String fieldType2,String cap2,String optional2,Strin
 	}
 	
 	@DataProvider(name="TemplateHyperlinkPageData")
-	public String [][] getHyperlinkData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateHyperlinkPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templatehyperlinkData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templatehyperlinkData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templatehyperlinkData;
+	public Object[][] getHyperlinkFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateHyperlinkPageData.xlsx");
+		return data;
 	}
 
 	
 
+	
 
 	@Test(dataProvider="TemplateScanTypeFieldPageData")
 	public void validateStoreElementScanTypeField(String user,String pass,String desc,String fieldType,String caption,String optional,String scanType) throws Exception {
@@ -1934,27 +1757,17 @@ public void commonListField(String fieldType2,String cap2,String optional2,Strin
 		}
 		
 	}
-
+	
 	@DataProvider(name="TemplateScanTypeFieldPageData")
-	String [][] getScanTypeData() throws IOException {
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateScanTypeFieldPageData.xlsx";
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateNumericData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateNumericData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}			
-		}
-	return templateNumericData;
-	}	
+	public Object[][] getScanTypeFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateScanTypeFieldPageData.xlsx");
+		return data;
+	}
 
 
+	
+	
+	
 	
 	@Test(dataProvider="TemplateFeatureLinkPageData")
 	public void validateStoreElementFeatureLinkField(String user,String pass,String desc,String fieldType,String cap,String optional,String featurelink) throws Exception {
@@ -2071,31 +1884,17 @@ public void commonListField(String fieldType2,String cap2,String optional2,Strin
 		}
 	}
 	
-	
 	@DataProvider(name="TemplateFeatureLinkPageData")
-	public String [][] getFeatureLinkData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateFeatureLinkPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateFeatureLinkData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateFeatureLinkData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateFeatureLinkData;
+	public Object[][] getFeatureLinkFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateFeatureLinkPageData.xlsx");
+		return data;
 	}
 	
 	
 	
+	
+	
+
 	@Test(dataProvider="TemplateSingleScreenWarapperPageData")
 	public void validateStoreElementSingleScreenWrapperField(String user,String pass,String desc,String fieldType,String cap,String optional) throws Exception {
 	
@@ -2214,28 +2013,14 @@ public void commonListField(String fieldType2,String cap2,String optional2,Strin
 		}
 		
 	}
-	
+
 	@DataProvider(name="TemplateSingleScreenWarapperPageData")
-	public String [][] getSingleWrapperData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateSingleScreenWarapperPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateSingleWrapperData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateSingleWrapperData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateSingleWrapperData;
+	public Object[][] getSingleScreenWrapperFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateSingleScreenWarapperPageData.xlsx");
+		return data;
 	}
+
+	
 	
 	
 
@@ -2330,30 +2115,15 @@ public void commonListField(String fieldType2,String cap2,String optional2,Strin
 		}
 	}
 	
-	
+			
 	@DataProvider(name="TemplateInLineFieldPageData")
-	public String [][] getInLineAttachmentData() throws IOException
-	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/TemplateInLineFieldPageData.xlsx";
-	
-		
-		int rownum=XLUtils.getRowCount(path, "Sheet1");
-		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
-		
-		String templateInLineData[][]=new String[rownum][colcount];
-		
-		for(int i=1;i<=rownum;i++)
-		{
-			for(int j=0;j<colcount;j++)
-			{
-				templateInLineData[i-1][j]=XLUtils.getCellData(path,"Sheet1", i,j);//1 0
-			}
-				
-		}
-	return templateInLineData;
+	public Object[][] getInLineFieldData() throws IOException {
+		Object data[][]=XLUtils.getData("TemplateInLineFieldPageData.xlsx");
+		return data;
 	}
 	
-			
+	
+	
 	
 }
 

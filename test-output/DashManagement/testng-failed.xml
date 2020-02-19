@@ -4,16 +4,16 @@
   <test name="DashTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.projects.activities.testCases.TC_ProgramPriorityTest_002">
+      <class name="com.projects.templates.testCases.AllFieldTypeTestCases">
         <methods>
           <include name="setup"/>
-          <include name="afterEachTestMethod"/>
-          <include name="createProgramPriority" invocation-numbers="0"/>
-          <include name="extentSetup"/>
+          <include name="validateStoreAllField" invocation-numbers="0"/>
           <include name="generateReport"/>
           <include name="startExtent"/>
+          <include name="afterEachTestMethod"/>
+          <include name="extentSetup"/>
         </methods>
-      </class> <!-- com.projects.activities.testCases.TC_ProgramPriorityTest_002 -->
+      </class> <!-- com.projects.templates.testCases.AllFieldTypeTestCases -->
     </classes>
   </test> <!-- DashTest(failed) -->
 </suite> <!-- Failed suite [DashManagement] -->

@@ -30,12 +30,11 @@ public class AllFieldTypeTestCases extends BaseClass {
 			testClass.commonPictureField(fieldType7,cap7,optional7,loose7);
 			testClass.commonExceptionField(fieldType8,cap8,optional8,exceptionType);
 
-
 }
 			
 			@DataProvider(name="AllFieldData")
 			public Object[][] getAllFieldData() throws IOException {
-				Object data[][]=XLUtils.getData(System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/AllFieldData.xlsx");
+				Object data[][]=XLUtils.getData("AllFieldData.xlsx");
 				return data;
 			}
 			
@@ -65,10 +64,12 @@ public class AllFieldTypeTestCases extends BaseClass {
 	
 			@DataProvider(name="AllFieldData2")
 			public Object[][] getAllFieldData2() throws IOException {
-				Object data[][]=XLUtils.getData(System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/AllFieldData2.xlsx");
+				Object data[][]=XLUtils.getData("AllFieldData2.xlsx");
 				return data;
 			}
 	
+			
+			
 	//Item template Test Cases
 	
 	@Test(dataProvider="AllFieldData")
@@ -92,6 +93,7 @@ public class AllFieldTypeTestCases extends BaseClass {
 
 
 }
+	
 	
 	@Test(dataProvider="AllFieldData2")
 	public void validateItemAllField2(String user,String pass,String desc,String fieldType,String cap,String optional,String comp,String value,
