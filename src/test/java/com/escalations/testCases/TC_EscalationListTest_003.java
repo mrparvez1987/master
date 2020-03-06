@@ -17,8 +17,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.dash2sell.database.DataTest;
 import com.dash2sell.pageObjects.LoginPage;
+import com.dashManagement.database.DataTest;
 import com.escalations.pageObjects.EscalataionListPage;
 import com.escalations.pageObjects.EscalationPage;
 import com.projects.activities.testCases.BaseClass;

@@ -14,6 +14,7 @@ import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 import org.apache.commons.io.FileUtils;
@@ -224,5 +225,27 @@ public class BaseClass  {
 		robot.keyRelease(KeyEvent.VK_END);
 				
 	}
+	
+	public String setFutureDate() {	
+	     Calendar cal = Calendar.getInstance();
+	     cal.setTimeZone(TimeZone.getTimeZone("GMT"));
+	     cal.add(Calendar.DATE, 5);
+	        System.out.println("date after 5 days : " + getDate(cal));	    
+	        return getDate(cal);
+	}
+	
+	
+	public String setPastDate() {
+		 Calendar cal = Calendar.getInstance();
+	     cal.setTimeZone(TimeZone.getTimeZone("GMT"));
+	     cal.add(Calendar.DATE, -5);
+	        System.out.println("date BEFORE 5 days : " + getDate(cal));	    
+	        return getDate(cal);
+	 }
+	
+	
+	public static String getDate(Calendar cal){
+       return "" + cal.get(Calendar.YEAR) +"-" + (cal.get(Calendar.MONTH)+1) + "-" + cal.get(Calendar.DATE);
+   }
 
 }

@@ -1,4 +1,4 @@
-package com.dash2sell.testData;
+package com.dashManagement.testData;
 
 import java.io.File;
 import java.io.IOException;

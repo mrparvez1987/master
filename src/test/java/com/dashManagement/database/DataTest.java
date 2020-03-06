@@ -1,4 +1,4 @@
-package com.dash2sell.database;
+package com.dashManagement.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,12 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
-
-import org.apache.poi.util.SystemOutLogger;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.dashManagement.utilities.ReadConfig;
+import com.dashManagement.utilities.TestLogger;
 
 
 
@@ -34,11 +31,11 @@ public class DataTest {
 		ResultSet rs = smt.executeQuery(query);
 		
 		if(rs.next()) {
-			System.out.println("PROGRAMPRIORITYID:"+rs.getString(1)+","+"PROGRAMID:"+rs.getString(2)+","+"RANK:"+rs.getString(3)+","+rs.getString(7)+","+"EFFECTIVEDATE:"+rs.getString(8)+","+"EXPIRATIONDATE:"+rs.getString(9)+","+"GENERATEFOLLOWUPS:"+rs.getString(10));
+			TestLogger.log("PROGRAMPRIORITYID:"+rs.getString(1)+","+"PROGRAMID:"+rs.getString(2)+","+"RANK:"+rs.getString(3)+","+rs.getString(7)+","+"EFFECTIVEDATE:"+rs.getString(8)+","+"EXPIRATIONDATE:"+rs.getString(9)+","+"GENERATEFOLLOWUPS:"+rs.getString(10));
 			Assert.assertTrue(true);
-			System.out.println("Record found and matches with Database...Test Case Passed");	
+			TestLogger.log("Record found and matches with Database...Test Case Passed");	
 				}else	{
-			System.out.println("Record Not Found in Database...Test Case Failed");
+					TestLogger.log("Record Not Found in Database...Test Case Failed");
 			Assert.assertTrue(false);
 		}
 		smt.executeUpdate(del);
@@ -307,10 +304,10 @@ public void validateTemplateScanTypeData2(String desc,String caption,String opti
 				
 		if(rs.getString(1).equalsIgnoreCase(desc) && rs.getString(2).equalsIgnoreCase(caption) && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).contains(""+instr)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -351,10 +348,10 @@ public void validateTemplateScanTypeData2(String desc,String caption,String opti
 			
 	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)) {
 			Assert.assertTrue(true);
-			System.out.println("Record found and matches with Database...Test Case Passed");
+			TestLogger.log("Record found and matches with Database...Test Case Passed");
 			
 		} else{
-			System.out.println("Record Not Found in Database...Test Case Failed");
+			TestLogger.log("Record Not Found in Database...Test Case Failed");
 			Assert.assertTrue(false);			
 		}		
 	
@@ -394,10 +391,10 @@ catch(Exception e){
 				
 		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -438,10 +435,10 @@ public void validatePictureTypeData(String fieldType,String caption,String optio
 				
 		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(loose)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -486,10 +483,10 @@ public void validateListTypeData(String fieldType,String caption,String optional
 			
 	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption) && rs.getString(3).equalsIgnoreCase(optional)  && rs.getString(4).equalsIgnoreCase(loose) && rs.getString(5).contains(resText)) {
 			Assert.assertTrue(true);
-			System.out.println("Record found and matches with Database...Test Case Passed");
+			TestLogger.log("Record found and matches with Database...Test Case Passed");
 			
 		} else{
-			System.out.println("Record Not Found in Database...Test Case Failed");
+			TestLogger.log("Record Not Found in Database...Test Case Failed");
 			Assert.assertTrue(false);			
 		}		
 	
@@ -529,10 +526,10 @@ public void validateTextTypeData(String fieldType,String caption,String optional
 			
 	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).equalsIgnoreCase(maxValue)&& rs.getString(5).contains(loose)) {
 			Assert.assertTrue(true);
-			System.out.println("Record found and matches with Database...Test Case Passed");
+			TestLogger.log("Record found and matches with Database...Test Case Passed");
 			
 		} else{
-			System.out.println("Record Not Found in Database...Test Case Failed");
+			TestLogger.log("Record Not Found in Database...Test Case Failed");
 			Assert.assertTrue(false);			
 		}		
 	
@@ -573,10 +570,10 @@ public void validateSignatureTypeData(String fieldType,String caption,String opt
 			
 	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).equalsIgnoreCase(aApprove) && rs.getString(5).equalsIgnoreCase(internal)&& rs.getString(6).equalsIgnoreCase(loose)) {
 			Assert.assertTrue(true);
-			System.out.println("Record found and matches with Database...Test Case Passed");
+			TestLogger.log("Record found and matches with Database...Test Case Passed");
 			
 		} else{
-			System.out.println("Record Not Found in Database...Test Case Failed");
+			TestLogger.log("Record Not Found in Database...Test Case Failed");
 			Assert.assertTrue(false);			
 		}		
 	
@@ -616,10 +613,10 @@ public void validateTemplateDateData(String fieldType,String caption,String opti
 			
 	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).equalsIgnoreCase(edate) && rs.getString(5).equalsIgnoreCase(ldate)) {
 			Assert.assertTrue(true);
-			System.out.println("Record found and matches with Database...Test Case Passed");
+			TestLogger.log("Record found and matches with Database...Test Case Passed");
 			
 		} else{
-			System.out.println("Record Not Found in Database...Test Case Failed");
+			TestLogger.log("Record Not Found in Database...Test Case Failed");
 			Assert.assertTrue(false);			
 		}		
 	
@@ -660,10 +657,10 @@ public void validateFeatureLinkTypeData(String fieldType,String caption,String o
 			
 	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(featurelink)) {
 			Assert.assertTrue(true);
-			System.out.println("Record found and matches with Database...Test Case Passed");
+			TestLogger.log("Record found and matches with Database...Test Case Passed");
 			
 		} else{
-			System.out.println("Record Not Found in Database...Test Case Failed");
+			TestLogger.log("Record Not Found in Database...Test Case Failed");
 			Assert.assertTrue(false);			
 		}		
 	
@@ -704,10 +701,10 @@ public void validateExceptionTypeData(String fieldType,String caption,String opt
 			
 	if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(exceptionType)&& rs.getString(5).equalsIgnoreCase(filename)) {
 			Assert.assertTrue(true);
-			System.out.println("Record found and matches with Database...Test Case Passed");
+			TestLogger.log("Record found and matches with Database...Test Case Passed");
 			
 		} else{
-			System.out.println("Record Not Found in Database...Test Case Failed");
+			TestLogger.log("Record Not Found in Database...Test Case Failed");
 			Assert.assertTrue(false);			
 		}		
 	
@@ -743,10 +740,10 @@ catch(Exception e){
 				
 		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(scanType)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -784,10 +781,10 @@ catch(Exception e){
 				
 		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).contains(minamount)&& rs.getString(5).contains(maxamount)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -829,10 +826,10 @@ catch(Exception e){
 				
 		if(rs.getString(1).equalsIgnoreCase(desc) && rs.getString(2).equalsIgnoreCase(fieldType) && rs.getString(3).equalsIgnoreCase(caption)  && rs.getString(4).equalsIgnoreCase(optional)&& rs.getString(5).equalsIgnoreCase(comp)&& rs.getString(6).equalsIgnoreCase(value)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -870,10 +867,10 @@ catch(Exception e){
 				
 		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)&& rs.getString(4).equalsIgnoreCase(hyperadd)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -910,10 +907,10 @@ catch(Exception e){
 				
 		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -957,10 +954,10 @@ catch(Exception e){
 				
 		if(rs.getString(1).equalsIgnoreCase(desc) && rs.getString(2).equalsIgnoreCase(fieldType) && rs.getString(3).equalsIgnoreCase(caption)  && rs.getString(4).equalsIgnoreCase(optional)&& rs.getString(5).equalsIgnoreCase(minvalue)  && rs.getString(6).equalsIgnoreCase(maxvalue)&& rs.getString(7).equalsIgnoreCase(comp)  && rs.getString(8).equalsIgnoreCase(value)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -1000,10 +997,10 @@ catch(Exception e){
 				
 		if(rs.getString(1).equalsIgnoreCase(fieldType) && rs.getString(2).equalsIgnoreCase(caption)  && rs.getString(3).equalsIgnoreCase(optional) && rs.getString(4).equalsIgnoreCase(loose)) {
 				Assert.assertTrue(true);
-				System.out.println("Record found and matches with Database...Test Case Passed");
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
 				
 			} else{
-				System.out.println("Record Not Found in Database...Test Case Failed");
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
 				Assert.assertTrue(false);			
 			}		
 		
@@ -1013,5 +1010,61 @@ catch(Exception e){
 	catch(Exception e){
 		System.out.println(e);
 	}
+		
 	}
+ 
+ 
+ 
+ 
+ 	public void validateElementData(String dept,String retake,String task,String sdate,String edate,String duration,String participant,String elementid,String elestatus,String itemTempNum,String storeTempNum,String concludingTempNum) {
+ 		
+try {
+			
+		Connection con = DriverManager.getConnection(read.getDbConnection(), read.getDbUserName(), read.getDbPassword());
+		Statement smt = con.createStatement();
+		
+		String query="SELECT d.DESCRIPTION AS DEPARTMENTID,cc.DESCRIPTION AS DEFAULTRETAKETYPEID,tt.DESCRIPTION AS TASKTYPEID ,date(ac.STARTDATETIME)STARTDATE,date(ac.ENDDATETIME) AS ENDDATE, " 
+			+"ac.DEFAULTDURATION, ac.PARTICIPANTLIST,cd.DESCRIPTION,ct.TEMPLATENUMBER as STORETEMPLATE, ct1.TEMPLATENUMBER AS ITEMTEMPLATE, ct2.TEMPLATENUMBER AS GLOBALTEMPLATE " 
+			+"FROM ACTIVITY.CAMPAIGNELEMENTS ac "  
+			+"JOIN COREAPP.CODES cc ON cc.CODEID=ac.DEFAULTRETAKETYPEID "  
+			+"JOIN ACTIVITY.DEPARTMENTS d ON d.DEPARTMENTID = ac.DEPARTMENTID "  
+			+"JOIN ACTIVITY.TASKTYPES tt ON tt.TASKTYPEID = ac.TASKTYPEID "
+			+"JOIN COREAPP.CODES cd on cd.CODEID=ac.STATUSID "
+			+"join ACTIVITY.CAMPAIGNELEMENTTEMPLATES ct on ct.CAMPAIGNELEMENTID=ac.CAMPAIGNELEMENTID "
+			+"join ACTIVITY.CAMPAIGNELEMENTTEMPLATES ct1 on ct1.CAMPAIGNELEMENTID = ct.CAMPAIGNELEMENTID and ct1.LOCATION = 943 "
+			+"join ACTIVITY.CAMPAIGNELEMENTTEMPLATES ct2 on ct2.CAMPAIGNELEMENTID =ct.CAMPAIGNELEMENTID and ct2.LOCATION = 944 "
+			+"WHERE ct.LOCATION = 942 AND ac.CAMPAIGNELEMENTID='"+elementid+"' ";	
+		
+
+		ResultSet rs = smt.executeQuery(query);
+
+		if(rs.next()) {	
+			
+			System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t"+rs.getString(5)+"\t"+rs.getString(6)+"\t"+rs.getString(7)+"\t"+rs.getString(8)+"\t"+rs.getString(9)+"\t"+rs.getString(10)+"\t"+rs.getString(11));
+				
+		if(rs.getString(1).equalsIgnoreCase(dept)&&rs.getString(2).equalsIgnoreCase(retake)&&rs.getString(3).equalsIgnoreCase(task)&&rs.getString(4).equalsIgnoreCase(sdate)&&rs.getString(5).equalsIgnoreCase(edate)&&rs.getString(6).equalsIgnoreCase(duration)&&rs.getString(7).equalsIgnoreCase(participant)&&rs.getString(8).equalsIgnoreCase(elestatus)&&rs.getString(9).equalsIgnoreCase(storeTempNum)&&rs.getString(10).equalsIgnoreCase(itemTempNum)&&rs.getString(11).equalsIgnoreCase(concludingTempNum)) {
+				Assert.assertTrue(true);
+				TestLogger.log("Record found and matches with Database...Test Case Passed");
+				
+			} else{
+				TestLogger.log("Record Not Found in Database...Test Case Failed");
+				Assert.assertTrue(false);			
+			}		
+		
+		}
+		con.close();
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}
+		
+	 
+	 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
 }

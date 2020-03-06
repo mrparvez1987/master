@@ -4,16 +4,16 @@
   <test name="DashTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.projects.templates.testCases.AllFieldTypeTestCases">
+      <class name="com.elements.testCases.TC_ElementsPageTest_002">
         <methods>
+          <include name="validateDurationElementPage" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="validateStoreAllField" invocation-numbers="0"/>
           <include name="generateReport"/>
           <include name="startExtent"/>
           <include name="afterEachTestMethod"/>
           <include name="extentSetup"/>
         </methods>
-      </class> <!-- com.projects.templates.testCases.AllFieldTypeTestCases -->
+      </class> <!-- com.elements.testCases.TC_ElementsPageTest_002 -->
     </classes>
   </test> <!-- DashTest(failed) -->
 </suite> <!-- Failed suite [DashManagement] -->

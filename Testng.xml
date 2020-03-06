@@ -20,15 +20,15 @@
 			 		 	      <!--  <class name="com.projects.templates.testCases.AllFieldTypeTestCases" />   -->
 			 		
  			 	 	
-	 		             <class name="com.projects.templates.testCases.AllFieldTypeTestCases" >
-					<methods> <include name= "validateStoreAllField"/> </methods> </class>   
+ 			 	 	<!-- 
+	 		               <class name="com.projects.templates.testCases.AllFieldTypeTestCases" >
+									<methods> <include name= "validateStoreAllField"/> </methods> </class>    -->  
 					   
-					 
-				 	  
-					  <!--  <class name="com.projects.templates.testCases.TC_StoreTemplatesPageTest_002" >
-					<methods> <include name= "validateStoreElementInLineAttachmentField"/> </methods> </class>  -->     
 					  
-					
+				 	  
+				 
+					 <class name="com.elements.testCases.TC_ElementsPageTest_002" >
+					<methods> <include name= "validateDurationLetterElementPage"/> </methods> </class>  
 								  
 					  		
 		</classes>

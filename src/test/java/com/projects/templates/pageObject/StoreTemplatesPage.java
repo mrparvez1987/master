@@ -5,15 +5,8 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.List;
 
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.sl.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -190,10 +183,7 @@ import org.openqa.selenium.support.ui.Select;
 		WebElement valuecriteria;
 		
 		@FindBy(xpath="//div[text()='Save']")
-		WebElement btnSave;
-		
-		
-		
+		WebElement btnSave;	
 		
 		
 		

@@ -94,7 +94,7 @@ public class XLUtils {
 	//This is current way
 	public static String [][] getData(String fileName) throws IOException
 	{
-		String path=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/"+fileName;
+		String path=System.getProperty("user.dir")+"/src/test/java/com/dashManagement/testData/"+fileName;
 			
 		int rownum=XLUtils.getRowCount(path, "Sheet1");
 		int colcount=XLUtils.getCellCount(path,"Sheet1",1);
@@ -117,7 +117,7 @@ public class XLUtils {
 		static Workbook book;
 		static Sheet sheet;
 		
-		public static String PATH=System.getProperty("user.dir")+"/src/test/java/com/dash2sell/testData/ProgramPageData.xlsx";
+		public static String PATH=System.getProperty("user.dir")+"/src/test/java/com/dashManagementl/testData/ProgramPageData.xlsx";
 		
 		public static Object[][] getTestData(String sheetName) {
 			
